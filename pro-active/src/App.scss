@@ -1,0 +1,26 @@
+$primary-color: #002d3d;
+
+@import 'animate.css';
+
+@font-face 
+{
+  font-family: 'Comic';
+  src: url('./Assets/fonts/comic.TTF');
+}
+
+@font-face 
+{
+  font-family: 'Tw Cen MT Bold';
+  src: url('./Assets/fonts/TwCenMTStd-Bold.otf');
+}
+
+@font-face 
+{
+  font-family: 'Trebuchet MS';
+  src: url('./Assets/fonts/trebuc.ttf');
+}
+
+input, textarea
+{
+  font-family: 'Trebuchet MS';
+}

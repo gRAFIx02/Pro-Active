@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server 1.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gRAFIx02/Pro-Active.git "
+  },
+  "author": "Tahmid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gRAFIx02/Pro-Active/issues"
+  },
+  "homepage": "https://github.com/gRAFIx02/Pro-Active#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
+  }
+}

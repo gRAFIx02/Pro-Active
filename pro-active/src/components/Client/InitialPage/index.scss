@@ -1,0 +1,120 @@
+.bottom-div
+{
+    display: block;
+    position: absolute;
+    height: 1000px;
+    animation: fadeIn 1.5s 1s backwards;
+}
+
+.button-div
+{
+    display: block;
+    position: absolute;
+    height: 180px;
+}
+
+.log-in
+{
+    display: block;
+    text-align: center;
+    position: absolute;
+    padding-left: 11px;
+    height: 60px;
+    width: 200px;
+    margin-left: 375px;
+    margin-top: 100px;
+    font-family:'TW Cen MT Bold';
+    font-size: 30px;
+    color: azure;
+    background-color: #002d3d;
+    border-radius: 12px;
+    transition: transform 0.4s;
+}
+
+.log-in:hover
+{
+    transform: scale(1.2);
+    background-color: azure;
+    color: #002d3d;
+    transition: 0.4s;
+}
+
+.sign-up
+{
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 60px;
+    width: 200px;
+    margin-left: 963px;
+    margin-top: 100px;
+    font-family:'TW Cen MT Bold';
+    font-size: 28.5px;
+    color: azure;
+    background-color: #002d3d;
+    border-radius: 12px;
+    padding-left: 9px;
+    transition: transform 0.4s;
+}
+
+.sign-up:hover
+{
+    transform: scale(1.2);
+    background-color: azure;
+    color: #002d3d;
+    transition: 0.4s;
+}
+
+.workout
+{
+    display: block;
+    position: absolute;
+    margin-top: 400px;
+    padding-left: 150px;
+    transform: scale(0.75);
+}
+
+.nutrition
+{
+    display: block;
+    position: absolute;
+    margin-top: 390px;
+    padding-left: 930px;
+    transform: scale(0.7);
+}
+
+.exercise
+{
+    display: block;
+    position: absolute;
+    margin-top: 700px;
+    padding-left: 120px;
+    transform: scale(0.7);
+}
+
+.tips
+{
+    display: block;
+    position: absolute;
+    margin-top: 700px;
+    padding-left: 930px;
+    transform: scale(0.7);
+}
+
+.invitation
+{
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 1000px;
+    margin-left: 520px;
+    width: 550px;
+}
+
+.copyright
+{
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 520px;
+}

@@ -1,0 +1,91 @@
+.s_main
+{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: azure;
+}
+
+.s_sub-main
+{
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    width: 35%;
+    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+    padding-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    opacity: 0%;
+    animation: fadeIn 2s 2s forwards;
+}
+
+.s_icon
+{
+    padding-top: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+.s_container-icon
+{
+    background-color: #002d3d;
+    border-radius: 150px;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+
+.s_user
+{
+    padding-left: 10.5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 130px;
+}
+
+.s_input
+{
+    width: 250px;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    outline: none;
+    background-color: azure;
+    text-align: center;
+}
+.s_label
+{
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.next_btn
+{
+    width: 75px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #002d3d;
+    color: azure;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+}
+
+.next
+{
+    padding-top: 15px;
+    padding-left: 260px;
+}
+
+.link
+{
+    padding-top: 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
