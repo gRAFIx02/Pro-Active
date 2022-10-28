@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import {addUser,getUser} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -23,6 +23,22 @@ export const register = async(req, res, next) => {
   }
 }
 
+export const trainer_register = async(req, res, next) => {
+  const {name,username, email, password,confPassword} = req.body;
+  try {
+    const hashPassword = bcrypt.hashSync(password, salt_rounds);
+    const response = await addtrainer(name,username, email,hashPassword)
+
+    if(response) return res.json({message: response});
+
+    return res.status(400).json({error :"Invalid entry"});
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+}
+
+
 export const login = async(req, res, next) => {
   
   if(req.user) {
@@ -33,6 +49,8 @@ export const login = async(req, res, next) => {
   const {usernameORemail, password} = req.body;
   try {
     const user = await getUser(usernameORemail);
+
+    console.log(user);
    
     // ERROR: User not found 
     if(user.length === 0) return res.status(401).json({error: "User not found"});
@@ -74,6 +92,7 @@ export const verifyToken = async(req, res, next) => {
 
       if(user.length != 0) {
           console.log('Token Verified');
+          console.log(username);
           req.user = user[0];
       }
     } catch (error) {

@@ -47,6 +47,8 @@ const SignUp = () =>
           console.log(error.response.data);
           setvalidName('Username already exists!');
         }
+
+        
       };
 
     const checkname = (e) =>{

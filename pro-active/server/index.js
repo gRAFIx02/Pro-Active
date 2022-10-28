@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import db from "./config/Database.js";
 
-import { register, login, verifyToken, logout } from "./middlewares/auth/auth.js";
+import { register, login, verifyToken, logout,trainer_register } from "./middlewares/auth/auth.js";
 import { bypassCORS } from "./middlewares/Setup.js";
 
 
@@ -24,7 +24,9 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 
 app.post("/register",bypassCORS, register);
-app.post("/login",bypassCORS, login);
+app.post("/login",bypassCORS,verifyToken,login);
+app.post("/logout",bypassCORS,verifyToken,logout);
+app.post("/trainer_register",bypassCORS, trainer_register);
 
 
  
