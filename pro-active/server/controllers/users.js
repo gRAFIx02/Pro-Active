@@ -31,12 +31,14 @@ export const getUser = async(usernameORemail) => {
   }
 }
   
-export const addUser = async(name, username, email, password) => {
+export const addUser = async(name, username, email, password,age,height,weight,focus,type,current_level) => {
+
+  
   try {
     const response = await new Promise((resolve, reject) => {
       db.execute(
-        'INSERT INTO `user_info` (`name`, `username`, `email`, `password`) VALUES (?, ?, ?, ?)',
-        [name,username, email, password], 
+        'INSERT INTO `user_info` (`name`, `username`, `email`, `password`, `age` ,`height`,`weight`,`focus`,`type`,`current_level`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+        [name,username, email, password,age,height,weight,focus,type,current_level], 
         (err, results) => {
         if (err) {
             reject(err.message);

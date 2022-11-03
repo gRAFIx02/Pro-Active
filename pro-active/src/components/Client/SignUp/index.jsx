@@ -20,6 +20,24 @@ const SignUp = () =>
     const [password, setPassword] = useState("");
     const [validPass, setvalidPass] = useState('');
     const [confPassword, setConfPassword] = useState("");
+    const [age, setAge] = useState("");
+    const [validAge, setvalidAge] = useState('');
+    const [height, setHeight] = useState("");
+    const [validHeight, setvalidHeight] = useState('');
+    const [weight, setWeight] = useState("");
+    const [validWeight, setvalidWeight] = useState('');
+    const [focus, setFocus] = useState("");
+    const [validFocus, setvalidFocus] = useState('');
+    const [type, setType] = useState("");
+    const [validType, setvalidType] = useState('');
+    const [current_level, setCurrent_level] = useState("");
+    const [validCurrent_level, setvalidCurrent_level] = useState('');
+
+
+
+
+    
+
     const [msg, setMsg] = useState("");
     const navigate = useNavigate();
 
@@ -36,13 +54,20 @@ const SignUp = () =>
               email: email,
               password: password,
               confPassword: confPassword,
+              age: age,
+              height: height,
+              weight: weight,
+              focus: focus,
+              type: type,
+              current_level: current_level,    
+              
             },
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
             },
           })
           console.log(name)
-          navigate("/signup2");
+          navigate("/login");
         } catch (error) {
           console.log(error.response.data);
           setvalidName('Username already exists!');
@@ -107,6 +132,70 @@ const SignUp = () =>
           setMsg('');
         } else {
           setMsg('Passwords do not match');
+          return true;
+        }
+      }
+
+      const checkage = (e) =>{
+        setAge(e.target.value);
+        if(age.length===0) {
+          setvalidName('Please enter age')
+        } else {
+          setvalidAge('');
+          return true;
+        }
+      }
+
+      const checkheight = (e) =>{
+        setHeight(e.target.value);
+        if(height.length===0) {
+          setvalidHeight('Please enter height')
+        } else {
+          setvalidHeight('');
+          return true;
+        }
+      }
+
+
+      const checkweight = (e) =>{
+        setWeight(e.target.value);
+        if(weight.length===0) {
+          setvalidWeight('Please enter weight')
+        } else {
+          setvalidWeight('');
+          return true;
+        }
+      }
+
+      
+      const checkfocus = (e) =>{
+        setFocus(e.target.value);
+        if(focus.length===0) {
+          setvalidFocus('Select Goal')
+        } else {
+          setvalidFocus('');
+          return true;
+        }
+      }
+
+      
+      const checktype = (e) =>{
+        setType(e.target.value);
+        if(type.length===0) {
+          setvalidType('Select workout type')
+        } else {
+          setvalidType('');
+          return true;
+        }
+      }
+
+      
+      const checkcurrent_level = (e) =>{
+        setCurrent_level(e.target.value);
+        if(current_level.length===0) {
+          setvalidCurrent_level('Select Current level')
+        } else {
+          setvalidCurrent_level('');
           return true;
         }
       }
@@ -183,46 +272,70 @@ const SignUp = () =>
                         </div>
                         <div>
                             <label className='su_label'>&nbsp;Age &emsp;&emsp;&emsp;&emsp;&nbsp;:</label>
-                            <input type='number' placeholder='Age' className='su_input' />
+                            <input 
+                            type='number'
+                             placeholder='Age' 
+                             className='su_input'
+                             value={age}
+                             onChange={checkage}
+
+                             />
                         </div>
                         <div>
                             <label className='su_label'>&nbsp;Height&emsp;&emsp;&emsp;&ensp;:</label>
-                            <input type='number' placeholder='Height (in cm)' className='su_input' />
+                            <input 
+                            type='number' 
+                            placeholder='Height (in cm)' 
+                            className='su_input' 
+                            
+                            value={height}
+                            onChange={checkheight}
+
+                            />
                         </div>
                         <div>
                             <label className='su_label'>&nbsp;Weight&emsp;&emsp;&emsp;&ensp;:</label>
-                            <input type='number' placeholder='Weight (in kg)' className='su_input' />
+                            <input
+                             type='number'
+                              placeholder='Weight (in kg)' 
+                              className='su_input'
+                              
+                             value={weight}
+                             onChange={checkweight}
+
+                               />
                         </div>
                         <div>
                             <label className='su_label'>Goal &emsp;&emsp;&emsp;&emsp;&nbsp;:</label>
-                            <select name='goal' id='goal' className='su_select'>
+                            <select name='goal' id='goal' className='su_select' value={focus} onChange={checkfocus}>
                                 <option value={'fat_burn'}>Fat Burn and Lose Weight</option>
                                 <option value={'maintain'}>Maintain Current Physique and Weight</option>
-                                <option value={'bulk'}>Increase Weight and Muscle Mass</option>
+                                <option value={'bulk'}>Increase Weight and Muscle Mass</option>   
                             </select>
                         </div>
                         <div>
                             <label className='su_label'>Workout Type :</label>
-                            <select name='type' id='type' className='su_select'>
+                            <select name='type' id='type' className='su_select' value={type} onChange={checktype}>
                                 <option value={'weightlifting'}>Weight-lifting</option>
                                 <option value={'calisthenics'}>Calisthenics</option>
+
                             </select>
                         </div>
                         <div>
                             <label className='su_label'>Current Level :</label>
-                            <select name='level' id='level' className='su_select'>
+                            <select name='level' id='level' className='su_select' value={current_level} onChange={checkcurrent_level}>
                                 <option value={'skinny'}>Skinny</option>
                                 <option value={'skinny_fat'}>Skinny Fat</option>
                                 <option value={'fat'}>Fat</option>
                                 <option value={'avergae'}>Average</option>
                                 <option value={'athletic'}>Athletic</option>
                                 <option value={'muscular'}>Muscular</option>
+
                             </select>
                         </div>
                         <div className='create_ac'>
-                            <Link to='/login'>
                                 <button className='create_btn'>Create Account</button>
-                            </Link >
+                            
                         </div>
                         <div className='link'>
                             <Link to = '/login'>

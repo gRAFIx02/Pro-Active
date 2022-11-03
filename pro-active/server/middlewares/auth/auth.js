@@ -9,10 +9,11 @@ const salt_rounds = 10
 
 
 export const register = async(req, res, next) => {
-  const {name,username, email, password,confPassword} = req.body;
+  const {name,username, email, password,confPassword,age,height,weight,focus,type,current_level} = req.body;
   try {
+   
     const hashPassword = bcrypt.hashSync(password, salt_rounds);
-    const response = await addUser(name,username, email,hashPassword)
+    const response = await addUser(name,username, email,hashPassword,age,height,weight,focus,type,current_level)
 
     if(response) return res.json({message: response});
 
@@ -73,8 +74,11 @@ export const login = async(req, res, next) => {
       maxAge: 24 * 60 * 60 * 1000 // 24 hours
     });
 
+   // console.log(accessToken)
+
     console.log('Authentication Success');
-    return res.json(user[0]);  
+    return res.json(user[0]); 
+     
 
   } catch (error) {
     console.log(error);
@@ -83,6 +87,8 @@ export const login = async(req, res, next) => {
 }
 
 export const verifyToken = async(req, res, next) => {
+  
+
   const accessToken = req.cookies['access_token'];
   if(accessToken) {
     try {
