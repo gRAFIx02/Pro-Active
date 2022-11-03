@@ -2,7 +2,7 @@ import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import Ulogo from '../../../Assets/images/proactive.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCompass } from '@fortawesome/free-solid-svg-icons'
+import { faCompass, faUserCheck } from '@fortawesome/free-solid-svg-icons'
 import Training from '../../../Assets/icons/training.png'
 import Nutrition from '../../../Assets/icons/nutrition.png'
 import Tips from '../../../Assets/icons/tips.png'
@@ -50,6 +50,13 @@ const UserSidebar = () =>
                         <NavLink exact='true' activeclassname='active' className='my_link' to='/my_plans'>
                             <img className='sidebar_logo' src={Myplan} alt='myLogo'/>
                             <label className='sidebarLabel'>My Plans</label>
+                        </NavLink>
+                    </div>
+
+                    <div className='container_sidebar'>
+                        <NavLink exact='true' activeclassname='active' className='ac_link' to='/my_ac'>
+                            <FontAwesomeIcon icon = {faUserCheck} color = 'black' className='explore'/>
+                            <label className='sidebarLabel'>My Account</label>
                         </NavLink>
                     </div>
                 </nav>
