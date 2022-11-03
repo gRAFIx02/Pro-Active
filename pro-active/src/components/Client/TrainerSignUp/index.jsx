@@ -127,7 +127,7 @@ const TrainerSignUp = () =>
                         <h2>Create Account</h2>
                         <br></br>
                         <div>
-                            <label className='s_label'>Name :</label>
+                            <label className='s_label'>Name&emsp;&emsp;&emsp; : </label>
                             <input 
                             type='text'
                             placeholder='Your name here'
@@ -138,7 +138,7 @@ const TrainerSignUp = () =>
                             <p className='message'>{validName}</p>
                         </div>
                         <div>
-                            <label className='s_label'>Username :</label>
+                            <label className='s_label'>Username&emsp; : </label>
                             <input 
                              type='text' 
                              className='s_input' 
@@ -149,7 +149,7 @@ const TrainerSignUp = () =>
                                <p className='message'>{validuserName}</p>
                         </div>
                         <div>
-                            <label className='s_label'>Email &emsp; &ensp; : </label>
+                            <label className='s_label'>Email&emsp; &emsp; &ensp; : </label>
                             <input 
                             type='email' 
                             placeholder='example@gmail.com' 
@@ -162,7 +162,7 @@ const TrainerSignUp = () =>
                              <p className='message'>{validMail}</p>
                         </div>
                         <div>
-                            <label className='s_label'>Password &ensp;: </label>
+                            <label className='s_label'>Password &emsp;&ensp; : </label>
                             <input 
                             type='password'
                             placeholder='Password'
@@ -174,7 +174,7 @@ const TrainerSignUp = () =>
                                   <p className='message'>{validPass}</p>
                         </div>
                         <div>
-                            <label className='s_label'>Re-type &emsp;: </label>
+                            <label className='s_label'>&nbsp;Re-type &emsp;&emsp; : </label>
                             <input 
                             type='password' 
                             placeholder='Confirm Password'
@@ -184,11 +184,30 @@ const TrainerSignUp = () =>
                               />
                                  <p className='message'>{msg}</p>
                         </div>
-                        <div className='next'>
-                           
-                                <button className='next_btn'>Next</button>
-                            
+                        <div>
+                            <label className='su_label'>&nbsp;Age &emsp;&emsp;&emsp;&emsp;&nbsp;:</label>
+                            <input type='number' placeholder='Age' className='su_input' />
                         </div>
+                        <div>
+                            <label className='su_label'>&nbsp;Height&emsp;&emsp;&emsp;&ensp;:</label>
+                            <input type='number' placeholder='Height (in cm)' className='su_input' />
+                        </div>
+                        <div>
+                            <label className='su_label'>&nbsp;Weight&emsp;&emsp;&emsp;&ensp;:</label>
+                            <input type='number' placeholder='Weight (in kg)' className='su_input' />
+                        </div>
+                        <div>
+                            <label className='su_label'>Expertise &emsp;&emsp;:</label>
+                            <select name='expert' id='expert' className='su_select'>
+                                <option value={'weighlifting'}>Weighlifting</option>
+                                <option value={'calisthenics'}>Calisthenics</option>
+                            </select>
+                        </div>
+                        <div className='tcreate_ac'>
+                            <Link to='/trainer_login'>
+                                <button className='tcreate_btn'>Create Account</button>
+                            </Link >
+                          </div>
                         <div className='link'>
                             <Link to='/trainer_login'>
                                 Already have an account? Log In!
