@@ -7,6 +7,7 @@ import SignUp from './components/Client/SignUp';
 import TrainerLogIn from './components/Client/TrainerLogIn';
 import TrainerSignUp from './components/Client/TrainerSignUp';
 import UserHomePage from './components/Client/UserHomePage';
+import Error401 from './components/Client/Error401';
 
 function App() 
 {
@@ -20,19 +21,11 @@ function App()
         <Route path='trainer_login' element={<TrainerLogIn />} />
         <Route path='trainer_signup' element={<TrainerSignUp />} />
         <Route path='user_homepage' element={<UserHomePage />} />
+        <Route path='*' element={<Error401 />} />
       </Route>
     </Routes>
     </>
-
-    
   );
-
- 
-
-      
-  
-
-
 }
 
 export default App;
