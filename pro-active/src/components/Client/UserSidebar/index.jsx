@@ -19,42 +19,42 @@ const UserSidebar = () =>
 
                 <nav className='user_nav'>
                     <div className='container_sidebar'>
-                        <NavLink exact='true' activeclassname='active' className='explore_link' to='/explore'>
+                        <NavLink exact='true' activeclassname='active' className='explore_link' to='/user_homepage'>
                             <FontAwesomeIcon icon={faCompass} className='explore' color='black'/>
                             <label className='sidebarLabel'>Explore</label>
                         </NavLink>
                     </div>
 
                     <div className='container_sidebar'>
-                        <NavLink exact='true' activeclassname='active' className='training_link' to='/training_plan'>
+                        <NavLink exact='true' activeclassname='active' className='training_link' to='/user_homapge/training_plan'>
                             <img className='sidebar_logo' src={Training} alt='traningLogo'/>
                             <label className='sidebarLabel'>Training Plans</label>
                         </NavLink>
                     </div>
 
                     <div className='container_sidebar'>
-                        <NavLink exact='true' activeclassname='active' className='nutrition_link' to='/nutrition_plan'>
+                        <NavLink exact='true' activeclassname='active' className='nutrition_link' to='/user_homapge/nutrition_plan'>
                             <img className='sidebar_logo' src={Nutrition} alt='nutritionLogo'/>
                             <label className='sidebarLabel'>Nutrition Plans</label>
                         </NavLink>
                     </div>
 
                     <div className='container_sidebar'>
-                         <NavLink exact='true' activeclassname='active' className='tips_link' to='/tips'>
+                         <NavLink exact='true' activeclassname='active' className='tips_link' to='/user_homapge/tips'>
                             <img className='sidebar_logo' src={Tips} alt='tipsLogo'/>
                             <label className='sidebarLabel'>Tips</label>
                         </NavLink>
                     </div>
 
                     <div className='container_sidebar'>
-                        <NavLink exact='true' activeclassname='active' className='my_link' to='/my_plans'>
+                        <NavLink exact='true' activeclassname='active' className='my_link' to='/user_homapge/my_plans'>
                             <img className='sidebar_logo' src={Myplan} alt='myLogo'/>
                             <label className='sidebarLabel'>My Plans</label>
                         </NavLink>
                     </div>
 
                     <div className='container_sidebar'>
-                        <NavLink exact='true' activeclassname='active' className='ac_link' to='/my_ac'>
+                        <NavLink exact='true' activeclassname='active' className='ac_link' to='/user_homapge/my_ac'>
                             <FontAwesomeIcon icon = {faUserCheck} color = 'black' className='explore'/>
                             <label className='sidebarLabel'>My Account</label>
                         </NavLink>

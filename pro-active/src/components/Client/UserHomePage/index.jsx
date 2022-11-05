@@ -1,18 +1,17 @@
+import { Route, Routes } from 'react-router-dom'
 import './index.scss'
-//import { Link } from 'react-router-dom'
-import UserSidebar from '../UserSidebar'
-import Loader from '../Loader'
-import SearchBar from '../SearchBar'
+import UserHomepageLayout from '../UserHomepageLayout'
+import Explore from '../Explore'
 
 const UserHomePage = () =>
 {
     return(
         <>
-            <div className='user_homepage'>
-                <UserSidebar />
-                <SearchBar />
-            </div>
-            <Loader />
+            <Routes>
+                <Route path='/' element={<UserHomepageLayout />}>
+                    <Route index element={<Explore />} />
+                </Route>
+            </Routes>
         </>
     )
 }

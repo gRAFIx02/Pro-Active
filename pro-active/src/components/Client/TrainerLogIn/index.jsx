@@ -3,7 +3,6 @@ import Loader from '../Loader'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 const TrainerLogIn = () => 
 {
@@ -31,14 +30,6 @@ const TrainerLogIn = () =>
                             <Link to='/user_homepage'>
                                 <button className='btn'>Log In</button>
                             </Link >
-                        </div>
-                        <h3>OR</h3>
-                        <div className='google_div'>
-                            <Link to='/google_log_in'>
-                                <button className='btn'>
-                                    <FontAwesomeIcon icon={faGoogle} color='azure' className='google' />
-                                </button>
-                            </Link>
                         </div>
                         <p>
                             &emsp; &emsp;

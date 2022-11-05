@@ -1,0 +1,62 @@
+.name_tag
+{
+    margin-left: 200px;
+    margin-top: 105px;
+    font-family: Comic;
+    font-size: 18px;
+
+}
+
+.outer_div
+{
+    height: 270px;
+    margin-left: 180px;
+    margin-right: 10px;
+    padding-left: 20px;
+}
+
+.inner_div
+{
+    box-shadow: 1px 1px 1px 1px gray;
+    display: flex;
+    gap: 50px;
+    height: 300px;
+    width: 250px;
+}
+
+.imagefield
+{
+    box-shadow: 0px 2px 0px 0px gray;
+    display: block;
+    width: 250px;
+    height: 255px;
+    margin-right: -50px;
+}
+
+.textfield
+{
+    display: block;
+    width: 250px;
+    height: 45px;
+    margin-left: -250px;
+    margin-top: 255px;
+}
+
+.blackbar-container
+{
+    margin-left: 190px;
+    margin-top: 105px;
+    width: 1300px;
+}
+
+.blackbar
+{
+    width: 1300px;
+    height: 80px;
+}
+
+.footer
+{
+    text-align: center;
+    margin-top: 130px;
+}
