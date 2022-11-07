@@ -24,6 +24,7 @@ const LogIn = () =>
           await axios({
             method: 'post',
             url: 'http://localhost:5000/login',
+            withCredentials: 'true',
             data: {
               usernameORemail: usernameORemail,
               password: password,
