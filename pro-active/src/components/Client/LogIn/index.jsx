@@ -3,8 +3,6 @@ import Loader from '../Loader'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
-
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
@@ -79,14 +77,6 @@ const LogIn = () =>
                            
                                 <button className='btn'>Log In</button>
                             
-                        </div>
-                        <h3>OR</h3>
-                        <div className='google_div'>
-                            <Link to='/google_log_in'>
-                                <button className='btn'>
-                                    <FontAwesomeIcon icon={faGoogle} color='azure' className='google' />
-                                </button>
-                            </Link>
                         </div>
                         <p>
                             &emsp; &emsp;

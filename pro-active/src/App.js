@@ -20,7 +20,7 @@ function App()
         <Route path='signup' element={<SignUp />} />
         <Route path='trainer_login' element={<TrainerLogIn />} />
         <Route path='trainer_signup' element={<TrainerSignUp />} />
-        <Route path='user_homepage' element={<UserHomePage />} />
+        <Route path='/user_homepage/*' element={<UserHomePage />} />
         <Route path='*' element={<Error401 />} />
       </Route>
     </Routes>
