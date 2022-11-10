@@ -139,7 +139,7 @@ const SignUp = () =>
       const checkage = (e) =>{
         setAge(e.target.value);
         if(age.length===0) {
-          setvalidName('Please enter age')
+          setvalidName('Please enter your age')
         } else {
           setvalidAge('');
           return true;
@@ -149,7 +149,7 @@ const SignUp = () =>
       const checkheight = (e) =>{
         setHeight(e.target.value);
         if(height.length===0) {
-          setvalidHeight('Please enter height')
+          setvalidHeight('Please enter your height')
         } else {
           setvalidHeight('');
           return true;
@@ -160,7 +160,7 @@ const SignUp = () =>
       const checkweight = (e) =>{
         setWeight(e.target.value);
         if(weight.length===0) {
-          setvalidWeight('Please enter weight')
+          setvalidWeight('Please enter your weight')
         } else {
           setvalidWeight('');
           return true;

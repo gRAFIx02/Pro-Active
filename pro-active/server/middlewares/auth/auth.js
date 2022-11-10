@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import {addUser,getUser,addtrainer} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer,getTrainer} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -25,10 +25,10 @@ export const register = async(req, res, next) => {
 }
 
 export const trainer_register = async(req, res, next) => {
-  const {name,username, email, password,confPassword} = req.body;
+  const {name,username, email, password,confPassword,age,height,weight,expertise} = req.body;
   try {
     const hashPassword = bcrypt.hashSync(password, salt_rounds);
-    const response = await addtrainer(name,username, email,hashPassword)
+    const response = await addtrainer(name,username, email,hashPassword,age,height,weight,expertise)
 
     if(response) return res.json({message: response});
 
@@ -43,7 +43,7 @@ export const trainer_register = async(req, res, next) => {
 export const login = async(req, res, next) => {
   
   if(req.user) {
-      console.log(req.user.handle, "already logged in");
+      console.log(req.user.username, "already logged in");
       return res.json(req.user);
   }
 
@@ -84,7 +84,57 @@ export const login = async(req, res, next) => {
     console.log(error);
     return res.status(400).json({error: error});
   }
+
 }
+
+export const trainerlogin = async(req, res, next) => {
+  
+  if(req.user) {
+      console.log(req.user.username, "already logged in");
+      return res.json(req.user);
+  }
+
+  const {usernameORemail, password} = req.body;
+  try {
+    const user = await getTrainer(usernameORemail);
+
+    
+
+    console.log(user);
+   
+    // ERROR: User not found 
+    if(user.length === 0) return res.status(401).json({error: "User not found"});
+
+    const match = await bcrypt.compare(password, user[0].password);
+    
+    // ERROR: Wrong password
+    if(!match) return res.status(401).json({error: "Wrong Password"});
+
+    const username = user[0].username;
+
+    // Create access token (24 hours)
+    const accessToken = jwt.sign({username}, process.env.COOKIE_SECRET,{
+        expiresIn: '1d'
+    });
+
+    // Set cookie (24 hours)
+    res.cookie('access_token', accessToken, {
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    });
+
+   // console.log(accessToken)
+
+    console.log('Authentication Success');
+    return res.json(user[0]); 
+     
+
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json({error: error});
+  }
+}
+
 
 export const verifyToken = async(req, res, next) => {
   
