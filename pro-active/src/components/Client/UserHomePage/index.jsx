@@ -1,8 +1,9 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import './index.scss'
 import UserHomepageLayout from '../UserHomepageLayout'
 import Explore from '../Explore'
 import MyAccount from '../MyAccount'
+import { useEffect } from 'react'
 
 const UserHomePage = () =>
 {

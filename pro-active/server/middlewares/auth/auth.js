@@ -104,7 +104,7 @@ export const trainer_register = async(req, res, next) => {
 export const login = async(req, res, next) => {
   
   if(req.user) {
-      console.log(req.user.username, "already logged in");
+      console.log(req.user.username, "Already logged in");
       return res.json(req.user);
   }
 

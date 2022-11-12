@@ -24,6 +24,7 @@
     display: block;
     height: 300px;
     width: 250px;
+    transition: 0.3s;
 
     .imagefield 
     {
@@ -48,6 +49,12 @@
     {
         transform: scale(0.8);
         margin-top: 25px;
+    }
+
+    &:hover
+    {
+        transform: scale(1.07);
+        transition: 0.3s;
     }
 }
 

@@ -18,7 +18,8 @@ const LogIn = () =>
 
     const Auth = async (e) => {
         e.preventDefault();
-        try {
+        try 
+        {
           await axios({
             method: 'post',
             url: 'http://localhost:5000/login',
