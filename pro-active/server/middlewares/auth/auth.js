@@ -232,3 +232,5 @@ export const logout = async(req, res) => {
     message: msg
   });
 }
+
+

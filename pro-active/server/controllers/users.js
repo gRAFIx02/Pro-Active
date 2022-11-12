@@ -3,8 +3,8 @@ import db from "../config/Database.js";
 export const getAllUsers = async(count) => {
   try {
     const response = await new Promise((resolve, reject) => {
-        db.execute('SELECT * FROM `user_info` LIMIT ?', 
-        [count], (err, results) => {
+        db.execute('SELECT * FROM `user_info` ', 
+         (err, results) => {
             if (err) reject(new Error(err.message));
             resolve(results);
         })
