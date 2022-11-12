@@ -9,39 +9,93 @@ const Explore = () =>
 {
     return(
         <>
+        {/* Exercise */}
         <h2 className='name_tag'>Exercises</h2>
         <div className='outer_div'>
+
+            {/* Exercise 1 */}
             <div className='inner_div'>
                 <div className='imagefield'>
                     <img src={exerciseDefault} alt='' className='explore_images'/>
                 </div>
-                <div className='textfield'>
-                    <h3 className='default_text'>Default text</h3>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Exercise 2 */}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={exerciseDefault} alt='' className='explore_images'/>
                 </div>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Exercise 3 */}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={exerciseDefault} alt='' className='explore_images'/>
+                </div>
+                <div className='textfield'>Default text</div>
             </div>
         </div>
 
+
+        {/* Workout plans */}
         <h2 className='name_tag'>Workout Plans</h2>
         <div className='outer_div'>
+
+            {/* Workout plans 1 */}
             <div className='inner_div'>
                 <div className='imagefield'>
                     <img src={workoutDefault} alt='' className='explore_images'/>
                 </div>
-                <div className='textfield'>
-                    <h3 className='default_text'>Default text</h3>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Workout plans 2 */}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={workoutDefault} alt='' className='explore_images'/>
                 </div>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Workout plans 3 */}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={workoutDefault} alt='' className='explore_images'/>
+                </div>
+                <div className='textfield'>Default text</div>
             </div>
         </div>
 
+        
+
+        {/* Nutrition plans */}
         <h2 className='name_tag'>Nutrition Plans</h2>
         <div className='outer_div'>
+
+            {/* Nutrition plans 1*/}
             <div className='inner_div'>
                 <div className='imagefield'>
                     <img src={nutritionDefault} alt='' className='explore_images'/>
                 </div>
-                <div className='textfield'>
-                    <h3 className='default_text'>Default text</h3>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Nutrition plans 2*/}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={nutritionDefault} alt='' className='explore_images'/>
                 </div>
+                <div className='textfield'>Default text</div>
+            </div>
+
+            {/* Nutrition plans 3*/}
+            <div className='inner_div'>
+                <div className='imagefield'>
+                    <img src={nutritionDefault} alt='' className='explore_images'/>
+                </div>
+                <div className='textfield'>Default text</div>
             </div>
         </div>
 

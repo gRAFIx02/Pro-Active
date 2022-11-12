@@ -1,6 +1,6 @@
 .name_tag 
 {
-    margin-left: 200px;
+    margin-left: 220px;
     margin-top: 105px;
     font-family: Comic;
     font-size: 18px;
@@ -10,16 +10,18 @@
 .outer_div 
 {
     height: 270px;
-    margin-left: 180px;
+    margin-left: 200px;
     margin-right: 10px;
     padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
 }
 
 .inner_div 
 {
     box-shadow: 1px 1px 1px 1px gray;
-    display: flex;
-    gap: 50px;
+    display: block;
     height: 300px;
     width: 250px;
 
@@ -29,7 +31,6 @@
         display: block;
         width: 250px;
         height: 255px;
-        margin-right: -50px;
     }
 
     .textfield 
@@ -37,16 +38,10 @@
         display: block;
         width: 250px;
         height: 45px;
-        margin-left: -250px;
-        margin-top: 255px;
-
-        .default_text 
-        {
-            text-align: center;
-            font-family: Comic;
-            font-size: 18px;
-            font-weight: lighter;
-        }
+        text-align: center;
+        font-family: Comic;
+        font-size: 18px;
+        font-weight: lighter;
     }
 
     .explore_images
