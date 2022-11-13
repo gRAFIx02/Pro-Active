@@ -2,8 +2,8 @@ import './index.scss'
 import Loader from '../Loader'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
-
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
+import TrainerLogo from '../../../Assets/icons/trainerlogo.png'
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ const TrainerLogIn = () =>
               'Content-Type': 'application/x-www-form-urlencoded',
             },
           })
-          navigate("/user_homepage");
+          navigate("/trainer_homepage");
 
         } catch (error) {
           if (error.response) {
@@ -47,7 +47,7 @@ const TrainerLogIn = () =>
                     <form onSubmit={Auth}>
                         <div className='t_icon'>
                             <div className='t_container-icon'>
-                                <FontAwesomeIcon icon={faUser} color="white" className='t_user' />
+                                <img src={TrainerLogo} alt='TrainerLogo' className='t_user' />
                             </div>
                         </div>
                         <p className="has-text-centered help is-danger">{msg}</p>
@@ -83,7 +83,7 @@ const TrainerLogIn = () =>
                             <Link to='/forgot_password'>
                                 Forgot password?
                             </Link> &emsp; &emsp; &emsp; &emsp; &emsp;
-                            <Link to='/trainer_signup'>
+                            <Link to='/signupoption'>
                                 New here? Register now!
                             </Link>
                             <br></br>

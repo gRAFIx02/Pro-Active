@@ -84,7 +84,7 @@ const LogIn = () =>
                             <Link to='/forgot_password'>
                                 Forgot password?
                             </Link> &emsp; &emsp; &emsp; &emsp; &emsp;
-                            <Link to='/signup'>
+                            <Link to='/signupoption'>
                                 New here? Register now!
                             </Link>
                             <br></br>

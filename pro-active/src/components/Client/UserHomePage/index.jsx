@@ -4,6 +4,7 @@ import UserHomepageLayout from '../UserHomepageLayout'
 import Explore from '../Explore'
 import MyAccount from '../MyAccount'
 import { useEffect } from 'react'
+import TrainingPlans from '../TrainingPlans'
 
 const UserHomePage = () =>
 {
@@ -12,6 +13,7 @@ const UserHomePage = () =>
             <Routes>
                 <Route path='/' element={<UserHomepageLayout />}>
                     <Route index element={<Explore />} />
+                    <Route path='/training_plan' element={<TrainingPlans />} />
                     <Route path='/my_ac' element={<MyAccount />} />
                 </Route>
             </Routes>

@@ -18,7 +18,7 @@ const Initial = () =>
                             Log In
                         </button>
                     </Link>
-                    <Link to = '/signup'>
+                    <Link to = '/signupoption'>
                         <button className='sign-up'>
                             Sign Up
                         </button>
