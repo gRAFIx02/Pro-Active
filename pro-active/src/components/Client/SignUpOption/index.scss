@@ -1,0 +1,79 @@
+.o_main
+{
+    text-align: center;
+    justify-content: center;
+    height: 80%;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: azure;
+}
+
+.o_sub-main
+{
+    display: block;
+    justify-content: center;
+    height: 550px;
+    width: 35%;
+    box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+    padding-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    opacity: 0%;
+    animation: fadeInLeft 1s 0s forwards;
+}
+
+.mainlabel
+{
+    height: 50px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.userbtn
+{
+    height: 60px;
+    width: 150px;
+    margin-top: 50px;
+    margin-right: 75px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    transition: 0.4s;
+    background-color: #00ff00;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    &:hover
+    {
+        transform: scale(1.2);
+        background-color: white;
+        color: #00ff00;
+        box-shadow: 1px 1px 1px 1px #00ff00;
+        transition: 0.4s;
+    }
+}
+
+.trainerbtn
+{
+    height: 60px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    transition: 0.4s;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    &:hover
+    {
+        transform: scale(1.2);
+        background-color: white;
+        color: red;
+        box-shadow: 1px 1px 1px 1px red;
+        transition: 0.4s;
+    }
+}

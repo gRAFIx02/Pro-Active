@@ -18,7 +18,8 @@ const LogIn = () =>
 
     const Auth = async (e) => {
         e.preventDefault();
-        try {
+        try 
+        {
           await axios({
             method: 'post',
             url: 'http://localhost:5000/login',
@@ -83,7 +84,7 @@ const LogIn = () =>
                             <Link to='/forgot_password'>
                                 Forgot password?
                             </Link> &emsp; &emsp; &emsp; &emsp; &emsp;
-                            <Link to='/signup'>
+                            <Link to='/signupoption'>
                                 New here? Register now!
                             </Link>
                             <br></br>
