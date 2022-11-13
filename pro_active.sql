@@ -1,1 +1,1 @@
-SELECT * FROM pro_active.exercise_info;
+SELECT * FROM trainer_info;
