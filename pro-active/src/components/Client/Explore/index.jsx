@@ -6,6 +6,7 @@ import nutritionDefault from '../../../Assets/images/nutrition_default.png'
 import { Link } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
+import {Grid} from 'react'
 
 //  ../image/exercise/pushup.jpg
 
@@ -42,10 +43,7 @@ const Explore = () =>
         {/* Exercise */}
         <h2 className='name_tag'>Exercises</h2>
          
-    
-        <div className='outer_div'>
-
-               
+        <div className='outer_div'>   
         
             {/* Exercise 1 */}
             <div className='inner_div'>
@@ -54,34 +52,11 @@ const Explore = () =>
                         <img src={exerciseDefault} alt='' className='explore_images'/>
                     </Link>
                 </div>
-                <div className='textfield'></div>
+                <div className='textfield'>Default text</div>
             </div>  
-
-
-
-            {/* Exercise 2 */}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/exercise'>
-                        <img src={exerciseDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
-            
-
-            {/* Exercise 3 */}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/exercise'>
-                        <img src={exerciseDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
-         
         
         </div>
+        
 
         
         {/* Workout plans */}
@@ -98,25 +73,6 @@ const Explore = () =>
                 <div className='textfield'>Default text</div>
             </div>
 
-            {/* Workout plans 2 */}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/wp'>
-                        <img src={workoutDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
-
-            {/* Workout plans 3 */}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/wp'>
-                        <img src={workoutDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
         </div>
 
         
@@ -135,25 +91,6 @@ const Explore = () =>
                 <div className='textfield'>Default text</div>
             </div>
 
-            {/* Nutrition plans 2*/}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/np'>
-                        <img src={nutritionDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
-
-            {/* Nutrition plans 3*/}
-            <div className='inner_div'>
-                <div className='imagefield'>
-                    <Link to='/user_homepage/np'>
-                        <img src={nutritionDefault} alt='' className='explore_images'/>
-                    </Link>
-                </div>
-                <div className='textfield'>Default text</div>
-            </div>
         </div>
 
         <div className='blackbar-container'>

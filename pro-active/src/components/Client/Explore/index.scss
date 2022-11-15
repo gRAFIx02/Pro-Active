@@ -13,9 +13,9 @@
     margin-left: 200px;
     margin-right: 10px;
     padding-left: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
 }
 
 .inner_div 

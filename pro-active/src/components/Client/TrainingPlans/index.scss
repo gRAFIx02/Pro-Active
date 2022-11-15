@@ -1,0 +1,59 @@
+.name_tag 
+{
+    margin-left: 220px;
+    margin-top: 105px;
+    font-family: Comic;
+    font-size: 18px;
+
+}
+
+.wp_outer_div 
+{
+    height: auto;
+    margin-left: 200px;
+    margin-right: 10px;
+    padding-left: 20px;
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: auto auto auto;
+}
+
+.wp_inner_div 
+{
+    box-shadow: 1px 1px 1px 1px gray;
+    display: block;
+    height: 300px;
+    width: 250px;
+    transition: 0.3s;
+
+    .imagefield 
+    {
+        box-shadow: 0px 2px 0px 0px gray;
+        display: block;
+        width: 250px;
+        height: 255px;
+    }
+
+    .textfield 
+    {
+        display: block;
+        width: 250px;
+        height: 45px;
+        text-align: center;
+        font-family: Comic;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .explore_images
+    {
+        transform: scale(0.8);
+        margin-top: 25px;
+    }
+
+    &:hover
+    {
+        transform: scale(1.07);
+        transition: 0.3s;
+    }
+}
