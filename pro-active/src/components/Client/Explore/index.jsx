@@ -1,12 +1,11 @@
 import './index.scss'
 import BlackBar from '../../../Assets/images/blackbar.png'
-import exerciseDefault from '../../../Assets/images/exercise_default.png'
 import workoutDefault from '../../../Assets/images/workout_default.png'
 import nutritionDefault from '../../../Assets/images/nutrition_default.png'
 import { Link } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
-import {Grid} from 'react'
+
 
 //  ../image/exercise/pushup.jpg
 
@@ -35,29 +34,40 @@ const Explore = () =>
       fetchData();
     },[]);
 
-        
+
+    setTimeout(function(){
+        window.location.reload();
+     }, 5000);
 
     return(
         <>
       
         {/* Exercise */}
+
         <h2 className='name_tag'>Exercises</h2>
-         
+          
         <div className='outer_div'>   
         
             {/* Exercise 1 */}
+            {data.map((exercise) => {
+          return (
+
             <div className='inner_div'>
                 <div className='imagefield'>
                     <Link to='/user_homepage/exercise'>
-                        <img src={exerciseDefault} alt='' className='explore_images'/>
+                        <img src={exercise.img} alt='' className='explore_images'/>
                     </Link>
                 </div>
                 <div className='textfield'>Default text</div>
             </div>  
+
+);
+})}
+
+
         
         </div>
-        
-
+         
         
         {/* Workout plans */}
         <h2 className='name_tag'>Workout Plans</h2>
@@ -72,8 +82,11 @@ const Explore = () =>
                 </div>
                 <div className='textfield'>Default text</div>
             </div>
+            
 
         </div>
+
+        
 
         
 
