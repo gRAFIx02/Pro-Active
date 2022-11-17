@@ -32,6 +32,6 @@ app.post("/trainer_login",bypassCORS, verifyToken,trainerlogin);
 app.get("/exercise_info",bypassCORS,exercise_info);
 app.get("/nutrition_info",bypassCORS,nutrition_info);
 app.get("/exercise_all_info",bypassCORS,exercise_all_info);
-app.get("/nutrition_all_info",nutrition_all_info);
+app.get("/nutrition_all_info",bypassCORS,nutrition_all_info);
  
 app.listen(5000, ()=> console.log('Server running at port 5000'));
