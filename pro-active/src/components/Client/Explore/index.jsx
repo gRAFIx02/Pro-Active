@@ -32,12 +32,15 @@ const Explore = () =>
         })
       }
       fetchData();
+
+
     },[]);
+
 
 
     setTimeout(function(){
         window.location.reload();
-     }, 5000);
+     }, 30000);
 
     return(
         <>
