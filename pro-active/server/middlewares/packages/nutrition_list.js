@@ -1,7 +1,7 @@
-import {getThreeExercise} from "../../controllers/users.js"
+import {getThreeNutrition} from "../../controllers/users.js"
 
-export const  exercise_info = async(req,res) => {
-    await getThreeExercise()
+export const  nutrition_info = async(req,res) => {
+    await getThreeNutrition()
     .then((data) => {
          console.log(data);
         return res.json({data: data});
