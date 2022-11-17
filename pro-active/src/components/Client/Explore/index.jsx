@@ -14,6 +14,7 @@ const Explore = () =>
 {
 
     const [data, setData] = useState([]);
+    const [data1, setData1] = useState([]);
 
     useEffect(() => {
       const fetchData = async() => {
@@ -32,6 +33,26 @@ const Explore = () =>
         })
       }
       fetchData();
+     
+      
+      const fetchData1 = async() => {
+        await axios({
+          method: 'get',
+          url: "http://localhost:5000/nutrition_info",
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          responseType: 'json',
+        }).then((response) => {
+          setData1(response.data.data);
+          console.log(response.data.data);
+        }).catch((err) => {
+          console.log(err);
+        })
+      }
+      fetchData1();
+      
+
 
 
     },[]);
@@ -98,14 +119,21 @@ const Explore = () =>
         <div className='outer_div'>
 
             {/* Nutrition plans 1*/}
+            {data1.map((nutrition) => {
+          return (
+
             <div className='inner_div'>
                 <div className='imagefield'>
                     <Link to='/user_homepage/np'>
-                        <img src={nutritionDefault} alt='' className='explore_images'/>
+                        <img src={nutrition.img} alt='' className='explore_images'/>
                     </Link>
                 </div>
                 <div className='textfield'>Default text</div>
             </div>
+            
+);
+})}
+
 
         </div>
 
