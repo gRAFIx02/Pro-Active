@@ -10,8 +10,6 @@ const TrainingPlans = () =>
     return (
         <>
             <h2 className='name_tag'>Workout Plans</h2>
-
-
             <div className='wp_outer_div'>
 
    
@@ -23,9 +21,7 @@ const TrainingPlans = () =>
                     </div>
                     <div className='textfield'>Default text</div>
                 </div>
-         </div>
-
-
+            </div>
         </>
     )
 }

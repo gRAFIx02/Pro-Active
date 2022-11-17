@@ -39,7 +39,7 @@ const LogIn = () =>
             setMsg('Invalid username or password!');
           }
         }
-      };
+      }; //auth end
 
     return (
         <>
