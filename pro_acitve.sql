@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pro_active
+-- Host: localhost    Database: pro_active
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -51,7 +51,7 @@ DROP TABLE IF EXISTS `nutrition_info`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nutrition_info` (
-  `name` varchar(200) DEFAULT NULL,
+  `name` varchar(200) NOT NULL,
   `description` longtext,
   `day` int DEFAULT NULL,
   `breakfast` varchar(200) DEFAULT NULL,
@@ -68,6 +68,7 @@ CREATE TABLE `nutrition_info` (
 
 LOCK TABLES `nutrition_info` WRITE;
 /*!40000 ALTER TABLE `nutrition_info` DISABLE KEYS */;
+INSERT INTO `nutrition_info` VALUES ('nam','dfsd',1,'ds','d','ddd','dfds','ddfdfs'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg'),('nam','dfsd',1,'ds','d','ddd','dfds','../image/exercise/image4.jpg');
 /*!40000 ALTER TABLE `nutrition_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,7 +133,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('Tam','$2b$10$Y4cWRhilooVM3d6RtpDYIui0cTap7RQ/kSK4pHCFl1hQlzI3Mf196','237@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'Tahmid Rahman'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman');
+INSERT INTO `user_info` VALUES ('grafix','$2b$10$mwWgCBWXYklnFXUlAoDvKOm0QeRN/Sh.v2BxYHP9j6379UnHuZgTm','grafix235@gmail.com',21,165,60,'maintain','calisthenics','skinny_fat','Protyoy Rafi'),('Tam','$2b$10$Y4cWRhilooVM3d6RtpDYIui0cTap7RQ/kSK4pHCFl1hQlzI3Mf196','237@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'Tahmid Rahman'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -145,4 +146,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-17 18:56:55
+-- Dump completed on 2022-11-17 20:24:52
