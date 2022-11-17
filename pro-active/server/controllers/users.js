@@ -104,12 +104,43 @@ export const getThreeExercise = async(count) => {
   }
 }
 
+export const getAllExercise = async(count) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `exercise_info`', 
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
 //nutrition_info
  
 export const getThreeNutrition = async(count) => {
   try {
     const response = await new Promise((resolve, reject) => {
         db.execute('SELECT * FROM `nutrition_info` order by rand()  limit 3', 
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const getAllNutrition = async(count) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `nutrition_info`', 
          (err, results) => {
             if (err) reject(new Error(err.message));
             resolve(results);

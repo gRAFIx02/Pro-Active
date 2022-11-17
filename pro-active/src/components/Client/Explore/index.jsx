@@ -1,7 +1,6 @@
 import './index.scss'
 import BlackBar from '../../../Assets/images/blackbar.png'
 import workoutDefault from '../../../Assets/images/workout_default.png'
-import nutritionDefault from '../../../Assets/images/nutrition_default.png'
 import { Link } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
@@ -82,7 +81,7 @@ const Explore = () =>
                         <img src={exercise.img} alt='' className='explore_images'/>
                     </Link>
                 </div>
-                <div className='textfield'>Default text</div>
+                <div className='textfield'>{exercise.name}</div>
             </div>  
 
 );
@@ -128,7 +127,7 @@ const Explore = () =>
                         <img src={nutrition.img} alt='' className='explore_images'/>
                     </Link>
                 </div>
-                <div className='textfield'>Default text</div>
+                <div className='textfield'>{nutrition.name}</div>
             </div>
             
 );
