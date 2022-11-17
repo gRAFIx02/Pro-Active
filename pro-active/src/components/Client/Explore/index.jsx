@@ -35,9 +35,9 @@ const Explore = () =>
     },[]);
 
 
-    setTimeout(function(){
-        window.location.reload();
-     }, 5000);
+    // setTimeout(function(){
+    //     window.location.reload();
+    //  }, 5000);
 
     return(
         <>
