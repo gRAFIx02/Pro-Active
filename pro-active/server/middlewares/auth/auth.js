@@ -31,7 +31,7 @@ export const register = async(req, res, next) => {
         from: process.env.EMAIL,
         to: email,
         subject: "Succesfully registerted as a Pro active user",
-        html: '<h1> BE A PRO BE ACTIVE  </h1>' 
+        html: '<h1> BE A PRO, BE ACTIVE  </h1>' 
     }
     console.log("hi " + email)
     transporter.sendMail(mailOptions, (error, info) => {
@@ -76,7 +76,7 @@ export const trainer_register = async(req, res, next) => {
         from: process.env.EMAIL,
         to: email,
         subject: "Succesfully registerted as a Pro active Trainer",
-        html: '<h1> BE A PRO BE ACTIVE  </h1>' 
+        html: '<h1> BE A PRO, BE ACTIVE  </h1>' 
     }
     console.log("hi " + email)
     transporter.sendMail(mailOptions, (error, info) => {

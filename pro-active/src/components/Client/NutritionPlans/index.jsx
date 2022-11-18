@@ -42,7 +42,7 @@ const NutritionPlan = () =>
                             <img src={nutrition.img} alt='' className='explore_images'/>
                         </Link>
                     </div>
-                    <div className='textfield'>{nutrition.name}</div>
+                    <div className='textfield'>{nutrition.plan_name}</div>
                 </div>
                 
 );
