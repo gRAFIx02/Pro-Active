@@ -1,7 +1,4 @@
 import './index.scss'
-
-
-import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
 
@@ -26,6 +23,7 @@ const MyAccount = () =>
             },
             
           })
+          localStorage.removeItem("logged-in-user");
           navigate("/");
         } catch (error) {
           console.log(error.response.data);     

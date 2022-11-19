@@ -6,6 +6,7 @@ import { faUser, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
+import { useEffect } from 'react'
 
 const LogIn = () => 
 {
@@ -15,6 +16,13 @@ const LogIn = () =>
     const [msg, setMsg] = useState("");
     const navigate = useNavigate(); 
 
+    useEffect(() =>
+    {
+      if(localStorage.getItem("logged-in-user"))
+      {
+        navigate("/user_homepage");
+      }
+    });
 
     const Auth = async (e) => {
         e.preventDefault();
@@ -32,7 +40,12 @@ const LogIn = () =>
               'Content-Type': 'application/x-www-form-urlencoded',
             },
           })
-          navigate("/user_homepage");
+          .then((response) =>
+          {
+              console.log(response);
+              localStorage.setItem("logged-in-user", JSON.stringify(response.data));
+              navigate("/user_homepage");
+          });
 
         } catch (error) {
           if (error.response) {

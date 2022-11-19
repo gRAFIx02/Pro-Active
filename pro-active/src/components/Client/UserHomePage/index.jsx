@@ -1,13 +1,25 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import './index.scss'
 import UserHomepageLayout from '../UserHomepageLayout'
 import Explore from '../Explore'
 import MyAccount from '../MyAccount'
 import TrainingPlans from '../TrainingPlans'
 import NutritionPlan from '../NutritionPlans'
+import { useEffect } from 'react'
 
 const UserHomePage = () =>
 {
+    const navigate = useNavigate();
+
+    useEffect(() =>
+    {
+        if(!localStorage.getItem("logged-in-user"))
+        {
+            navigate("/unauthorized");
+        }
+    });
+
+
     return(
         <>
             <Routes>
