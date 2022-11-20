@@ -20,24 +20,24 @@
 
 .wp_inner_div 
 {
-    box-shadow: 1px 1px 1px 1px gray;
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
     display: block;
-    height: 300px;
-    width: 250px;
+    height: 270px;
+    width: 320px;
     transition: 0.3s;
 
     .imagefield 
     {
-        box-shadow: 0px 2px 0px 0px gray;
+        box-shadow: 0px 1px 0px 0px gray;
         display: block;
-        width: 250px;
-        height: 255px;
+        width: 320px;
+        height: 225px;
     }
 
     .textfield 
     {
         display: block;
-        width: 250px;
+        width: 320px;
         height: 45px;
         text-align: center;
         font-family: Comic;
@@ -47,8 +47,8 @@
 
     .explore_images
     {
-        transform: scale(0.8);
-        margin-top: 25px;
+        width: 320px;
+        height: 225px;
     }
 
     &:hover
