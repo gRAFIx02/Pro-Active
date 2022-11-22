@@ -1,14 +1,14 @@
 import './index.scss'
-import UserSidebar from '../UserSidebar'
+import TrainerSidebar from '../TrainerSidebar'
 import SearchBar from '../SearchBar'
 import { Outlet } from 'react-router-dom'
 
-const UserHomepageLayout = () =>
+const TrainerHomePageLayout = () => 
 {
-    return(
+    return (
         <>
             <div className='homepage'>
-                <UserSidebar />
+                <TrainerSidebar />
                 <SearchBar />
                 <div>
                     <Outlet />
@@ -18,4 +18,4 @@ const UserHomepageLayout = () =>
     )
 }
 
-export default UserHomepageLayout
+export default TrainerHomePageLayout
