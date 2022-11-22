@@ -29,9 +29,9 @@ app.post("/login",bypassCORS,verifyToken,login);
 app.post("/logout",bypassCORS,verifyToken,logout);
 app.post("/trainer_register",bypassCORS, trainer_register);
 app.post("/trainer_login",bypassCORS, verifyToken,trainerlogin);
-app.get("/exercise_info",bypassCORS,exercise_info);
-app.get("/nutrition_info",bypassCORS,nutrition_info);
-app.get("/exercise_all_info",bypassCORS,exercise_all_info);
-app.get("/nutrition_all_info",bypassCORS,nutrition_all_info);
+app.get("/exercise_info",bypassCORS,verifyToken,exercise_info);
+app.get("/nutrition_info",bypassCORS,verifyToken,nutrition_info);
+//app.get("/exercise_all_info",bypassCORS,exercise_all_info);
+app.get("/nutrition_all_info",bypassCORS,verifyToken,nutrition_all_info);
  
 app.listen(5000, ()=> console.log('Server running at port 5000'));

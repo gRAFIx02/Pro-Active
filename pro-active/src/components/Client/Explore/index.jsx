@@ -20,6 +20,7 @@ const Explore = () =>
         await axios({
           method: 'get',
           url: "http://localhost:5000/exercise_info",
+          withCredentials: 'true',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           },

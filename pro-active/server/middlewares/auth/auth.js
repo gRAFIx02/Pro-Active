@@ -108,6 +108,8 @@ export const login = async(req, res, next) => {
       return res.json(req.user);
   }
 
+  //console.log(req.user.username);
+
   const {usernameORemail, password} = req.body;
   try {
     const user = await getUser(usernameORemail);

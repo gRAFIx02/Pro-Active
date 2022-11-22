@@ -1,6 +1,7 @@
 import {getThreeNutrition,getAllNutrition} from "../../controllers/users.js"
 
 export const  nutrition_info = async(req,res) => {
+    
     await getThreeNutrition()
     .then((data) => {
          console.log(data);
@@ -11,6 +12,8 @@ export const  nutrition_info = async(req,res) => {
 }
 
 export const  nutrition_all_info = async(req,res) => {
+    
+    console.log(req.user.username); 
     await getAllNutrition()
     .then((data) => {
          console.log(data);

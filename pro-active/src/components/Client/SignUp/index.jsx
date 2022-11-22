@@ -48,6 +48,7 @@ const SignUp = () =>
           await axios({
             method: 'post',
             url: "http://localhost:5000/register",
+            withCredentials: 'true',
             data: {
               name: name,
               username: username,
