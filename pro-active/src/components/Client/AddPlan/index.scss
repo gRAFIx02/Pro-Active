@@ -1,0 +1,124 @@
+.outershell 
+{
+    box-shadow: 1px 1px 1px 1px black;
+    height: 1000px;
+    margin-top: 110px;
+
+    .container_plan_image 
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        width: 320px;
+        height: 240px;
+        margin-left: 220px;
+
+        .plan_image 
+        {
+            width: 320px;
+            height: 240px;
+        }
+    }
+
+    .container_button_browse 
+    {
+        width: 100px;
+        height: 30px;
+        margin-left: 550px;
+        margin-top: -70px;
+    }
+
+    .container_button_upload
+    {
+        margin-left: 550px;
+        margin-top: 20px;
+        width: 100px;
+        height: 30px;
+    }
+
+    .plan_upload 
+    {
+        width: 65px;
+    }
+
+    .plan_label
+    {
+        font-family: Comic;
+        font-size: 15px;
+        padding-right: 20px;
+    }
+
+    .desc_label
+    {
+        font-family: Comic;
+        font-size: 15px;
+    }
+
+    .plan_name
+    {
+        width: 500px;
+        height: 30px;
+        margin-left: 900px;
+        margin-top: -200px;
+        margin-bottom: 20px;
+
+        .wp_name
+        {
+            width: 380px;
+            height: 25px;
+            padding-left: 20px;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 1px 1px #bfbfbf;
+            border-radius: 3px;
+            font-family: Comic;
+        }
+    }
+
+    .desc
+    {
+        width: 85px;
+    }
+
+    .description
+    {
+        width: 500px;
+        height: 155px;
+        margin-left: 900px;
+        
+        
+        .wp_desc
+        {
+            width: 380px;
+            height: 140px;
+            margin-left: 91px;
+            margin-top: -21px;
+            padding-left: 20px;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 1px 1px #bfbfbf;
+            border-radius: 3px;
+            font-family: Comic;
+        }
+    }
+
+    .catNdif
+    {
+        margin-left: 550px;
+        margin-top: 50px;
+        width: 610px;
+        height: 30px;
+        
+        .cat_label
+        {
+            font-family: Comic;
+            font-size: 15px;
+        }
+
+        .cat_select
+        {
+            font-family: Comic;
+            font-size: 14px;
+            text-align: center;
+            margin-right: 100px;
+        }
+    }
+}

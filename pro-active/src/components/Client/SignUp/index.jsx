@@ -319,7 +319,6 @@ const SignUp = () =>
                             <select name='type' id='type' className='su_select' value={type} onChange={checktype}>
                                 <option value={'weightlifting'}>Weight-lifting</option>
                                 <option value={'calisthenics'}>Calisthenics</option>
-
                             </select>
                         </div>
                         <div>
