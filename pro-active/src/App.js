@@ -10,6 +10,7 @@ import UserHomePage from './components/Client/UserHomePage';
 import Error401 from './components/Client/Error401';
 import Error404 from './components/Client/Error404';
 import SignUpOption from './components/Client/SignUpOption';
+import TrainerHomePage from './components/Client/TrainerHomePage';
 
 function App() 
 {
@@ -24,6 +25,7 @@ function App()
         <Route path='trainer_login' element={<TrainerLogIn />} />
         <Route path='trainer_signup' element={<TrainerSignUp />} />
         <Route path='/user_homepage/*' element={<UserHomePage />} />
+        <Route path='/trainer_homepage/*' element={<TrainerHomePage />} />
         <Route path='/unauthorized' element={<Error401 />} />
         <Route path='/*' element={<Error404 />} />
       </Route>

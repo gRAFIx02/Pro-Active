@@ -13,7 +13,7 @@ const UserSidebar = () =>
     return (
         <>
             <div className='nav-bar'>
-                <Link className='user_logo' to='/user_homepage'>
+                <Link className='user_logo' to='/'>
                     <img src={Ulogo} alt='u_logo' className='user_img' />
                 </Link>
 
