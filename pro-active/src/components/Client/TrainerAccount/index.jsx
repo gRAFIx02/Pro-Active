@@ -14,7 +14,7 @@ const TrainerAccount =() =>
         try {
           await axios({
             method: 'post',
-            url: "http://localhost:5000/logout",
+            url: "http://localhost:5000/logout1",
             withCredentials: 'true',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -22,7 +22,7 @@ const TrainerAccount =() =>
             
           })
           localStorage.removeItem("logged-in-trainer");
-          navigate("/trainer_login");
+          navigate("/");
         } catch (error) {
           console.log(error.response.data);     
         }

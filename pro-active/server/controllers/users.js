@@ -151,3 +151,27 @@ export const getAllNutrition = async(count) => {
     console.log(error);
   }
 }
+
+
+//trainer_exercise_training_plan
+export const addTrainerplan = async(planname, username, category, difficulty,description,img) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `workout_info` (`plan_name`, `uploaded_by`, `category`, `difficulty`, `description` ,`img`) VALUES (?, ?, ?, ?, ?, ?)',
+        [planname,username, category, difficulty,description,img], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+

@@ -221,6 +221,31 @@ export const verifyToken = async(req, res, next) => {
   next();
 }
 
+export const verifyToken1 = async(req, res, next) => {
+  
+
+  const accessToken = req.cookies['access_token'];
+  if(accessToken) {
+    try {
+      const payload = jwt.verify(accessToken, process.env.COOKIE_SECRET);
+      const username = payload.username;
+      const user = await getTrainer(username);
+
+      console.log(user);
+
+      if(user.length != 0) {
+          console.log('Token Verified');
+          console.log(username);
+          req.user = user[0];
+      }
+    } catch (error) {
+        console.log(error);
+    }
+  }
+  next();
+}
+
+
 export const logout = async(req, res) => {
   let msg;  
   if(req.user) {
@@ -235,4 +260,17 @@ export const logout = async(req, res) => {
   });
 }
 
+export const logout1 = async(req, res) => {
+  let msg;  
+  if(req.user) {
+    msg = "User logged out successfully.";
+    res.clearCookie('access_token');
+  } else {
+    msg = "No user logged in";
+  }
+  console.log(msg);
+  res.json({
+    message: msg
+  });
+}
 
