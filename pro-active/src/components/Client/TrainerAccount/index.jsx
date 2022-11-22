@@ -21,7 +21,7 @@ const TrainerAccount =() =>
             },
             
           })
-          localStorage.removeItem("logged-in-user");
+          localStorage.removeItem("logged-in-trainer");
           navigate("/trainer_login");
         } catch (error) {
           console.log(error.response.data);     

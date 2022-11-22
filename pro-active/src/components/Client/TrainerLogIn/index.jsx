@@ -7,6 +7,7 @@ import TrainerLogo from '../../../Assets/icons/trainerlogo.png'
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate } from "react-router-dom";
+import { useEffect } from 'react'
 
 const TrainerLogIn = () => 
 {
@@ -16,7 +17,15 @@ const TrainerLogIn = () =>
     const [usernameORemail, setusernameORemail] = useState("");
     const [password, setPassword] = useState("");
     const [msg, setMsg] = useState("");
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+    
+    useEffect(()=>
+    {
+      if(localStorage.getItem("logged-in-trainer"))
+      {
+        navigate("/trainer_homepage");
+      }
+    });
 
     const Auth = async (e) => {
         e.preventDefault();
@@ -33,7 +42,12 @@ const TrainerLogIn = () =>
               'Content-Type': 'application/x-www-form-urlencoded',
             },
           })
-          navigate("/trainer_homepage");
+          .then((response) =>
+          {
+              console.log(response);
+              localStorage.setItem("logged-in-trainer", JSON.stringify(response.data));
+              navigate("/trainer_homepage");
+          });
 
         } catch (error) {
           if (error.response) {

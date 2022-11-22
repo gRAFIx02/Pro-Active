@@ -49,11 +49,11 @@ const TrainerExplore = () =>
                 </div>
             </div>
 
-            <div className='blackbar-container'>
+            <div className='t_blackbar-container'>
                 <img src={BlackBar} alt='' className='blackbar' />
             </div>
 
-            <footer className='footer'>Pro-Active Ⓒ Copyright 2022 Final Flash</footer>
+            <footer className='t_footer'>Pro-Active Ⓒ Copyright 2022 Final Flash</footer>
         </>
     )
 }
