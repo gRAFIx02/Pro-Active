@@ -175,3 +175,20 @@ export const addTrainerplan = async(planname, username, category, difficulty,des
   }
 }
 
+export const getTrainerWorkout = async(username) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM `workout_info` WHERE `uploaded_by`=? ',
+      [username],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+

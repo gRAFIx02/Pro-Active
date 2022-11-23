@@ -1,9 +1,40 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
 import workoutDefault from '../../../Assets/images/workout_default.png'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const TrainerTP = () => 
 {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async() => {
+        await axios({
+          method: 'get',
+          url: "http://localhost:5000/MytrainingPlans",
+          withCredentials: 'true',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          responseType: 'json',
+        }).then((response) => {
+          setData(response.data.data);
+          console.log(response.data.data);
+        }).catch((err) => {
+          console.log(err);
+        })
+      }
+      fetchData();
+     
+      
+
+
+  }, []);
+
+
+
     return (
         <>
             <Link to = '/trainer_homepage/my_tp/add_plan'>
@@ -13,15 +44,22 @@ const TrainerTP = () =>
             </Link>
             <h2 className='t_name_tag'>My Workout Plans</h2>
             <div className='wp_outer_div'>
+            {data.map((plan) => {
+          return (
+
                 <div className='wp_inner_div'>
                     <div className='imagefield'>
                         <Link to='/user_homepage/wp'>
-                            <img src={workoutDefault} alt='' className='explore_images' />
+                            <img src={plan.img} alt='' className='explore_images' />
                         </Link>
                     </div>
-                    <div className='textfield'>Default text</div>
+                    <div className='textfield'>{plan.plan_name}</div>
                 </div>
+                 );
+                })} );
+            
             </div>
+            
         </>
     )
 }

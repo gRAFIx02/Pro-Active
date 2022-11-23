@@ -1,4 +1,4 @@
-import {addTrainerplan} from "../../controllers/users.js"
+import {addTrainerplan,getTrainerWorkout} from "../../controllers/users.js"
 
 
 export const trainerPlan = async(req, res, next) => {
@@ -32,3 +32,17 @@ export const trainerPlan = async(req, res, next) => {
     }
   }
   
+
+  
+export const  Trainerworkoutplans = async(req,res) => {
+    
+  console.log(req.user.username);
+
+  await getTrainerWorkout(req.user.username)
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
