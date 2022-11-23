@@ -192,3 +192,34 @@ export const getTrainerWorkout = async(username) => {
 }
 
 
+export const getAllTrainerWorkot = async(count) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `workout_info`', 
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
+export const getThreeWorkout = async(count) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `workout_info` order by rand()  limit 3', 
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}

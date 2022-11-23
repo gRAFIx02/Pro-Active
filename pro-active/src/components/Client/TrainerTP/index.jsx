@@ -1,6 +1,5 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
-import workoutDefault from '../../../Assets/images/workout_default.png'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 

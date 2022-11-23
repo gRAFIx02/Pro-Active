@@ -1,4 +1,4 @@
-import {addTrainerplan,getTrainerWorkout} from "../../controllers/users.js"
+import {addTrainerplan,getTrainerWorkout,getAllTrainerWorkot,getThreeWorkout} from "../../controllers/users.js"
 
 
 export const trainerPlan = async(req, res, next) => {
@@ -39,6 +39,31 @@ export const  Trainerworkoutplans = async(req,res) => {
   console.log(req.user.username);
 
   await getTrainerWorkout(req.user.username)
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
+
+
+  
+export const  workoutPlanForUser = async(req,res) => {
+    
+  await getAllTrainerWorkot()
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
+
+  
+export const  getthreeWorkPlan = async(req,res) => {
+    
+  await getThreeWorkout()
   .then((data) => {
        console.log(data);
       return res.json({data: data});

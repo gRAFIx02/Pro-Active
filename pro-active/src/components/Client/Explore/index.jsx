@@ -1,6 +1,5 @@
 import './index.scss'
 import BlackBar from '../../../Assets/images/blackbar.png'
-import workoutDefault from '../../../Assets/images/workout_default.png'
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -14,6 +13,7 @@ const Explore = () =>
 
   const [data, setData] = useState([]);
   const [data1, setData1] = useState([]);
+  const[data2,setData2]=useState([]);
 
     useEffect(() => {
       const fetchData = async() => {
@@ -51,6 +51,24 @@ const Explore = () =>
         })
       }
       fetchData1();
+
+      const fetchData2 = async() => {
+        await axios({
+          method: 'get',
+          url: "http://localhost:5000/getthreeworkouts",
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          responseType: 'json',
+        }).then((response) => {
+          setData2(response.data.data);
+          console.log(response.data.data);
+        }).catch((err) => {
+          console.log(err);
+        })
+      }
+      fetchData2();
+   
       
 
 
@@ -87,14 +105,20 @@ const Explore = () =>
       {/* Workout plans */}
       <h2 className='name_tag'>Workout Plans</h2>
       <div className='outer_div'>
+      {data2.map((workout) => {
+          return (
+
         <div className='inner_div'>
           <div className='imagefield'>
             <Link to='/user_homepage/wp'>
-              <img src={workoutDefault} alt='' className='explore_images' />
+              <img src={workout.img} alt='' className='explore_images' />
             </Link>
           </div>
-          <div className='textfield'>Default text</div>
+          <div className='textfield'>{workout.name}</div>
         </div>
+
+);
+})}
       </div>
 
 
