@@ -175,6 +175,30 @@ export const addTrainerplan = async(planname, username, category, difficulty,des
   }
 }
 
+export const addTrainerplan1 = async(planname, day, workout_1, workout_2,workout_3,workout_4) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `workout` (`plan_name`, `day`, `workout_1`, `workout_2`, `workout_3` ,`workout_4`) VALUES (?, ?, ?, ?, ?, ?)',
+        [planname,day, workout_1, workout_2,workout_3,workout_4], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+
+
 export const getTrainerWorkout = async(username) => {
   try {
     const response = await new Promise((resolve, reject) => {
@@ -221,5 +245,38 @@ export const getThreeWorkout = async(count) => {
     return response;
   } catch (error) {
     console.log(error);
+  }
+}
+
+
+export const deleteUser = async(usernameORemail) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('Delete FROM `user_info` WHERE `username`=? OR `email`=?',
+      [usernameORemail,usernameORemail],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const deleteTrainer = async(usernameORemail) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('Delete FROM `trainer_info` WHERE `username`=? OR `email`=?',
+      [usernameORemail,usernameORemail],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
   }
 }

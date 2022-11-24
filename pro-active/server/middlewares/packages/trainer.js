@@ -1,4 +1,4 @@
-import {addTrainerplan,getTrainerWorkout,getAllTrainerWorkot,getThreeWorkout} from "../../controllers/users.js"
+import {addTrainerplan,getTrainerWorkout,getAllTrainerWorkot,getThreeWorkout,addTrainerplan1} from "../../controllers/users.js"
 
 
 export const trainerPlan = async(req, res, next) => {
@@ -30,6 +30,8 @@ export const trainerPlan = async(req, res, next) => {
       console.log(error);
       res.status(400).json({error: error});
     }
+
+    
   }
   
 

@@ -73,9 +73,9 @@ const TrainerExplore = () =>
   
   
   
-    setTimeout(function () {
-      window.location.reload();
-    }, 30000);
+  //  setTimeout(function () {
+ //     window.location.reload();
+   // }, 30000);
   
 
     return (
