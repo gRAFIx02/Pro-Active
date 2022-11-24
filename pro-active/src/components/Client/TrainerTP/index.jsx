@@ -48,7 +48,7 @@ const TrainerTP = () =>
 
                 <div className='wp_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/wp'>
+                        <Link to='/trainer_homepage/tp'>
                             <img src={plan.img} alt='' className='explore_images' />
                         </Link>
                     </div>
