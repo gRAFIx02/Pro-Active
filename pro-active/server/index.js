@@ -8,7 +8,7 @@ import { register, login, verifyToken, logout,trainer_register,trainerlogin, ver
 import { bypassCORS } from "./middlewares/Setup.js";
 import { exercise_info,exercise_all_info } from "./middlewares/packages/exercise_list.js";
 import  {nutrition_info,nutrition_all_info} from "./middlewares/packages/nutrition_list.js";
-import {trainerPlan ,Trainerworkoutplans,workoutPlanForUser,getthreeWorkPlan} from "./middlewares/packages/trainer.js"
+import {trainerPlan ,Trainerworkoutplans,workoutPlanForUser,getthreeWorkPlan,NutritionPlan,Trainernutritionplans} from "./middlewares/packages/trainer.js"
 import {user_information,addimguser,deluser} from "./middlewares/packages/user.js"
 
 dotenv.config();
@@ -50,6 +50,7 @@ app.post("/userimage",bypassCORS,verifyToken,addimguser);
 
 app.post("/deleteuser",bypassCORS,verifyToken,deluser);
 
-
+app.post("/addNutritionPlan",bypassCORS,verifyToken1,NutritionPlan);
+app.get("/MyNutritionPlans",bypassCORS,verifyToken1,Trainernutritionplans);
 
 app.listen(5000, ()=> console.log('Server running at port 5000'));

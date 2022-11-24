@@ -218,7 +218,71 @@ export const addTrainerplan1 = async(planname, day, workout_1, workout_2,workout
   } catch (error) {
     throw error;
   }
+
+
 }
+
+export const addNutritionplan = async(planname, username,description,img) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `nutrition_info` (`plan_name`, `uploaded_by`, `description` ,`img`) VALUES (?, ?, ?, ?)',
+        [planname,username,description,img], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+export const addNutritionplan1 = async(planname, day, breakfast, lunch,snacks,dinner) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `nutrition` (`plan_name`, `day`, `breakfast`, `lunch`, `snacks` ,`dinner`) VALUES (?, ?, ?, ?, ?, ?)',
+        [planname,day,breakfast,lunch,snacks,dinner], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+
+export const getTrainerNutrition = async(username) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM `nutrition_info` WHERE `uploaded_by`=? ',
+      [username],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 
 
 
