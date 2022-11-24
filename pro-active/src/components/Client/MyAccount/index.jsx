@@ -139,7 +139,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Name : </label>
+          <label>Name &emsp; &emsp; &emsp;: </label>
           
           <div className='textfield'>{user.name}</div>
           <div className='edit'>
@@ -153,7 +153,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Username : </label>
+          <label>Username &emsp; &nbsp;: </label>
           <div className='textfield'>{user.username}</div>
         </div>
         );
@@ -165,7 +165,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Email : </label>
+          <label>Email &emsp; &emsp; &emsp; : </label>
           <div className='textfield'>{user.email}</div>
         </div>
          );
@@ -177,7 +177,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Age : </label>
+          <label>Age &emsp; &emsp; &emsp; &nbsp; : </label>
           <div className='textfield'>{user.age}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -192,7 +192,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Height : </label>
+          <label>Height &emsp; &emsp; &ensp;: </label>
           <div className='textfield'>{user.height}</div>
         </div>
           );
@@ -205,7 +205,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Weight : </label>
+          <label>Weight &emsp; &emsp; &nbsp;: </label>
           <div className='textfield'>{user.weight}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -220,7 +220,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Focus : </label>
+          <label>Focus &emsp; &emsp; &ensp; &nbsp;: </label>
           <div className='textfield'>{user.focus}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -235,7 +235,7 @@ const MyAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Type : </label>
+          <label>Type &emsp; &emsp; &emsp; &nbsp;: </label>
           <div className='textfield'>{user.type}</div>
           <div className='edit'>
             <button>Edit</button>

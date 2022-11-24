@@ -48,7 +48,7 @@ const TrainerAccount = () => {
 
         {/* Name */}
         <div className='info'>
-          <label>Name : </label>
+          <label>Name &emsp; &emsp; &emsp; &emsp;&nbsp;: </label>
           <div className='textfield'></div>
           <div className='edit'>
             <button>Edit</button>
@@ -57,19 +57,19 @@ const TrainerAccount = () => {
 
         {/* Username */}
         <div className='info'>
-          <label>Username : </label>
+          <label>Username &emsp; &emsp; &ensp; : </label>
           <div className='textfield'></div>
         </div>
 
         {/* Email */}
         <div className='info'>
-          <label>Email : </label>
+          <label>Email &emsp; &emsp; &emsp; &emsp; &ensp;: </label>
           <div className='textfield'></div>
         </div>
 
         {/* Age */}
         <div className='info'>
-          <label>Age : </label>
+          <label>Age &emsp; &emsp; &emsp; &emsp; &emsp; : </label>
           <div className='textfield'></div>
           <div className='edit'>
             <button>Edit</button>
@@ -78,13 +78,13 @@ const TrainerAccount = () => {
 
         {/* Height */}
         <div className='info'>
-          <label>Height : </label>
+          <label>Height &emsp; &emsp; &emsp; &emsp; : </label>
           <div className='textfield'></div>
         </div>
 
         {/* Weight */}
         <div className='info'>
-          <label>Weight : </label>
+          <label>Weight &emsp; &emsp; &emsp; &emsp;: </label>
           <div className='textfield'></div>
           <div className='edit'>
             <button>Edit</button>
@@ -93,7 +93,7 @@ const TrainerAccount = () => {
 
         {/* Expertise */}
         <div className='info'>
-          <label>Expertise : </label>
+          <label>Expertise &emsp; &emsp; &emsp; : </label>
           <div className='textfield'></div>
         </div>
       </div>
