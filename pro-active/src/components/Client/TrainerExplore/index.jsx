@@ -73,9 +73,9 @@ const TrainerExplore = () =>
   
   
   
-  //  setTimeout(function () {
- //     window.location.reload();
-   // }, 30000);
+   setTimeout(function () {
+     window.location.reload();
+   }, 30000);
   
 
     return (
@@ -110,7 +110,7 @@ const TrainerExplore = () =>
           return (
                 <div className='inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/wp'>
+                        <Link to='/trainer_homepage/tp'>
                             <img src={n.img} alt='Workout Default' className='explore_images' />
                         </Link>
                     </div>

@@ -1,10 +1,10 @@
 import './index.scss'
 
-const ShowTP = () =>
+const ShowNP = () =>
 {
     return(
         <>
-            <div className='tp_back'>
+            <div className='np_back'>
                 <div className='imagefield'>
                     <img src='' alt='exercise' />
                 </div>
@@ -16,28 +16,16 @@ const ShowTP = () =>
                     <label>Uploaded By &emsp; &emsp;: </label>
                     <div className='textfield'></div>
                 </div>
-                <div className='difficulty'>
-                    <label>Difficulty &emsp; &ensp; : </label>
-                    <div className='textfield'></div>
-                </div>
-                <div className='catNdiff'>
-                    <label>Category &emsp; &emsp; : </label>
-                    <div className='textfield'></div>
-                </div>
-                <div className='catNdiff'>
-                    <label>Type  &emsp; &emsp;  &emsp; &ensp; : </label>
-                    <div className='textfield'></div>
-                </div>
                 <div className='description'>
                     <label>Description :</label>
                     <div></div>
                 </div>
                 <div className='column_names'>
                       <label>Day</label>
-                      <label>Workout 1</label>
-                      <label>Workout 2</label>
-                      <label>Workout 3</label>
-                      <label>Workout 4</label>
+                      <label>Breakfast</label>
+                      <label>Lunch</label>
+                      <label>Snacks</label>
+                      <label>Dinner</label>
                 </div>
 
                 {/* row 1 */}
@@ -53,4 +41,4 @@ const ShowTP = () =>
     )
 }
 
-export default ShowTP
+export default ShowNP
