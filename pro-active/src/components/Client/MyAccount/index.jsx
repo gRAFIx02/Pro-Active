@@ -3,16 +3,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
-const MyAccount = () => 
-{
+const MyAccount = () => {
 
   const navigate = useNavigate();
 
-  const logOut = async (e) => 
-  {
+  const logOut = async (e) => {
     e.preventDefault();
-    try 
-    {
+    try {
       await axios({
         method: 'post',
         url: "http://localhost:5000/logout",
@@ -260,18 +257,16 @@ const MyAccount = () =>
             <button>Edit</button>
           </div>
         </div>
-         );
-        })}
-   
 
         <div className='change'>
           <button>Change Password</button>
         </div>
-        <div className='delete' onClick={deluser}>
+        <div className='delete'>
           <button>Delete Account</button>
         </div>
 
       </div>
+
     </>
   )
 }

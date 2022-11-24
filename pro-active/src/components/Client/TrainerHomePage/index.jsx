@@ -9,6 +9,7 @@ import TrainerAccount from '../TrainerAccount'
 import { useEffect } from 'react'
 import AddPlan from '../AddPlan'
 import ShowExercise from '../ShowExercise'
+import AddNutrition from '../AddNutrition'
 
 const TrainerHomePage = () =>
 {
@@ -30,6 +31,7 @@ const TrainerHomePage = () =>
                     <Route path='/exercise' element={<ShowExercise />} />
                     <Route path='/my_tp' element={<TrainerTP />} />
                     <Route path='/my_tp/add_plan' element={<AddPlan />} />
+                    <Route path='/my_np/add_plan' element={<AddNutrition />} />
                     <Route path='/my_np' element={<TrainerNP />} />
                     <Route path='/my_tips' element={<TrainerTips />} />
                     <Route path='/my_ac' element={<TrainerAccount />} />

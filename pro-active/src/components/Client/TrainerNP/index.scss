@@ -1,0 +1,87 @@
+.t_name_tag 
+{
+    margin-left: 220px;
+    margin-top: 25px;
+    font-family: Comic;
+    font-size: 18px;
+
+}
+
+.np_outer_div 
+{
+    height: auto;
+    margin-left: 200px;
+    margin-right: 10px;
+    padding-left: 20px;
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: auto auto auto;
+}
+
+.np_inner_div 
+{
+    box-shadow: 2px 2px 2px 2px #bfbfbf;
+    display: block;
+    height: 270px;
+    width: 320px;
+    transition: 0.3s;
+
+    .imagefield 
+    {
+        box-shadow: 0px 1px 0px 0px gray;
+        display: block;
+        width: 320px;
+        height: 225px;
+    }
+
+    .textfield 
+    {
+        display: block;
+        width: 320px;
+        height: 45px;
+        text-align: center;
+        font-family: Comic;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .explore_images
+    {
+        width: 320px;
+        height: 225px;
+    }
+
+    &:hover
+    {
+        transform: scale(1.07);
+        transition: 0.3s;
+    }
+}
+
+.add_plan
+{
+    margin-left: 220px;
+    margin-top: 115px;
+    width: fit-content;
+    
+    .add_plan_btn
+    {
+        background-color: #002d3d;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        font-family: Comic;
+        font-weight: bold;
+        transition: 0.4s;
+
+        &:hover
+        {
+            transform: scale(1.07);
+            background-color: white;
+            color: #002d3d;
+            box-shadow: 1px 1px 1px 1px gray;
+            transition: 0.4s;
+        }
+    }
+}
