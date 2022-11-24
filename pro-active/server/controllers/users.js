@@ -69,6 +69,7 @@ export const addUser = async(name, username, email, password,age,height,weight,f
   }
 }
 
+
 export const addUserimage = async(username,img) => {
 
   
@@ -89,6 +90,31 @@ export const addUserimage = async(username,img) => {
     throw error;
   }
 }
+
+
+
+export const addTrainerimage = async(username,img) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'update `trainer_info`  set   `img`=?  where `username`=?',
+        [img,username], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
 
 
 
