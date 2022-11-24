@@ -10,6 +10,8 @@ const TrainingPlans = () =>
 {
 
     const [data, setData] = useState([]);
+    //const exercise = useLocation().state;
+   // console.log(exercise);
 
     useEffect(() => {
         const fetchData = async() => {
@@ -41,6 +43,8 @@ const TrainingPlans = () =>
             <h2 className='name_tag'>Workout Plans</h2>
             <div className='wp_outer_div'>
 
+              
+
             {data.map((w) => {
           return (
  
@@ -50,7 +54,7 @@ const TrainingPlans = () =>
                             <img src={w.img} alt='' className='explore_images'/>
                         </Link>
                     </div>
-                    <div className='textfield'>{w.name}</div>
+                    <div className='textfield'>{w.plan_name}</div>
                 </div>
                 );
             })}

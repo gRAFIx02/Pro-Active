@@ -91,8 +91,14 @@ const Explore = () =>
 
             <div className='inner_div'>
               <div className='imagefield'>
-                <Link to='/user_homepage/exercise'>
+                <Link
+                state={{exercise}}    
+                to={{
+                 pathname: "/user_homepage/exercise",
+                state: exercise // your data array of objects
+               }}>
                   <img src={exercise.img} alt='' className='explore_images' />
+                   
                 </Link>
               </div>
               <div className='textfield'>{exercise.name}</div>

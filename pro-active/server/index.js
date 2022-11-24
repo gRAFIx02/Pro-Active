@@ -39,6 +39,9 @@ app.post("/addTrainerPlan",bypassCORS,verifyToken1,trainerPlan);
 app.get("/MytrainingPlans",bypassCORS,verifyToken1,Trainerworkoutplans);
 app.get("/getallworkout",bypassCORS,verifyToken,workoutPlanForUser); 
 app.get("/getthreeworkouts",bypassCORS,verifyToken,getthreeWorkPlan);
+app.get("/exercise_info1",bypassCORS,verifyToken1,exercise_info);
+app.get("/nutrition_info1",bypassCORS,verifyToken1,nutrition_info);
+app.get("/getthreeworkouts1",bypassCORS,verifyToken1,getthreeWorkPlan);
 
 
 
