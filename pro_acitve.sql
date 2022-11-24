@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pro_active
+-- Host: localhost    Database: pro_active
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -203,7 +203,7 @@ CREATE TABLE `trainer_info` (
 
 LOCK TABLES `trainer_info` WRITE;
 /*!40000 ALTER TABLE `trainer_info` DISABLE KEYS */;
-INSERT INTO `trainer_info` VALUES ('ProtyRaf','$2b$10$CrZOQ71bmDoGUjDzGtcnmOUfqQl..hQ2tP1GkS2bJbVtD0/TyGN/G','prottoyrafi@iut-dhaka.edu',22,180,70,'calisthenics','Prottoy Rafi'),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s'),('taf','$2b$10$aAEkVGeDxJ/8n9T305YyfunBpY3xiQIibes4T0zGvF5duMV4rpgJ.','23@gmail.com',22,22,222,'calisthenics','ere'),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm'),('Tam1','$2b$10$LvL96eFifH.PpjTMnDkdTeNonRzNhlorydcR8BLX2C26kr1iPNCEy','1233@gmail.com',22,222,222,'calisthenics','Tam1'),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman');
+INSERT INTO `trainer_info` VALUES ('grafix','$2b$10$DRIBKx6RtqirJkwoIf0VyuEW5Cx39Mqs7B1EEwc5PMsSxR.C1PjTG','grafix235@gmail.com',21,165,60,'calisthenics','Protyoy Rafi'),('ProtyRaf','$2b$10$CrZOQ71bmDoGUjDzGtcnmOUfqQl..hQ2tP1GkS2bJbVtD0/TyGN/G','prottoyrafi@iut-dhaka.edu',22,180,70,'calisthenics','Prottoy Rafi'),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s'),('taf','$2b$10$aAEkVGeDxJ/8n9T305YyfunBpY3xiQIibes4T0zGvF5duMV4rpgJ.','23@gmail.com',22,22,222,'calisthenics','ere'),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm'),('Tam1','$2b$10$LvL96eFifH.PpjTMnDkdTeNonRzNhlorydcR8BLX2C26kr1iPNCEy','1233@gmail.com',22,222,222,'calisthenics','Tam1'),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman');
 /*!40000 ALTER TABLE `trainer_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -237,7 +237,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('Tam','$2b$10$Y4cWRhilooVM3d6RtpDYIui0cTap7RQ/kSK4pHCFl1hQlzI3Mf196','237@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'Tahmid Rahman'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman');
+INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi'),('Tam','$2b$10$Y4cWRhilooVM3d6RtpDYIui0cTap7RQ/kSK4pHCFl1hQlzI3Mf196','237@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,'Tahmid Rahman'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -309,4 +309,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-24 20:16:35
+-- Dump completed on 2022-11-24 22:55:47
