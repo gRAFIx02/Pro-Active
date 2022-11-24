@@ -69,6 +69,30 @@ export const addUser = async(name, username, email, password,age,height,weight,f
   }
 }
 
+export const addUserimage = async(username,img) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'update `user_info`  set   `img`=?  where `username`=?',
+        [img,username], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+
+
 export const addtrainer = async(name, username, email, password,age,height,weight,expertise) => {
   try {
     const response = await new Promise((resolve, reject) => {

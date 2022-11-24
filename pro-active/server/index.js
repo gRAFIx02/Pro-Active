@@ -9,6 +9,7 @@ import { bypassCORS } from "./middlewares/Setup.js";
 import { exercise_info,exercise_all_info } from "./middlewares/packages/exercise_list.js";
 import  {nutrition_info,nutrition_all_info} from "./middlewares/packages/nutrition_list.js";
 import {trainerPlan ,Trainerworkoutplans,workoutPlanForUser,getthreeWorkPlan} from "./middlewares/packages/trainer.js"
+import {user_information,addimguser,deluser} from "./middlewares/packages/user.js"
 
 dotenv.config();
 const app = express();
@@ -42,6 +43,12 @@ app.get("/getthreeworkouts",bypassCORS,verifyToken,getthreeWorkPlan);
 app.get("/exercise_info1",bypassCORS,verifyToken1,exercise_info);
 app.get("/nutrition_info1",bypassCORS,verifyToken1,nutrition_info);
 app.get("/getthreeworkouts1",bypassCORS,verifyToken1,getthreeWorkPlan);
+
+app.get("/userinfo",bypassCORS,verifyToken,user_information);
+
+app.post("/userimage",bypassCORS,verifyToken,addimguser);
+
+app.post("/deleteuser",bypassCORS,verifyToken,deluser);
 
 
 
