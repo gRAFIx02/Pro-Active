@@ -55,7 +55,7 @@ const TrainerTP = () =>
                     <div className='textfield'>{plan.plan_name}</div>
                 </div>
                  );
-                })} );
+                })}
             
             </div>
             

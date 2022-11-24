@@ -1,0 +1,31 @@
+.row
+{
+    box-shadow: 1px 1px 1px 1px gray;
+    width: 1175px;
+    height: 30px;
+    margin-left: 220px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    border-radius: 3px;
+    justify-content: center;
+    font-family: Comic;
+    font-size: 15px;
+    padding-bottom: 5px;
+    background-color: #efefef;
+
+    input
+    {
+        font-family: Comic;
+        border: none;
+        outline: none;
+        box-shadow: 0px 1px 0px 0px gray;
+        border-radius: 1px;
+    }
+
+    .day
+    {
+        text-align: center;
+    }
+}

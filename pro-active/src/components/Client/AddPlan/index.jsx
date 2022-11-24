@@ -1,10 +1,9 @@
 import './index.scss'
 import workoutDefault from '../../../Assets/images/workout_default.png'
-
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Choice from '../Choice';
 
 const AddPlan = () =>
 {
@@ -72,10 +71,7 @@ const AddPlan = () =>
       
       const checkimg = (e) =>{
         setImg(e.target.value);
-
       }
-
-
 
     
     
@@ -85,16 +81,13 @@ const AddPlan = () =>
         <>
             <div className='outershell'>
                 <form onSubmit={addTrainerPlan}>
-                    <div className='container_plan_image' >
-                        <img src={workoutDefault} alt='Workout Default' className='plan_image' />
+                  
+                    <div className='container_plan_image'>
+                        <img src={workoutDefault} alt='plan_image' className='plan_image'/>
                     </div>
 
                     <div className='container_button_browse'>
                         <input type='file' onChange={checkimg}/>
-                    </div>
-
-                    <div className='container_button_upload'>
-                        <button className='plan_upload'>Upload</button>
                     </div>
 
                     <div className='plan_name'>
@@ -124,8 +117,25 @@ const AddPlan = () =>
                             <option value={'expert'}>Expert</option>
                         </select>
                     </div>
-                    <div className='container_button_upload'>
-                        <button className='plan_upload'>Add Plan</button>
+
+                    <div className='column_names'>
+                      <label>Day</label>
+                      <label>Workout 1</label>
+                      <label>Workout 2</label>
+                      <label>Workout 3</label>
+                      <label>Workout 4</label>
+                    </div>
+
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                    <Choice />
+                    <Choice />
+
+                    <div className='container_button_submit'>
+                        <button className='plan_upload'>Submit</button>
                     </div>
                 </form>
             </div>
