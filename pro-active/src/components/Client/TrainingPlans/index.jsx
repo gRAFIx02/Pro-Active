@@ -10,7 +10,7 @@ const TrainingPlans = () =>
 {
 
     const [data, setData] = useState([]);
-    //const exercise = useLocation().state;
+    // const exercise = useLocation().state;
    // console.log(exercise);
 
     useEffect(() => {

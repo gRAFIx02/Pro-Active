@@ -95,7 +95,7 @@ const Explore = () =>
                 state={{exercise}}    
                 to={{
                  pathname: "/user_homepage/exercise",
-                state: exercise // your data array of objects
+                 // your data array of objects
                }}>
                   <img src={exercise.img} alt='' className='explore_images' />
                    
