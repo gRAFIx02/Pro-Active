@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pro_active
+-- Host: localhost    Database: pro_active
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -238,7 +238,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi',NULL),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
+INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi','../image/default/default3.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,4 +310,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-25  3:28:16
+-- Dump completed on 2022-11-25  3:41:07
