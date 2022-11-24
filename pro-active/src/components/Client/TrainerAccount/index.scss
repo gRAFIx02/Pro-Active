@@ -1,5 +1,4 @@
-.logout
-{
+.logout {
     width: 75px;
     height: 30px;
     margin-left: 1400px;
@@ -7,8 +6,7 @@
     justify-content: center;
 }
 
-.logout_btn
-{
+.logout_btn {
     width: 75px;
     height: 30px;
     background-color: #002d3d;
@@ -25,13 +23,124 @@
     border-radius: 5px;
     transition: 0.4s;
 
-    &:hover
-    {
+    &:hover {
         transform: scale(1.2);
         border: 1px;
         background-color: white;
         color: #002d3d;
         box-shadow: 1px 1px 1px 1px gray;
         transition: 0.4s;
+    }
+}
+
+.backpage {
+    width: 1200px;
+    height: 900px;
+    margin-left: 240px;
+    margin-top: 115px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+
+    .profilepic {
+        box-shadow: 2px 1px 1px 2px #bfbfbf;
+        width: 480px;
+        height: 320px;
+        margin-left: 360px;
+        margin-bottom: 50px;
+
+        img {
+            width: 480px;
+            height: 320px;
+        }
+    }
+
+    .browse {
+        margin-bottom: 50px;
+    }
+
+    .info {
+        box-shadow: 1px 1px 1px 1px gray;
+        border-radius: 3px;
+        width: 460px;
+        height: 27px;
+        margin-left: 360px;
+        display: block;
+        align-items: baseline;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 5px;
+        margin-bottom: 20px;
+
+        label {
+            font-family: Comic;
+            font-size: 15px;
+        }
+
+        .textfield {
+            width: 300px;
+            height: 30px;
+            margin-left: 80px;
+            margin-top: -21px;
+        }
+
+        .edit {
+            width: 70px;
+            height: 30px;
+            margin-left: 390px;
+            margin-top: -32px;
+
+            button {
+                width: 50px;
+                height: 25px;
+                font-family: Comic;
+                font-size: 15px;
+                margin-left: 10px;
+                background-color: white;
+                border: none;
+                outline: none;
+                color: #1a1aff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.change {
+    width: 150px;
+    height: 30px;
+    margin-left: 650px;
+
+    button {
+        width: 150px;
+        height: 30px;
+        font-family: Comic;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #002d3d;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+    }
+}
+
+.delete {
+    width: 150px;
+    height: 30px;
+    margin-left: 900px;
+    margin-top: -30px;
+
+    button {
+        width: 150px;
+        height: 30px;
+        font-family: Comic;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #002d3d;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 3px;
     }
 }
