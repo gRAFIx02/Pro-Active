@@ -116,7 +116,7 @@ const Explore = () =>
 
         <div className='inner_div'>
           <div className='imagefield'>
-            <Link to='/trainer_homepage/wp'>
+            <Link to='/user_homepage/tp'>
               <img src={workout.img} alt='' className='explore_images' />
             </Link>
           </div>

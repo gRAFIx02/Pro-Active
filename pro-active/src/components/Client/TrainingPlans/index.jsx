@@ -50,7 +50,7 @@ const TrainingPlans = () =>
  
                 <div className='wp_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/user_homepage/wp'>
+                        <Link to='/user_homepage/tp'>
                             <img src={w.img} alt='' className='explore_images'/>
                         </Link>
                     </div>
