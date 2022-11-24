@@ -23,20 +23,23 @@
         width: 100px;
         height: 30px;
         margin-left: 550px;
-        margin-top: -70px;
+        margin-top: -20px;
     }
 
-    .container_button_upload
+    .container_button_submit
     {
-        margin-left: 550px;
-        margin-top: 20px;
-        width: 100px;
-        height: 30px;
-    }
-
-    .plan_upload 
-    {
+        margin-left: 800px;
+        margin-top: 75px;
         width: 65px;
+        height: 30px;
+
+        .plan_upload 
+        {
+            width: 65px;
+            height: 30px;
+            font-family: Comic;
+            font-size: 15px;
+        }
     }
 
     .plan_label
@@ -103,7 +106,7 @@
     .catNdif
     {
         margin-left: 550px;
-        margin-top: 50px;
+        margin-top: 75px;
         width: 610px;
         height: 30px;
         
@@ -120,5 +123,24 @@
             text-align: center;
             margin-right: 100px;
         }
+    }
+
+    .column_names
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        border-radius: 3px;
+        width: 1175px;
+        height: 30px;
+        margin-left: 220px;
+        margin-top: 75px;
+        font-family: Comic;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 140px;
+        background-color: #efefef;
     }
 }
