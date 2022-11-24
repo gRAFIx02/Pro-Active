@@ -257,12 +257,14 @@ const MyAccount = () => {
             <button>Edit</button>
           </div>
         </div>
+  );
+})}
 
         <div className='change'>
           <button>Change Password</button>
         </div>
         <div className='delete'>
-          <button>Delete Account</button>
+          <button onClick={deluser}>Delete Account</button>
         </div>
 
       </div>
