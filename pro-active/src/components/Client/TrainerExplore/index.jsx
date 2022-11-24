@@ -87,7 +87,13 @@ const TrainerExplore = () =>
           return (
                 <div className='inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/exercise'>
+                        <Link  state={{exercise}}    
+                to={{
+                 pathname: "/trainer_homepage/exercise",
+                 // your data array of objects
+               }}
+                        
+               >
                             <img src={exercise.img} alt='Exercise Default' className='explore_images' />
                         </Link>
                     </div>
