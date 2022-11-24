@@ -3,7 +3,6 @@ import workoutDefault from '../../../Assets/images/workout_default.png'
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Choice from '../Choice';
 
 const AddPlan = () =>
 {
@@ -126,13 +125,68 @@ const AddPlan = () =>
                       <label>Workout 4</label>
                     </div>
 
-                    <Choice />
-                    <Choice />
-                    <Choice />
-                    <Choice />
-                    <Choice />
-                    <Choice />
-                    <Choice />
+                    {/* row 1 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 2 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 3 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 4 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 5 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 6 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
+
+                    {/* row 7 */}
+                    <div className='row'> 
+                      <input type='number' placeholder='Choose day' className='day'/>
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                      <input type='text' placeholder='Choose exercise' />
+                    </div>
 
                     <div className='container_button_submit'>
                         <button className='plan_upload'>Submit</button>
