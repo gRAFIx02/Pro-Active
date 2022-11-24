@@ -8,6 +8,7 @@ import TrainerTips from '../TrainerTips'
 import TrainerAccount from '../TrainerAccount'
 import { useEffect } from 'react'
 import AddPlan from '../AddPlan'
+import ShowExercise from '../ShowExercise'
 
 const TrainerHomePage = () =>
 {
@@ -26,6 +27,7 @@ const TrainerHomePage = () =>
             <Routes>
                 <Route path='/' element={<TrainerHomepageLayout />}>
                     <Route index element={<TrainerExplore />} />
+                    <Route path='/exercise' element={<ShowExercise />} />
                     <Route path='/my_tp' element={<TrainerTP />} />
                     <Route path='/my_tp/add_plan' element={<AddPlan />} />
                     <Route path='/my_np' element={<TrainerNP />} />
