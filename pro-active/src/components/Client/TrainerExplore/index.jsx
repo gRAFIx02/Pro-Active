@@ -106,15 +106,20 @@ const TrainerExplore = () =>
             {/* Workout plans */}
             <h2 className='name_tag'>Workout Plans</h2>
             <div className='outer_div'>
-            {data2.map((n) => {
+            {data2.map((workout) => {
           return (
                 <div className='inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/tp'>
-                            <img src={n.img} alt='Workout Default' className='explore_images' />
+                    <Link
+                state={{workout}}    
+                to={{
+                 pathname: "/trainer_homepage/tp",
+                 // your data array of objects
+               }}>
+                            <img src={workout.img} alt='Workout Default' className='explore_images' />
                         </Link>
                     </div>
-                    <div className='textfield'>{n.plan_name}</div>
+                    <div className='textfield'>{workout.plan_name}</div>
                 </div>
                   );
                 })}
@@ -124,15 +129,20 @@ const TrainerExplore = () =>
             {/* Nutrition plans */}
             <h2 className='name_tag'>Nutrition Plans</h2>
             <div className='outer_div'>
-            {data1.map((w) => {
+            {data1.map((nutrition) => {
           return (
                 <div className='inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/np'>
-                            <img src={w.img} alt='Nutrition Default' className='explore_images' />
+                    <Link
+                state={{nutrition}}    
+                to={{
+                 pathname: "/trainer_homepage/np",
+                 // your data array of objects
+               }}>
+                            <img src={nutrition.img} alt='Nutrition Default' className='explore_images' />
                         </Link>
                     </div>
-                    <div className='textfield'>{w.plan_name}</div>
+                    <div className='textfield'>{nutrition.plan_name}</div>
                 </div>
                   );
                 })}

@@ -43,16 +43,21 @@ const TrainerTP = () =>
             </Link>
             <h2 className='t_name_tag'>My Workout Plans</h2>
             <div className='wp_outer_div'>
-            {data.map((plan) => {
+            {data.map((workout) => {
           return (
 
                 <div className='wp_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/tp'>
-                            <img src={plan.img} alt='' className='explore_images' />
+                    <Link
+                state={{workout}}    
+                to={{
+                 pathname: "/trainer_homepage/tp",
+                 // your data array of objects
+               }}>
+                            <img src={workout.img} alt='' className='explore_images' />
                         </Link>
                     </div>
-                    <div className='textfield'>{plan.plan_name}</div>
+                    <div className='textfield'>{workout.plan_name}</div>
                 </div>
                  );
                 })}

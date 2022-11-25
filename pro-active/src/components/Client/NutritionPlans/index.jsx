@@ -39,7 +39,12 @@ const NutritionPlan = () =>
 
                 <div className='np_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/user_homepage/np'>
+                    <Link 
+                state={{nutrition}}    
+                to={{
+                 pathname: "/user_homepage/np",
+                 // your data array of objects
+               }}>
                             <img src={nutrition.img} alt='' className='explore_images'/>
                         </Link>
                     </div>

@@ -45,16 +45,21 @@ const TrainingPlans = () =>
 
               
 
-            {data.map((w) => {
+            {data.map((workout) => {
           return (
  
                 <div className='wp_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/user_homepage/tp'>
-                            <img src={w.img} alt='' className='explore_images'/>
+                    <Link
+                state={{workout}}    
+                to={{
+                 pathname: "/user_homepage/tp",
+                 // your data array of objects
+               }}>
+                            <img src={workout.img} alt='' className='explore_images'/>
                         </Link>
                     </div>
-                    <div className='textfield'>{w.plan_name}</div>
+                    <div className='textfield'>{workout.plan_name}</div>
                 </div>
                 );
             })}

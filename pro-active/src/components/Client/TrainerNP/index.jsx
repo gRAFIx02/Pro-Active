@@ -43,15 +43,20 @@ const TrainerNP = () =>
             </Link>
             <h2 className='t_name_tag'>My Nutrition Plans</h2>
             <div className='np_outer_div'>
-            {data.map((plan) => {
+            {data.map((nutrition) => {
           return (
                 <div className='np_inner_div'>
                     <div className='imagefield'>
-                        <Link to='/trainer_homepage/np'>
-                            <img src={plan.img} alt='Nutrition_Plan' className='explore_images' />
+                    <Link
+                state={{nutrition}}    
+                to={{
+                 pathname: "/trainer_homepage/np",
+                 // your data array of objects
+               }}>
+                            <img src={nutrition.img} alt='Nutrition_Plan' className='explore_images' />
                         </Link>
                     </div>
-                    <div className='textfield'>{plan.plan_name}</div>
+                    <div className='textfield'>{nutrition.plan_name}</div>
                 </div>
                   );
                 })}

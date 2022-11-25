@@ -116,7 +116,12 @@ const Explore = () =>
 
         <div className='inner_div'>
           <div className='imagefield'>
-            <Link to='/user_homepage/tp'>
+            <Link   
+                state={{workout}}    
+                to={{
+                 pathname: "/user_homepage/tp",
+                 // your data array of objects
+               }}>
               <img src={workout.img} alt='' className='explore_images' />
             </Link>
           </div>
@@ -135,7 +140,12 @@ const Explore = () =>
           return (
             <div className='inner_div'>
               <div className='imagefield'>
-                <Link to='/user_homepage/np'>
+                <Link 
+                state={{nutrition}}    
+                to={{
+                 pathname: "/user_homepage/np",
+                 // your data array of objects
+               }}>
                   <img src={nutrition.img} alt='' className='explore_images' />
                 </Link>
               </div>
