@@ -98,7 +98,10 @@ const MyAccount = () => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
+
       })
+
+      window.location.reload(false);
 
     } catch (error) {
         console.log(error)

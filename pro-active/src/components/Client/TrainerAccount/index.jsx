@@ -81,6 +81,8 @@ const TrainerAccount = () => {
         },
       })
 
+      window.location.reload(false);
+
     } catch (error) {
         console.log(error)
       
@@ -102,7 +104,7 @@ const TrainerAccount = () => {
         },
 
       })
-      localStorage.removeItem("logged-in-user");
+      localStorage.removeItem("logged-in-trainer");
       navigate("/");
     } catch (error) {
       console.log(error.response.data);
@@ -145,7 +147,7 @@ const TrainerAccount = () => {
          
 
         <div className='info'>
-          <label>Name &emsp; &emsp; &emsp; &emsp;&nbsp;: </label>
+          <label>Name &emsp; &emsp; &emsp; &emsp;&nbsp; </label>
           <div className='textfield'>{user.name}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -160,7 +162,7 @@ const TrainerAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Username &emsp; &emsp; &ensp; : </label>
+          <label>Username &emsp; &emsp; &ensp;  </label>
           <div className='textfield'>{user.username}</div>
         </div>
         );
@@ -172,7 +174,7 @@ const TrainerAccount = () => {
           return (
 
         <div className='info'>
-          <label>Email &emsp; &emsp; &emsp; &emsp; &ensp;: </label>
+          <label>Email &emsp; &emsp; &emsp; &emsp; &ensp; </label>
           <div className='textfield'>{user.email}</div>
         </div>
 
@@ -184,7 +186,7 @@ const TrainerAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Age &emsp; &emsp; &emsp; &emsp; &emsp; : </label>
+          <label>Age &emsp; &emsp; &emsp; &emsp; &emsp;  </label>
           <div className='textfield'>{user.age}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -198,7 +200,7 @@ const TrainerAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Height &emsp; &emsp; &emsp; &emsp; : </label>
+          <label>Height &emsp; &emsp; &emsp; &emsp;  </label>
           <div className='textfield'>{user.height}</div>
         </div>
          );
@@ -210,7 +212,7 @@ const TrainerAccount = () => {
         {data.map((user) => {
           return (
         <div className='info'>
-          <label>Weight &emsp; &emsp; &emsp; &emsp;: </label>
+          <label>Weight &emsp; &emsp; &emsp; &emsp; </label>
           <div className='textfield'>{user.weight}</div>
           <div className='edit'>
             <button>Edit</button>
@@ -225,7 +227,7 @@ const TrainerAccount = () => {
         
         
         <div className='info'>
-          <label>Expertise &emsp; &emsp; &emsp; : </label>
+          <label>Expertise &emsp; &emsp; &emsp;  </label>
           {data.map((user) => {
           return (
           <div className='textfield'>{user.expertise}</div>

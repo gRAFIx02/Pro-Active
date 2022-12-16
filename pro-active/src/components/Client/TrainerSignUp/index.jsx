@@ -276,8 +276,8 @@ const TrainerSignUp = () =>
                         <div>
                             <label className='su_label'>Expertise &emsp;&emsp;:</label>
                             <select name='expert' id='expert' className='su_select' value={expertise} onChange={checkExpertise}>
-                                <option value={'weighlifting'}>Weighlifting</option>
-                                <option value={'calisthenics'}>Calisthenics</option>
+                                <option value={'Weight-lifting'}>Weight-lifting</option>
+                                <option value={'Calisthenics'}>Calisthenics</option>
                             </select>
                         </div>
                         <div className='tcreate_ac'>

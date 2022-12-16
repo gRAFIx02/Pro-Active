@@ -309,27 +309,27 @@ const SignUp = () =>
                         <div>
                             <label className='su_label'>Goal &emsp;&emsp;&emsp;&emsp;&nbsp;:</label>
                             <select name='goal' id='goal' className='su_select' value={focus} onChange={checkfocus}>
-                                <option value={'fat_burn'}>Fat Burn and Lose Weight</option>
-                                <option value={'maintain'}>Maintain Current Physique and Weight</option>
-                                <option value={'bulk'}>Increase Weight and Muscle Mass</option>   
+                                <option value={'Fat Burn and Lose Weight'}>Fat Burn and Lose Weight</option>
+                                <option value={'Maintain Current Physique and Weight'}>Maintain Current Physique and Weight</option>
+                                <option value={'Increase Weight and Muscle Mass'}>Increase Weight and Muscle Mass</option>   
                             </select>
                         </div>
                         <div>
                             <label className='su_label'>Workout Type :</label>
                             <select name='type' id='type' className='su_select' value={type} onChange={checktype}>
-                                <option value={'weightlifting'}>Weight-lifting</option>
-                                <option value={'calisthenics'}>Calisthenics</option>
+                                <option value={'Weight-lifting'}>Weight-lifting</option>
+                                <option value={'Calisthenics'}>Calisthenics</option>
                             </select>
                         </div>
                         <div>
                             <label className='su_label'>Current Level :</label>
                             <select name='level' id='level' className='su_select' value={current_level} onChange={checkcurrent_level}>
-                                <option value={'skinny'}>Skinny</option>
-                                <option value={'skinny_fat'}>Skinny Fat</option>
-                                <option value={'fat'}>Fat</option>
-                                <option value={'avergae'}>Average</option>
-                                <option value={'athletic'}>Athletic</option>
-                                <option value={'muscular'}>Muscular</option>
+                                <option value={'Skinny'}>Skinny</option>
+                                <option value={'Skinny Fat'}>Skinny Fat</option>
+                                <option value={'Fat'}>Fat</option>
+                                <option value={'Avergae'}>Average</option>
+                                <option value={'Athletic'}>Athletic</option>
+                                <option value={'Muscular'}>Muscular</option>
 
                             </select>
                         </div>

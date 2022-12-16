@@ -9,6 +9,7 @@ import { useEffect } from 'react'
 import ShowExercise from '../ShowExercise'
 import ShowTP from '../ShowTP'
 import ShowNP from '../ShowNP'
+import Tips from '../Tips'
 
 const UserHomePage = () =>
 {
@@ -33,6 +34,7 @@ const UserHomePage = () =>
                     <Route path='/tp' element={<ShowTP />} />
                     <Route path='/nutrition_plan' element={<NutritionPlan />} />
                     <Route path='/np' element={<ShowNP />} />
+                    <Route path='/tips' element={<Tips />} />
                     <Route path='/my_ac' element={<MyAccount />} />
                 </Route>
             </Routes>

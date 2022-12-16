@@ -17,7 +17,7 @@ const ShowTP = () =>
                     <div className='textfield'>{workout.plan_name}</div>
                 </div>
                 <div className='uploader'>
-                    <label>Uploaded By &emsp; &emsp;: </label>
+                    <label>Uploaded By &emsp;: </label>
                     <div className='textfield'>{workout.uploaded_by}</div>
                 </div>
                 <div className='difficulty'>
@@ -27,10 +27,6 @@ const ShowTP = () =>
                 <div className='catNdiff'>
                     <label>Category &emsp; &emsp; : </label>
                     <div className='textfield'>{workout.category}</div>
-                </div>
-                <div className='catNdiff'>
-                    <label>Type  &emsp; &emsp;  &emsp; &ensp; : </label>
-                    <div className='textfield'>{workout.type}</div>
                 </div>
                 <div className='description'>
                     <label>Description :</label>
