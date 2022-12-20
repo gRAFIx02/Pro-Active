@@ -362,6 +362,21 @@ export const getThreeWorkout = async(count) => {
   }
 }
 
+export const getWorkoutPlan = async(plan_name) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `workout` WHERE `plan_name`=? ', 
+        [plan_name],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export const deleteUser = async(usernameORemail) => {
   try {

@@ -5,7 +5,7 @@ dotenv.config();
 
 import nodemailer from "nodemailer"
 
-import {addUser,getUser,addtrainer,getTrainer} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -260,6 +260,7 @@ export const logout = async(req, res) => {
   });
 }
 
+
 export const logout1 = async(req, res) => {
   let msg;  
   if(req.user) {
@@ -273,4 +274,37 @@ export const logout1 = async(req, res) => {
     message: msg
   });
 }
+
+var plan="";
+
+export const plansperday = async(req, res, next) => {
+  const {plan_name} = req.body;
+  try {
+   
+     console.log(plan_name);
+     plan=plan_name;
+     
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+
+
+  next();
+}
+
+
+export const  getplansperday1 = async(req,res) => {
+    
+
+  await getWorkoutPlan(plan)
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
+
+
 

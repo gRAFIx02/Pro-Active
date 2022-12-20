@@ -1,4 +1,4 @@
-import {getThreeExercise,getAllExercise} from "../../controllers/users.js"
+import {getThreeExercise,getAllExercise, getWorkoutPlan} from "../../controllers/users.js"
 
 export const  exercise_info = async(req,res) => {
     await getThreeExercise()
@@ -21,3 +21,4 @@ export const  exercise_all_info = async(req,res) => {
         return res.status(400).send({error: error});
     })
 }
+

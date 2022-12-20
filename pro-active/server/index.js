@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import db from "./config/Database.js";
 
-import { register, login, verifyToken, logout,trainer_register,trainerlogin, verifyToken1,logout1} from "./middlewares/auth/auth.js";
+import { register, login, verifyToken, logout,trainer_register,trainerlogin, verifyToken1,logout1,plansperday,getplansperday1} from "./middlewares/auth/auth.js";
 import { bypassCORS } from "./middlewares/Setup.js";
 import { exercise_info,exercise_all_info } from "./middlewares/packages/exercise_list.js";
 import  {nutrition_info,nutrition_all_info} from "./middlewares/packages/nutrition_list.js";
@@ -61,5 +61,10 @@ app.get("/trainerinfo",bypassCORS,verifyToken1,trainer_information);
 app.post("/trainerimage",bypassCORS,verifyToken1,addimgtrainer);
 
 app.post("/deletetrainer",bypassCORS,verifyToken1,deltrainer);
+
+app.post("/plansperday",bypassCORS,verifyToken,plansperday);
+
+app.get("/getplansperday",bypassCORS,verifyToken,getplansperday1);
+
 
 app.listen(5000, ()=> console.log('Server running at port 5000'));

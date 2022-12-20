@@ -1,4 +1,4 @@
-import {getUser,addUserimage,deleteUser} from "../../controllers/users.js"
+import {getUser,addUserimage,deleteUser,getWorkoutPlan} from "../../controllers/users.js"
 
 
 export const  user_information = async(req,res) => {
@@ -76,3 +76,5 @@ export const addimguser = async(req, res, next) => {
     
   }
 
+
+  
