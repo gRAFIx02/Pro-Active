@@ -378,6 +378,24 @@ export const getWorkoutPlan = async(plan_name) => {
   }
 }
 
+export const getNutritionPlan = async(plan_name) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `nutrition` WHERE `plan_name`=? ', 
+        [plan_name],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
+
 export const deleteUser = async(usernameORemail) => {
   try {
     const user = await new Promise((resolve, reject) => {

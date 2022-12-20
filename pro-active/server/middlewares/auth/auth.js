@@ -5,7 +5,7 @@ dotenv.config();
 
 import nodemailer from "nodemailer"
 
-import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan,getNutritionPlan} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -307,4 +307,33 @@ export const  getplansperday1 = async(req,res) => {
 }
 
 
+export const nutritionsperday = async(req, res, next) => {
+  const {plan_name} = req.body;
+  try {
+   
+     console.log(plan_name);
+     plan=plan_name;
+     
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+
+
+  next();
+}
+
+
+
+export const  getnutritionperday1 = async(req,res) => {
+    
+
+  await getNutritionPlan(plan)
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
 
