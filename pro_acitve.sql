@@ -122,7 +122,7 @@ CREATE TABLE `nutrition` (
 
 LOCK TABLES `nutrition` WRITE;
 /*!40000 ALTER TABLE `nutrition` DISABLE KEYS */;
-INSERT INTO `nutrition` VALUES ('A',1,'1','2','4','er'),('A',2,'12','ewr','erw','rr'),('A',3,'erre','er','erwr','rr'),('A',4,'r','r','rr','rr'),('A',5,'r','rrrrrrrrr','rr','r'),('A',6,'r','r','r','r'),('A',7,'r','r','r','rrr');
+INSERT INTO `nutrition` VALUES ('A',1,'1','2','4','er'),('A',2,'12','ewr','erw','rr'),('A',3,'erre','er','erwr','rr'),('A',4,'r','r','rr','rr'),('A',5,'r','rrrrrrrrr','rr','r'),('A',6,'r','r','r','r'),('A',7,'r','r','r','rrr'),('hero',1,'ddd','ddd','dddd','ee'),('hero',2,'d','ddddd','ddddd','ee'),('hero',3,'dd','ddd','dd','eee'),('hero',4,'d','dddd','d','eee'),('hero',5,'d','ddd','d','eeeeeee'),('hero',6,'d','ddd','d','eeeee'),('hero',7,'d','ddd','dddd','ee');
 /*!40000 ALTER TABLE `nutrition` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,9 @@ CREATE TABLE `nutrition_info` (
   `uploaded_by` varchar(200) DEFAULT NULL,
   `description` longtext,
   `img` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`plan_name`)
+  PRIMARY KEY (`plan_name`),
+  KEY `fk_nutri_idx` (`uploaded_by`),
+  CONSTRAINT `fk_nutri` FOREIGN KEY (`uploaded_by`) REFERENCES `trainer_info` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -148,7 +150,7 @@ CREATE TABLE `nutrition_info` (
 
 LOCK TABLES `nutrition_info` WRITE;
 /*!40000 ALTER TABLE `nutrition_info` DISABLE KEYS */;
-INSERT INTO `nutrition_info` VALUES ('A','Tam37','dsdffsd','../image/nutrition/pescatarian.jpg'),('High Protein Diet','Tam37','Great for building muscle.','../image/nutrition/high_protein.jpg'),('Ketogenic Diet','Tam37','Great diet if you want to lose fat in a short amount of time.','../image/nutrition/keto.jpg'),('Paleo Diet','Tam37','For balanced diet.','../image/nutrition/paleo.jpg'),('Pescatarian Diet','Tam37','For people who only eat fish as a source of animal protein.','../image/nutrition/pescatarian.jpg'),('Vegan Diet','Tam37','For those who don\'t like flavour.','../image/nutrition/vegan.jpg');
+INSERT INTO `nutrition_info` VALUES ('A','Tam37','dsdffsd','../image/nutrition/pescatarian.jpg'),('hero','Tah','fggffgdf','../image/nutrition/high_protein.jpg'),('High Protein Diet','Tam37','Great for building muscle.','../image/nutrition/high_protein.jpg'),('Ketogenic Diet','Tam37','Great diet if you want to lose fat in a short amount of time.','../image/nutrition/keto.jpg'),('Paleo Diet','Tam37','For balanced diet.','../image/nutrition/paleo.jpg'),('Pescatarian Diet','Tam37','For people who only eat fish as a source of animal protein.','../image/nutrition/pescatarian.jpg'),('Vegan Diet','Tam37','For those who don\'t like flavour.','../image/nutrition/vegan.jpg');
 /*!40000 ALTER TABLE `nutrition_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -205,7 +207,7 @@ CREATE TABLE `trainer_info` (
 
 LOCK TABLES `trainer_info` WRITE;
 /*!40000 ALTER TABLE `trainer_info` DISABLE KEYS */;
-INSERT INTO `trainer_info` VALUES ('grafix','$2b$10$DRIBKx6RtqirJkwoIf0VyuEW5Cx39Mqs7B1EEwc5PMsSxR.C1PjTG','grafix235@gmail.com',21,165,60,'calisthenics','Protyoy Rafi','../image/default/default3.jpg'),('ProtyRaf','$2b$10$CrZOQ71bmDoGUjDzGtcnmOUfqQl..hQ2tP1GkS2bJbVtD0/TyGN/G','prottoyrafi@iut-dhaka.edu',22,180,70,'calisthenics','Prottoy Rafi',NULL),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s',NULL),('taf','$2b$10$aAEkVGeDxJ/8n9T305YyfunBpY3xiQIibes4T0zGvF5duMV4rpgJ.','23@gmail.com',22,22,222,'calisthenics','ere',NULL),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm',NULL),('Tam1','$2b$10$LvL96eFifH.PpjTMnDkdTeNonRzNhlorydcR8BLX2C26kr1iPNCEy','1233@gmail.com',22,222,222,'calisthenics','Tam1',NULL),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman',NULL);
+INSERT INTO `trainer_info` VALUES ('grafix','$2b$10$DRIBKx6RtqirJkwoIf0VyuEW5Cx39Mqs7B1EEwc5PMsSxR.C1PjTG','grafix235@gmail.com',21,165,60,'calisthenics','Protyoy Rafi','../image/default/default3.jpg'),('ProtyRaf','$2b$10$CrZOQ71bmDoGUjDzGtcnmOUfqQl..hQ2tP1GkS2bJbVtD0/TyGN/G','prottoyrafi@iut-dhaka.edu',22,180,70,'calisthenics','Prottoy Rafi',NULL),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s',NULL),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm','../image/default/default1.jpg'),('Tam1','$2b$10$LvL96eFifH.PpjTMnDkdTeNonRzNhlorydcR8BLX2C26kr1iPNCEy','1233@gmail.com',22,222,222,'calisthenics','Tam1',NULL),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman','../image/default/default3.jpg');
 /*!40000 ALTER TABLE `trainer_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -240,7 +242,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi',NULL),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
+INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -261,7 +263,7 @@ CREATE TABLE `workout` (
   `status` varchar(10) DEFAULT 'Undone',
   PRIMARY KEY (`day`,`plan_name`),
   KEY `trainer_workout_fk_idx` (`plan_name`),
-  CONSTRAINT `trainer_workout_fk` FOREIGN KEY (`plan_name`) REFERENCES `workout_info` (`plan_name`)
+  CONSTRAINT `trainer_workout_fk` FOREIGN KEY (`plan_name`) REFERENCES `workout_info` (`plan_name`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -271,7 +273,7 @@ CREATE TABLE `workout` (
 
 LOCK TABLES `workout` WRITE;
 /*!40000 ALTER TABLE `workout` DISABLE KEYS */;
-INSERT INTO `workout` VALUES ('My Plan',1,'A','B','C','d','Undone'),('My Plan',2,'E','F','G','H','Undone'),('My Plan',3,'I','J','K','L','Undone'),('My Plan',4,'M','N','O','P','Undone'),('My Plan',5,'Q','R','S','T','Undone'),('My Plan',6,'U','V','W','X','Undone'),('My Plan',7,'Y','Z','A+','A-','Undone');
+INSERT INTO `workout` VALUES ('My Plan',1,'A','B','C','d','Undone'),('Test1',1,'ggg','dddd','ddd','aa','Undone'),('My Plan',2,'E','F','G','H','Undone'),('Test1',2,'ggggg','dd','ddd','ddddd','Undone'),('My Plan',3,'I','J','K','L','Undone'),('Test1',3,'a','dd','dd','ddd','Undone'),('My Plan',4,'M','N','O','P','Undone'),('Test1',4,'v','ddd','dd','dddd','Undone'),('My Plan',5,'Q','R','S','T','Undone'),('Test1',5,'cccc','dd','d','dddd','Undone'),('My Plan',6,'U','V','W','X','Undone'),('Test1',6,'c','dddd','d','gg','Undone'),('My Plan',7,'Y','Z','A+','A-','Undone'),('Test1',7,'c','dd','d','xxxxxxx','Undone');
 /*!40000 ALTER TABLE `workout` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,7 +291,9 @@ CREATE TABLE `workout_info` (
   `difficulty` varchar(45) DEFAULT NULL,
   `description` longtext,
   `img` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`plan_name`)
+  PRIMARY KEY (`plan_name`),
+  KEY `fk_uploaded_plan_idx` (`uploaded_by`),
+  CONSTRAINT `fk_uploaded_plan` FOREIGN KEY (`uploaded_by`) REFERENCES `trainer_info` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -299,7 +303,7 @@ CREATE TABLE `workout_info` (
 
 LOCK TABLES `workout_info` WRITE;
 /*!40000 ALTER TABLE `workout_info` DISABLE KEYS */;
-INSERT INTO `workout_info` VALUES ('cc','Tam37','calisthenics','intermediate','ccccccccccccccccccccccccccc','../image/trainer_plan/download (5).png'),('dasdasd','Tam37','weightlifting','intermediate','ddddd','../image/trainer_plan/download (5).png'),('fdsfdfsd','Tam37','calisthenics','intermediate','dfsdfdssd','../image/trainer_plan/download (4).png'),('ggg','Tam37','calisthenics','intermediate','gg','../image/trainer_plan/download.png'),('My Plan','Tam37','calisthenics','advanced','It is my plan.','../image/trainer_plan/download (5).png'),('new','Tah','calisthenics','intermediate','ghfghfghf','../image/trainer_plan/download (3).png'),('PlanA','Tah','calisthenics','intermediate','sdsdsaasd','../image/trainer_plan/download (1).jpg'),('PlanB','Tah','calisthenics','intermediate','adfdsfdfs','../image/trainer_plan/download (1).png'),('PlanC','Tah','calisthenics','expert','dsdddfdsdf','../image/trainer_plan/download (2).png');
+INSERT INTO `workout_info` VALUES ('cc','Tam37','calisthenics','intermediate','ccccccccccccccccccccccccccc','../image/trainer_plan/download (5).png'),('dasdasd','Tam37','weightlifting','intermediate','ddddd','../image/trainer_plan/download (5).png'),('fdsfdfsd','Tam37','calisthenics','intermediate','dfsdfdssd','../image/trainer_plan/download (4).png'),('ggg','Tam37','calisthenics','intermediate','gg','../image/trainer_plan/download.png'),('My Plan','Tam37','calisthenics','advanced','It is my plan.','../image/trainer_plan/download (5).png'),('new','Tah','calisthenics','intermediate','ghfghfghf','../image/trainer_plan/download (3).png'),('PlanA','Tah','calisthenics','intermediate','sdsdsaasd','../image/trainer_plan/download (1).jpg'),('PlanB','Tah','calisthenics','intermediate','adfdsfdfs','../image/trainer_plan/download (1).png'),('PlanC','Tah','calisthenics','expert','dsdddfdsdf','../image/trainer_plan/download (2).png'),('Test1','Tah','calisthenics','intermediate','123','../image/trainer_plan/download.jpg');
 /*!40000 ALTER TABLE `workout_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -312,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-25  9:06:26
+-- Dump completed on 2022-12-21 21:33:27
