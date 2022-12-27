@@ -264,7 +264,7 @@ export const logout = async(req, res) => {
 export const logout1 = async(req, res) => {
   let msg;  
   if(req.user) {
-    msg = "User logged out successfully.";
+    msg = "Trainer logged out successfully.";
     res.clearCookie('access_token');
   } else {
     msg = "No user logged in";

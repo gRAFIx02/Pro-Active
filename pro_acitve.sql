@@ -195,7 +195,7 @@ CREATE TABLE `trainer_info` (
   `weight` double DEFAULT NULL,
   `expertise` varchar(20) DEFAULT NULL,
   `name` varchar(45) DEFAULT NULL,
-  `img` varchar(45) DEFAULT NULL,
+  `img` varchar(45) DEFAULT '../image/default/default2.jpg',
   PRIMARY KEY (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -225,11 +225,11 @@ CREATE TABLE `user_info` (
   `age` int DEFAULT NULL,
   `height` double DEFAULT NULL,
   `weight` double DEFAULT NULL,
-  `focus` varchar(20) DEFAULT NULL,
+  `focus` varchar(255) DEFAULT NULL,
   `type` varchar(15) DEFAULT NULL,
   `current_level` varchar(15) DEFAULT NULL,
   `name` varchar(45) DEFAULT NULL,
-  `img` varchar(200) DEFAULT NULL,
+  `img` varchar(200) DEFAULT '../image/default/default2.jpg',
   PRIMARY KEY (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   UNIQUE KEY `username_UNIQUE` (`username`)
@@ -242,7 +242,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
+INSERT INTO `user_info` VALUES ('Gr','$2b$10$QfcIi0egwtJMx68PU2hnQemTggG0GPCInSLFjZjwQ8r9FdCwh3g1m','rafi190041235@gmail.com',222,222,22,'Maintain Current Physique and Weight','Calisthenics','Athletic','Gr','../image/default/default2.jpg'),('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi','../image/default/default2.jpg'),('Tah','$2b$10$jxTpe7VsU1qsisH78G/yh.O/W.H.dV8ksAT12HK09cx8VP1isgc2C','tahmidrahman@iut-dhaka.edu',22,22,22,'Maintain Current Physique and Weight','Calisthenics','Skinny Fat','Tammy','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -316,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-21 21:33:27
+-- Dump completed on 2022-12-27 14:32:51
