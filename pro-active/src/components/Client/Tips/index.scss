@@ -1,14 +1,30 @@
-// .tip_back
-// {
-//     height: auto;
-//     margin-left: 180px;
-//     padding-left: 20px;
-//     display: block;
+.tip_back
+{
+    width: 1270px;
+    height: auto;
+    margin-top: 105px;
+    margin-left: 220px;
+    display: block;
 
-//     .tips
-//     {
-//         width: 500px;
-//         height: 50px;
-//         box-shadow: 1px 1px 1px 1px black;
-//     }
-// }
+    .tips_label
+    {
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        font-family: Comic;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .tip_box
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        padding: 5px;
+        width: 1200px;
+        height: auto;
+        font-size: 15px;
+        font-family: Comic;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+}

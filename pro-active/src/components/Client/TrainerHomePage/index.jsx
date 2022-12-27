@@ -12,6 +12,7 @@ import ShowExercise from '../ShowExercise'
 import AddNutrition from '../AddNutrition'
 import ShowTP from '../ShowTP'
 import ShowNP from '../ShowNP'
+import AddTips from '../AddTips'
 
 const TrainerHomePage = () =>
 {
@@ -38,6 +39,7 @@ const TrainerHomePage = () =>
                     <Route path='/np' element={<ShowNP />} />
                     <Route path='/my_np/add_plan' element={<AddNutrition />} />
                     <Route path='/my_tips' element={<TrainerTips />} />
+                    <Route path='/my_tips/add_tips' element={<AddTips />} />
                     <Route path='/my_ac' element={<TrainerAccount />} />
                 </Route>
             </Routes>

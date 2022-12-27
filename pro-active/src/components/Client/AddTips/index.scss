@@ -1,0 +1,55 @@
+.out
+{
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 5px;
+    height: 650px;
+    width: 500px;
+    margin-top: 110px;
+    margin-left: 650px;
+
+    .write_tip
+    {
+        height: 30px;
+        width: 400px;
+        padding: 5px 20px;
+        font-size: 15px;
+        font-family: Comic;
+    }
+
+    .desc_tip
+    {
+        width: 460px;
+        margin-left: 20px;
+        height: 500px;
+        margin-bottom: 40px;
+
+        textarea
+        {
+            height: 500px;
+            width: 450px;
+            outline: none;
+        }
+    }
+
+    .tip_submit
+    {
+        width: 100px;
+        height: 30px;
+        margin-left: 185px;
+
+        button
+        {
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+            font-family: Comic;
+            font-weight: bold;
+            color: white;
+            background-color: #002d3d;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}

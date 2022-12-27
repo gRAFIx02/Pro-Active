@@ -1,0 +1,52 @@
+.t_tip_back
+{
+    width: 1270px;
+    height: auto;
+    margin-top: 105px;
+    margin-left: 220px;
+    display: block;
+
+    .t_tips_label
+    {
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+        font-family: Comic;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .add_tips
+    {
+        background-color: #002d3d;
+        margin-bottom: 30px;
+        color: white;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        font-family: Comic;
+        font-weight: bold;
+        transition: 0.4s;
+
+        &:hover
+        {
+            transform: scale(1.07);
+            background-color: white;
+            color: #002d3d;
+            box-shadow: 1px 1px 1px 1px gray;
+            transition: 0.4s;
+        }
+    }
+
+    .t_tip_box
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        padding: 5px;
+        width: 1200px;
+        height: auto;
+        font-size: 15px;
+        font-family: Comic;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+}
