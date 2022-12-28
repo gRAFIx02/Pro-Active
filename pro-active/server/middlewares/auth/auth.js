@@ -5,7 +5,7 @@ dotenv.config();
 
 import nodemailer from "nodemailer"
 
-import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan,getNutritionPlan} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan,getNutritionPlan,addtrainertips} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -337,3 +337,18 @@ export const  getnutritionperday1 = async(req,res) => {
   })
 }
 
+export const addtips = async(req, res, next) => {
+  const {desc} = req.body;
+  try {
+   
+     console.log(desc);
+     const response = await addtrainertips(desc,req.user.username);
+     return res.json({message: response});
+     
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+
+
+}

@@ -121,7 +121,7 @@ const AddPlan = () =>
               'Content-Type': 'application/x-www-form-urlencoded',
             },
           })
-
+       
           navigate("/trainer_homepage/my_tp");
 
         } catch (error) {

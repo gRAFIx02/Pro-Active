@@ -427,3 +427,41 @@ export const deleteTrainer = async(usernameORemail) => {
     throw error;
   }
 }
+
+
+
+export const addtrainertips = async(desc,username) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `trainertips` (`tips`, `username`) VALUES (?, ?)',
+        [desc,username], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+export const getTrainerTips = async(username) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM `trainertips` WHERE `username`=? ',
+      [username],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}

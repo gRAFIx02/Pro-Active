@@ -1,5 +1,5 @@
 import {addTrainerplan,getTrainerWorkout,getAllTrainerWorkot,getThreeWorkout,addTrainerplan1,addNutritionplan1,addNutritionplan,getTrainerNutrition,
-  getTrainer,addTrainerimage,deleteTrainer
+  getTrainer,addTrainerimage,deleteTrainer, getTrainerTips
 } from "../../controllers/users.js"
 
 
@@ -222,6 +222,18 @@ export const deltrainer = async(req, res, next) => {
 
 
 
+export const  getTrainertips = async(req,res) => {
+    
+
+
+  await getTrainerTips(req.user.username)
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+  })
+}
 
 
 
