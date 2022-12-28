@@ -465,3 +465,23 @@ export const getTrainerTips = async(username) => {
     throw error;
   }
 }
+
+
+export const addTrainerPlan1 = async(trainername,trainerplanname,username,type) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `addtrainersplan` (`trainername`, `username`,`trainerplanname`,`type`) VALUES (?, ?, ? , ?)',
+        [trainername,username,trainerplanname,type], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}

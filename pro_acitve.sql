@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `addtrainersplan`
+--
+
+DROP TABLE IF EXISTS `addtrainersplan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `addtrainersplan` (
+  `trainername` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `trainerplanname` varchar(45) NOT NULL,
+  PRIMARY KEY (`trainerplanname`,`username`),
+  KEY `fk_trainer_n_idx` (`trainername`),
+  CONSTRAINT `fk_trainer_n` FOREIGN KEY (`trainername`) REFERENCES `trainer_info` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `addtrainersplan`
+--
+
+LOCK TABLES `addtrainersplan` WRITE;
+/*!40000 ALTER TABLE `addtrainersplan` DISABLE KEYS */;
+INSERT INTO `addtrainersplan` VALUES ('Tam37','Tam37','training','My Plan'),('Tah','Tam37','training','Test1'),('Tam37','Tam37','training','tt');
+/*!40000 ALTER TABLE `addtrainersplan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `exercise_info`
 --
 
@@ -341,4 +369,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-28 23:29:58
+-- Dump completed on 2022-12-29  1:05:36
