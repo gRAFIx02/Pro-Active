@@ -96,7 +96,7 @@ const SignUp = () =>
 
 
         setName(e.target.value);
-        console.log(e.target.value);
+      
         if(name.length===0) {
           setBoolname(false);
           setvalidName('Please enter a name')
@@ -270,27 +270,6 @@ const SignUp = () =>
           else
           setDisabled(true);
          
-          console.log("name" +namebool );
-          
-          console.log("user"+userbool );
-
-          console.log("emaail"+emailbool);
-
-          console.log("age"+agebool);
-          console.log("he"+heightbool);
-          
-          console.log("we"+weighttbool);
-          
-          console.log("f"+focusbool);
-
-          console.log("work"+workoutbool);
-          
-          console.log("cur"+curlevbool);
-          
-          
-          
-
-          
         
       }
 

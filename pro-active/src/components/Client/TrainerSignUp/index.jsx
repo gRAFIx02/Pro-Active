@@ -32,6 +32,16 @@ const TrainerSignUp = () =>
  
     const [msg, setMsg] = useState("");
     const navigate = useNavigate();
+    const [disabled, setDisabled] = useState(true);
+    
+    const [namebool, setBoolname] = useState(false);
+    const [userbool, setBooluser] = useState(false);
+    const [emailbool, setBoolemail] = useState(false);
+    const [passbool, setBoolpass] = useState(false);
+    const [agebool, setBoolage] = useState(false);
+    const [heightbool, setBoolheight] = useState(false);
+    const [weighttbool, setBoolweight] = useState(false);
+    
 
     const addTrainer = async (e) => {
         e.preventDefault();
@@ -70,8 +80,10 @@ const TrainerSignUp = () =>
         setName(e.target.value);
         if(name.length===0) {
           setvalidName('Please enter a name')
+          setBoolname(false);
         } else {
           setvalidName('');
+          setBoolname(true);
           return true;
         }
       }
@@ -79,8 +91,10 @@ const TrainerSignUp = () =>
       const checkusername = (e) =>{
         setuserName(e.target.value);
         if(username.length===0) {
+          setBooluser(false);
           setvaliduserName('Please enter a username')
         } else {
+          setBooluser(true);
           setvaliduserName('');
           return true;
         }
@@ -90,8 +104,10 @@ const TrainerSignUp = () =>
       const checkEmail = (e) =>{
         setEmail(e.target.value);
         if(regex.test(email)===false) {
+          setBoolemail(false);
           setvalidMail('Please enter valid Email')
         } else {
+          setBoolemail(true);
           setvalidMail('');
           return true;
         }
@@ -108,19 +124,28 @@ const TrainerSignUp = () =>
         } else{
           setMsg('Passwords do not match!');
         }
-        if(passRegex.test(password)){
-          setvalidPass('Please enter a valid password!');
-        } else{
-          setvalidPass('');
-          return true;
-        }
+
+        const temp=e.target.value;
+        console.log(temp.length);
+       if(temp.length<6){
+        
+         setvalidPass('Password must be atleast 7 characters long');
+ 
+       } else if(temp.length>6){
+         setvalidPass('');
+         setBoolpass(true);
+         
+       }
+       
       }
 
       const checkConfirmPass = (e) => {
         setConfPassword(e.target.value);
         if(e.target.value===password) {
           setMsg('');
+          setBoolpass(true);
         } else {
+          setBoolpass(false);
           setMsg('Passwords do not match');
           return true;
         }
@@ -129,8 +154,10 @@ const TrainerSignUp = () =>
       const checkage = (e) =>{
         setAge(e.target.value);
         if(age.length===0) {
-          setvalidName('Please enter your age')
+          setBoolage(false);
+          setvalidAge('Please enter your age')
         } else {
+          setBoolage(true);
           setvalidAge('');
           return true;
         }
@@ -139,8 +166,10 @@ const TrainerSignUp = () =>
       const checkheight = (e) =>{
         setHeight(e.target.value);
         if(height.length===0) {
+          setBoolheight(false);
           setvalidHeight('Please enter your height')
         } else {
+          setBoolheight(true);
           setvalidHeight('');
           return true;
         }
@@ -149,9 +178,12 @@ const TrainerSignUp = () =>
 
       const checkweight = (e) =>{
         setWeight(e.target.value);
-        if(weight.length===0) {
+        if(weight.length===0) 
+          {
+            setBoolweight(false);
           setvalidWeight('Please enter your weight')
         } else {
+          setBoolweight(true);
           setvalidWeight('');
           return true;
         }
@@ -159,12 +191,14 @@ const TrainerSignUp = () =>
 
       const checkExpertise =(e) =>{
         setExpertise(e.target.value);
-        if(expertise.length===0){
-          setvalidExpertise('Please select your expertise')
-         }else{
-            setvalidExpertise('');
-            return true; 
-         }
+         
+        if(namebool===true&&userbool===true&&passbool===true&&emailbool===true&&agebool===true
+          &&heightbool===true&&weighttbool===true)
+        {
+                 setDisabled(false);
+        }
+        else
+        setDisabled(true);
 
       }
 
@@ -281,7 +315,7 @@ const TrainerSignUp = () =>
                             </select>
                         </div>
                         <div className='tcreate_ac'>
-                                <button className='tcreate_btn'>Create Account</button>
+                                <button className='tcreate_btn' disabled={disabled}>Create Account</button>
                           </div>
                         <div className='link'>
                             <Link to='/trainer_login'>
