@@ -20,11 +20,11 @@ const SignUp = () =>
     const [password, setPassword] = useState("");
     const [validPass, setvalidPass] = useState('');
     const [confPassword, setConfPassword] = useState("");
-    const [age, setAge] = useState("");
+    const [age, setAge] = useState(null);
     const [validAge, setvalidAge] = useState('');
     const [height, setHeight] = useState("");
     const [validHeight, setvalidHeight] = useState('');
-    const [weight, setWeight] = useState("");
+    const [weight, setWeight] = useState(0);
     const [validWeight, setvalidWeight] = useState('');
     const [focus, setFocus] = useState("");
     const [validFocus, setvalidFocus] = useState('');
@@ -39,7 +39,22 @@ const SignUp = () =>
     
 
     const [msg, setMsg] = useState("");
+
+    const [namebool, setBoolname] = useState(false);
+    const [userbool, setBooluser] = useState(false);
+    const [emailbool, setBoolemail] = useState(false);
+    const [passbool, setBoolpass] = useState(false);
+    const [agebool, setBoolage] = useState(false);
+    const [heightbool, setBoolheight] = useState(false);
+    const [weighttbool, setBoolweight] = useState(false);
+    const [focusbool, setBoolfocus] = useState(false);
+    const [workoutbool, setBoolworkout] = useState(false);
+    const [curlevbool, setBoolcurlevel] = useState(false);
+
+
     const navigate = useNavigate();
+
+    const [disabled, setDisabled] = useState(true);
 
 
     const addUser = async (e) => {
@@ -78,34 +93,52 @@ const SignUp = () =>
       };
 
     const checkname = (e) =>{
+
+
         setName(e.target.value);
+        console.log(e.target.value);
         if(name.length===0) {
+          setBoolname(false);
           setvalidName('Please enter a name')
         } else {
           setvalidName('');
+          setBoolname(true);
           return true;
         }
+
+
+
       }
 
       const checkusername = (e) =>{
         setuserName(e.target.value);
-        if(username.length===0) {
+        if(e.target.value.length===0) {
+          setBooluser(false);
           setvaliduserName('Please enter a username')
         } else {
           setvaliduserName('');
+          setBooluser(true);
           return true;
         }
+
+
+        
       }
 
       const regex = /\S+@\S+\.\S+/;
       const checkEmail = (e) =>{
+
+      
         setEmail(e.target.value);
         if(regex.test(email)===false) {
+          setBoolemail(false);
           setvalidMail('Please enter valid Email')
         } else {
           setvalidMail('');
+          setBoolemail(true);
           return true;
         }
+
       }
 
       const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -113,93 +146,156 @@ const SignUp = () =>
 
       const checkPass = (e) =>{
         e.preventDefault();
+
+       
+
         setPassword(e.target.value);
+
+        
+
         if(e.target.value === confPassword){
           setMsg("");
-        } else{
+        } 
+        else{
           setMsg('Passwords do not match!');
         }
-        if(passRegex.test(password)){
-          setvalidPass('Please enter a valid password!');
-        } else{
+
+        const temp=e.target.value;
+         console.log(temp.length);
+        if(temp.length<6){
+         
+          setvalidPass('Password must be atleast 7 characters long');
+  
+        } else if(temp.length>6){
           setvalidPass('');
-          return true;
+          setBoolpass(true);
+          
         }
       }
 
       const checkConfirmPass = (e) => {
         setConfPassword(e.target.value);
-        if(e.target.value===password) {
+        if(e.target.value===password) { 
+          
+          setBoolpass(true);
           setMsg('');
         } else {
+          setBoolpass(false);
           setMsg('Passwords do not match');
-          return true;
+         
         }
+
       }
 
       const checkage = (e) =>{
+
+       
+        const temp=e.target.value;
         setAge(e.target.value);
-        if(age.length===0) {
-          setvalidName('Please enter your age')
-        } else {
+        
+        if(temp.length==0) {
+          setBoolage(false);
+          console.log("false"+agebool);
+          setvalidAge('Please enter your age')
+        } else  if(temp.length>0){
+          setBoolage(true);
           setvalidAge('');
-          return true;
         }
+
+       
+
+        
       }
 
       const checkheight = (e) =>{
         setHeight(e.target.value);
         if(height.length===0) {
+          setBoolheight(false);
           setvalidHeight('Please enter your height')
         } else {
+          setBoolheight(true);
           setvalidHeight('');
           return true;
         }
+
       }
 
 
       const checkweight = (e) =>{
+       
         setWeight(e.target.value);
-        if(weight.length===0) {
+        console.log(weight);
+        if(e.target.value==="0") {
+         
+          setBoolweight(false);
           setvalidWeight('Please enter your weight')
         } else {
+          setBoolweight(true);
           setvalidWeight('');
           return true;
         }
+
+        
       }
 
       
       const checkfocus = (e) =>{
         setFocus(e.target.value);
-        if(focus.length===0) {
-          setvalidFocus('Select Goal')
-        } else {
-          setvalidFocus('');
-          return true;
-        }
+          setBoolfocus(true);
+
+          
+        
       }
 
       
       const checktype = (e) =>{
         setType(e.target.value);
-        if(type.length===0) {
-          setvalidType('Select workout type')
-        } else {
-          setvalidType('');
-          return true;
-        }
+          setBoolworkout(true);
+
+        
       }
 
       
       const checkcurrent_level = (e) =>{
         setCurrent_level(e.target.value);
-        if(current_level.length===0) {
-          setvalidCurrent_level('Select Current level')
-        } else {
-          setvalidCurrent_level('');
-          return true;
-        }
+        
+
+        setBoolcurlevel(true);
+
+          if(namebool===true&&userbool===true&&passbool===true&&emailbool===true&&agebool===true
+            &&heightbool===true&&weighttbool===true&&focusbool===true&&workoutbool===true)
+          {
+                   setDisabled(false);
+          }
+          else
+          setDisabled(true);
+         
+          console.log("name" +namebool );
+          
+          console.log("user"+userbool );
+
+          console.log("emaail"+emailbool);
+
+          console.log("age"+agebool);
+          console.log("he"+heightbool);
+          
+          console.log("we"+weighttbool);
+          
+          console.log("f"+focusbool);
+
+          console.log("work"+workoutbool);
+          
+          console.log("cur"+curlevbool);
+          
+          
+          
+
+          
+        
       }
+
+
+      
     
   
     return(
@@ -257,7 +353,7 @@ const SignUp = () =>
                             onChange={checkPass}
 
                              />
-                             <p className='message'>{validPass}</p>
+                              <p className='message'>{validPass}</p>
                         </div>
                         <div>
                             <label className='s_label'>&ensp;Re-type &emsp;&emsp; : </label>
@@ -301,7 +397,6 @@ const SignUp = () =>
                               placeholder='Weight (in kg)' 
                               className='su_input'
                               
-                             value={weight}
                              onChange={checkweight}
 
                                />
@@ -334,7 +429,7 @@ const SignUp = () =>
                             </select>
                         </div>
                         <div className='create_ac'>
-                                <button className='create_btn'>Create Account</button>
+                                <button className='create_btn' disabled={disabled} >Create Account</button>
                             
                         </div>
                         <div className='link'>

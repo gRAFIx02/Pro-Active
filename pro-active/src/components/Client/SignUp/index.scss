@@ -65,13 +65,37 @@
     font-weight: bold;
 }
 
-.create_btn
+.create_btn:disabled
 {
     width: 150px;
     height: 35px;
     border-radius: 5px;
     background-color: #002d3d;
     color: azure;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+}
+
+.create_btn:disabled
+{
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #002d3d;
+    color: azure;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+}.create_btn:enabled
+{
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #3d0000;
+    color: rgb(240, 248, 255);
     font-size: 17px;
     font-style: italic;
     font-weight: bold;
