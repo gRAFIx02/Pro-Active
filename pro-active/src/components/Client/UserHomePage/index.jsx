@@ -10,6 +10,8 @@ import ShowExercise from '../ShowExercise'
 import ShowTP from '../ShowTP'
 import ShowNP from '../ShowNP'
 import Tips from '../Tips'
+import MyPlan from '../MyPlan'
+import AddCustomPlan from '../AddCustomPlan'
 
 const UserHomePage = () =>
 {
@@ -36,6 +38,8 @@ const UserHomePage = () =>
                     <Route path='/np' element={<ShowNP />} />
                     <Route path='/tips' element={<Tips />} />
                     <Route path='/my_ac' element={<MyAccount />} />
+                    <Route path='/my_plans' element={<MyPlan />} />
+                    <Route path='/my_plans/create_custom_plan' element={<AddCustomPlan />} />
                 </Route>
             </Routes>
         </>
