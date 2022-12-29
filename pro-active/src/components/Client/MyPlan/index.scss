@@ -1,0 +1,103 @@
+.plan_out 
+{
+    width: 1300px;
+    height: auto;
+    margin-left: 220px;
+    margin-top: 105px;
+
+    .my_label 
+    {
+        height: 30px;
+        width: 100px;
+        font-size: 18px;
+        font-family: Comic;
+        font-weight: bold;
+        margin-bottom: 28px;
+    }
+
+    .custom_plan_btn 
+    {
+        width: 150px;
+        height: auto;
+
+        button 
+        {
+            font-family: Comic;
+            font-weight: bold;
+            color: white;
+            background-color: #002d3d;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            transition: 0.2s;
+
+            &:hover 
+            {
+                transform: scale(1.07);
+                transition: 0.2s;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .current_plan 
+    {
+        height: 30px;
+        width: 200px;
+        font-size: 15px;
+        font-family: Comic;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .current_tp 
+    {
+        box-shadow: 2px 2px 2px 2px #bfbfbf;
+        display: block;
+        height: 270px;
+        width: 320px;
+        margin-bottom: 50px;
+        transition: 0.3s;
+
+        .current_plan_imagefield 
+        {
+            box-shadow: 0px 1px 0px 0px gray;
+            display: block;
+            width: 320px;
+            height: 225px;
+        }
+
+        .current_plan_textfield
+        {
+            display: block;
+            width: 320px;
+            height: 45px;
+            text-align: center;
+            font-family: Comic;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        .current_plan_image
+        {
+            width: 320px;
+            height: 225px;
+        }
+
+        &:hover 
+        {
+            transform: scale(1.07);
+            transition: 0.3s;
+            margin-left: 10px;
+        }
+    }
+
+    .custom_plan
+    {
+        height: auto;
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: auto auto auto;
+    }
+}
