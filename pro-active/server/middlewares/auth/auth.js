@@ -358,14 +358,16 @@ export const addplan1 = async(req, res, next) => {
   const {trainername,trainerplanname} = req.body;
   try {
    
+   
+     
      console.log(trainername);
      console.log(trainerplanname);
      const response = await addTrainerPlan1(trainername,trainerplanname,req.user.username,"training");
      return res.json({message: response});
      
-  } catch (error) {
-    console.log(error);
-    res.status(400).json({error: error});
+  } catch (error1) {
+    console.log(error1);
+    res.status(400).json({error: error1});
   }
 
 

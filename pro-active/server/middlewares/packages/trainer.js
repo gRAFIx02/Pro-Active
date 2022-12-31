@@ -1,5 +1,5 @@
 import {addTrainerplan,getTrainerWorkout,getAllTrainerWorkot,getThreeWorkout,addTrainerplan1,addNutritionplan1,addNutritionplan,getTrainerNutrition,
-  getTrainer,addTrainerimage,deleteTrainer, getTrainerTips
+  getTrainer,addTrainerimage,deleteTrainer, getTrainerTips, getTrainernametogetTips, gTips
 } from "../../controllers/users.js"
 
 
@@ -237,4 +237,29 @@ export const  getTrainertips = async(req,res) => {
 
 
 
+
+
+
+
+export const  Exctips = async(req,res) => {
+    
+
+  const user=getTrainernametogetTips("Tah","Training");
+
+
+  console.log(user);
+  
+  await gTips("Tam37")
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+
+
+
+    })
+
+  
+}
 

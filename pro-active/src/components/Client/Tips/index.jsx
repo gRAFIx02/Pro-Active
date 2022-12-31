@@ -1,7 +1,20 @@
 import './index.scss'
 
+import React, { useEffect,useState } from "react";
+import axios from "axios";
+
+
+
+
+
 const Tips = () =>
 {
+
+  
+    
+   
+  
+
     return(
         <>
             <div className='tip_back'>
