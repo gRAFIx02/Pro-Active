@@ -139,9 +139,7 @@
     {
         width: 100px;
         height: 30px;
-        margin-top: -120px;
         margin-left: 580px;
-        margin-bottom: 100px;
 
         button
         {
@@ -164,5 +162,13 @@
                 transition: 0.3s;
             }
         }
+    }
+
+    .message
+    {
+        font-family: Comic;
+        font-size: 15px;
+        margin-left: 530px;
+        color: red;
     }
 }
