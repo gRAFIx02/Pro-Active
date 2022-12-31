@@ -372,3 +372,24 @@ export const addplan1 = async(req, res, next) => {
 
 
 }
+
+
+export const addplan2 = async(req, res, next) => {
+  const {trainername,trainerplanname} = req.body;
+  try {
+   
+   
+     
+     console.log(trainername);
+     console.log(trainerplanname);
+     const response = await addTrainerPlan1(trainername,trainerplanname,req.user.username,"n");
+     return res.json({message: response});
+     
+  } catch (error1) {
+    console.log(error1);
+    res.status(400).json({error: error1});
+  }
+
+
+}
+
