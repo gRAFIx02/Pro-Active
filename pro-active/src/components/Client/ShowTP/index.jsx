@@ -116,8 +116,6 @@ const [msg, setMsg] = useState("");
         <>
               
             <div className='tp_back'>
-            <p className='message'>{msg}</p>
-
                 <div className='imagefield'>
                
                     <img src={workout.img} alt='exercise' />
@@ -143,6 +141,13 @@ const [msg, setMsg] = useState("");
                     <div>{workout.description}</div>
                 </div>
                 <button className='hide_btn' onLoad={plan_per_day()} >Hide this plan</button>
+
+                <div className='add_plan_btn'>
+                  <button onClick={addthisplan}>Add Plan</button>
+                </div>
+
+                <p className='message'>{msg}</p>  
+
                 <div className='column_names'>
                       <label>Day</label>
                       <label>Workout 1</label>
@@ -151,10 +156,7 @@ const [msg, setMsg] = useState("");
                       <label>Workout 4</label>
                 </div>
 
-                {/* row 1 */}
-            <div className='add_plan_btn'>
-              <button onClick={addthisplan}>Add Plan</button>
-            </div>    
+                {/* row 1 */}  
 
                 {data.map((workout) => {
           return (
