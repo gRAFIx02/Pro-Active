@@ -2,7 +2,6 @@ import './index.scss'
 import { useLocation } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
-import { faSpaghettiMonsterFlying } from '@fortawesome/free-solid-svg-icons';
 
 
 const ShowTP = () =>

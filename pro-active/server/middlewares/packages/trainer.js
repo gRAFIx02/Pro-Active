@@ -263,3 +263,26 @@ export const  Exctips = async(req,res) => {
   
 }
 
+
+export const  Exctips1 = async(req,res) => {
+    
+
+ 
+
+
+  
+  
+  await gTips(req.user.username,"n")
+  .then((data) => {
+       console.log(data);
+      return res.json({data: data});
+  }).catch((error) => {
+      return res.status(400).send({error: error});
+
+
+
+    })
+
+  
+}
+

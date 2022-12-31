@@ -524,3 +524,4 @@ export const gTips = async(username,type) => {
     throw error;
   }
 }
+
