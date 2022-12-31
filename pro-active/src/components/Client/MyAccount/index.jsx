@@ -1,6 +1,6 @@
 import './index.scss'
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 const MyAccount = () => {
@@ -264,7 +264,9 @@ const MyAccount = () => {
 })}
 
         <div className='change'>
-          <button>Change Password</button>
+          <Link to='/user_homepage/my_ac/change_password'>
+            <button>Change Password</button>
+          </Link>
         </div>
         <div className='delete'>
           <button onClick={deluser}>Delete Account</button>

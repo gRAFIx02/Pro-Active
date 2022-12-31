@@ -12,6 +12,7 @@ import ShowNP from '../ShowNP'
 import Tips from '../Tips'
 import MyPlan from '../MyPlan'
 import AddCustomPlan from '../AddCustomPlan'
+import ChangePass from '../ChangePass'
 
 const UserHomePage = () =>
 {
@@ -40,6 +41,7 @@ const UserHomePage = () =>
                     <Route path='/my_ac' element={<MyAccount />} />
                     <Route path='/my_plans' element={<MyPlan />} />
                     <Route path='/my_plans/create_custom_plan' element={<AddCustomPlan />} />
+                    <Route path='/my_ac/change_password' element={<ChangePass />} />
                 </Route>
             </Routes>
         </>
