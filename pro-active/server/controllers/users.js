@@ -485,3 +485,42 @@ export const addTrainerPlan1 = async(trainername,trainerplanname,username,type) 
     throw error;
   }
 }
+
+
+
+export const getTrainernametogetTips = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT `trainername` FROM `addtrainersplan` WHERE `username`=?  and `type`=?',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+
+  } catch (error) {
+    console.log("EROR IN ME")
+    throw error;
+  }
+}
+
+
+
+
+export const gTips = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM pro_active.trainertips where username in (select trainername from pro_active.addtrainersplan where `username`=? and `type` =?)',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}

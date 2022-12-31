@@ -100,7 +100,7 @@ const [msg, setMsg] = useState("");
       
       } catch (error) {
         console.log(error.response.data);
-        checkmsg("This plan is already added");
+        checkmsg("User is already enrolled in a training plan");
       }
 
       
