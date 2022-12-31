@@ -9,7 +9,7 @@ import { bypassCORS } from "./middlewares/Setup.js";
 import { exercise_info,exercise_all_info } from "./middlewares/packages/exercise_list.js";
 import  {nutrition_info,nutrition_all_info} from "./middlewares/packages/nutrition_list.js";
 import {trainerPlan ,Trainerworkoutplans,workoutPlanForUser,getthreeWorkPlan,NutritionPlan,Trainernutritionplans,
-    addimgtrainer,deltrainer,trainer_information,getTrainertips, Exctips, Exctips1
+    addimgtrainer,deltrainer,trainer_information,getTrainertips, Exctips, Exctips1, getTrainerExer, getTrainerNutri
 } from "./middlewares/packages/trainer.js"
 import {user_information,addimguser,deluser} from "./middlewares/packages/user.js"
 import { addtrainer } from "./controllers/users.js";
@@ -82,5 +82,11 @@ app.post("/addthisplan1",bypassCORS,verifyToken,addplan2);
 app.get("/gettipsforuser",bypassCORS,verifyToken,Exctips);
 
 app.get("/gettipsforuser1",bypassCORS,verifyToken,  Exctips1);
+
+app.get("/selected_exercise_info",bypassCORS,verifyToken, getTrainerExer);
+
+app.get("/selected_nutrition_info",bypassCORS,verifyToken,  getTrainerNutri);
+
+
 
 app.listen(5000, ()=> console.log('Server running at port 5000'));

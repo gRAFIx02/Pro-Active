@@ -525,3 +525,34 @@ export const gTips = async(username,type) => {
   }
 }
 
+export const gnutri = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM pro_active.nutrition_info where plan_name in (select trainerplanname from pro_active.addtrainersplan where `username`=? and `type` =?)',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const gexer = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM pro_active.workout_info where plan_name in (select trainerplanname from pro_active.addtrainersplan where `username`=? and `type` =?)',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
