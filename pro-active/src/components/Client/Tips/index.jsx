@@ -11,6 +11,33 @@ const Tips = () =>
 {
 
   
+           
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async() => {
+      await axios({
+        method: 'get',
+        url: "http://localhost:5000/gettipsforuser",
+        withCredentials: 'true',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        responseType: 'json',
+      }).then((response) => {
+        setData(response.data.data);
+        console.log(response.data.data);
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
+    fetchData();
+
+
+
+}, []);
+  
+
     
    
   
@@ -19,7 +46,13 @@ const Tips = () =>
         <>
             <div className='tip_back'>
                 <div className='tips_label'>Tips</div>
-                <div className='tip_box'>Show tips here - Trainer Name</div>
+
+                {data.map((trainer) => {
+          return (
+
+                <div className='tip_box'>{trainer.username}    {trainer.tips}</div>
+                );
+            })}
             </div>
         </>
     )

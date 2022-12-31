@@ -77,6 +77,6 @@ app.post("/addtips",bypassCORS,verifyToken1,addtips);
 
 app.post("/addthisplan",bypassCORS,verifyToken,addplan1);
 
-app.get("/gettipsforuser",Exctips);
+app.get("/gettipsforuser",bypassCORS,verifyToken,Exctips);
 
 app.listen(5000, ()=> console.log('Server running at port 5000'));

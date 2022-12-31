@@ -244,12 +244,12 @@ export const  getTrainertips = async(req,res) => {
 export const  Exctips = async(req,res) => {
     
 
-  const user=getTrainernametogetTips("Tah","Training");
+ 
 
 
-  console.log(user);
   
-  await gTips("Tam37")
+  
+  await gTips(req.user.username,"training")
   .then((data) => {
        console.log(data);
       return res.json({data: data});
