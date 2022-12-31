@@ -142,11 +142,7 @@ const [msg, setMsg] = useState("");
                     <label>Description :</label>
                     <div>{workout.description}</div>
                 </div>
-                <div className='change'>
-          <button onLoad={plan_per_day()  } >Hide this plan</button>
-          
-         
-        </div>
+                <button className='hide_btn' onLoad={plan_per_day()} >Hide this plan</button>
                 <div className='column_names'>
                       <label>Day</label>
                       <label>Workout 1</label>
@@ -156,8 +152,9 @@ const [msg, setMsg] = useState("");
                 </div>
 
                 {/* row 1 */}
-                
-            <button onClick={addthisplan}   >Add Plan</button>
+            <div className='add_plan_btn'>
+              <button onClick={addthisplan}>Add Plan</button>
+            </div>    
 
                 {data.map((workout) => {
           return (

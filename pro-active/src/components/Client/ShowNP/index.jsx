@@ -81,14 +81,19 @@ const ShowNP = () =>
                     <div className='textfield'>{nutrition.plan_name}</div>
                 </div>
                 <div className='uploader'>
-                    <label>Uploaded By &emsp; &emsp;: </label>
+                    <label>Uploaded By &emsp;: </label>
                     <div className='textfield'>{nutrition.uploaded_by}</div>
                 </div>
                 <div className='description'>
                     <label>Description :</label>
                     <div>{nutrition.description}</div>
                 </div>
-                <button onLoad={plan_per_day()} >Hide this button</button>
+                <button className='hide_btn' onLoad={plan_per_day()} >Hide this button</button>
+
+                <div className='add_plan_btn'>
+                  <button>Add Plan</button>
+                </div>
+
                 <div className='column_names'>
                       <label>Day</label>
                       <label>Breakfast</label>
