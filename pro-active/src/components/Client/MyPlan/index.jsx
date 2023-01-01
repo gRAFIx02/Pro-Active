@@ -64,6 +64,35 @@ const [data1, setData1] = useState([]);
 
 
 
+const [data3, setData3] = useState([]);
+
+
+
+useEffect(() => {
+  const fetchData3 = async() => {
+    await axios({
+      method: 'get',
+      url: "http://localhost:5000/MycustomPlans",
+      withCredentials: 'true',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      responseType: 'json',
+    }).then((response) => {
+      setData3(response.data.data);
+      console.log(response.data.data);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+  fetchData3();
+ 
+  
+
+
+}, []);
+
+
 
     return(
         <>
@@ -155,13 +184,28 @@ const [data1, setData1] = useState([]);
             </div>
 
             <div className='custom_plan'>
+            {data3.map((workout) => {
+          return (
                 <div className='current_tp'>
+                  
                     <div className='current_plan_imagefield'>
-                        <img src='' alt='My Plans' className='current_plan_image'/>
+
+                    <Link
+                state={{workout}}    
+                to={{
+                 pathname: "",
+                 // your data array of objects
+               }}>
+                            
+
+                        <img src={workout.img} alt='My Plans' className='current_plan_image'/>
+
+                        </Link>
                     </div>
-                    <div className='current_plan_textfield'>Plan name</div>
+                    <div className='current_plan_textfield'>{workout.plan_name}</div>
                 </div>
-            </div>
+               );
+              })} </div>
         </div>
         </>
     )
