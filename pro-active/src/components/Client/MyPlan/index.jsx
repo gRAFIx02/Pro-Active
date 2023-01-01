@@ -85,7 +85,7 @@ const [data1, setData1] = useState([]);
 
             <div>
 
-            {data.map((exercise) => {
+            {data.map((workout) => {
           return (
             
          
@@ -94,10 +94,18 @@ const [data1, setData1] = useState([]);
     
           
                 <div className='current_plan_imagefield'>
+                <Link   
+                state={{workout}}    
+                to={{
+                 pathname: "/user_homepage/tp",
+                 // your data array of objects
+               }}>
                
-                    <img src={exercise.img} alt='Current workout plan' className='current_plan_image'/>               
+                    <img src={workout.img} alt='Current workout plan' className='current_plan_image'/>  
+
+                      </Link>             
                 </div>
-                <div className='current_plan_textfield'>{exercise.plan_name}</div>
+                <div className='current_plan_textfield'>{workout.plan_name}</div>
 
           </div>
 
@@ -120,7 +128,17 @@ const [data1, setData1] = useState([]);
            
             <div className='current_tp'>
                 <div className='current_plan_imagefield'>
+
+                <Link 
+                state={{nutrition}}    
+                to={{
+                 pathname: "/user_homepage/np",
+                 // your data array of objects
+               }}>
+
                     <img src={nutrition.img} alt='Current nutrition plan' className='current_plan_image'/>
+
+                    </Link>
                 </div>
                 <div className='current_plan_textfield'>{nutrition.plan_name}</div>
             </div>

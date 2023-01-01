@@ -317,7 +317,7 @@ export const  getTrainerExer = async(req,res) => {
 
   
   
-  await gexer("Tah","training")
+  await gexer(req.user.username,"training")
   .then((data) => {
        console.log(data);
       return res.json({data: data});
