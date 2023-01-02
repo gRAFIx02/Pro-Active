@@ -66,7 +66,7 @@ const TrainerLogIn = () =>
                                 <img src={TrainerLogo} alt='TrainerLogo' className='t_user' />
                             </div>
                         </div>
-                        <p className="has-text-centered help is-danger">{msg}</p>
+                        <p className="has-text-centered">{msg}</p>
                         <div className='username'>
                             <h3 className='label_user'>Email or username:</h3>
                             <FontAwesomeIcon icon={faEnvelope} color="black" className='in_icon' />
@@ -95,10 +95,7 @@ const TrainerLogIn = () =>
                         
                         </div>
                         <p>
-                            &emsp; &emsp;
-                            <Link to='/forgot_password'>
-                                Forgot password?
-                            </Link> &emsp; &emsp; &emsp; &emsp; &emsp;
+                            <br></br>
                             <Link to='/signupoption'>
                                 New here? Register now!
                             </Link>
