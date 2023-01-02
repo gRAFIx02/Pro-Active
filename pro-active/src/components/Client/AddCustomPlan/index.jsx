@@ -399,16 +399,16 @@ const AddCustomPlan = () =>
                     <div className='catNdif'>
                         <label className='cat_label'>Category: &ensp;</label>
                         <select name='cat' id='cat' className='cat_select' onChange={ checkCategory}>
-                            <option value={'weightlifting'}>Weight-lifting</option>
-                            <option value={'calisthenics'}>Calisthenics</option>
+                            <option value={'Weight-lifting'}>Weight-lifting</option>
+                            <option value={'Calisthenics'}>Calisthenics</option>
                         </select>
 
                         <label className='cat_label'>Difficulty: &ensp;</label>
                         <select name='dif' id='dif' className='cat_select' onChange={checkDifficulty}>
-                            <option value={'beginner'}>Beginner</option>
-                            <option value={'intermediate'}>Intermediate</option>
-                            <option value={'advanced'}>Advanced</option>
-                            <option value={'expert'}>Expert</option>
+                            <option value={'Beginner'}>Beginner</option>
+                            <option value={'Intermediate'}>Intermediate</option>
+                            <option value={'Advanced'}>Advanced</option>
+                            <option value={'Expert'}>Expert</option>
                         </select>
                     </div>
 

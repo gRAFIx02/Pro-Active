@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pro_active
+-- Host: localhost    Database: pro_active
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -39,7 +39,7 @@ CREATE TABLE `addtrainersplan` (
 
 LOCK TABLES `addtrainersplan` WRITE;
 /*!40000 ALTER TABLE `addtrainersplan` DISABLE KEYS */;
-INSERT INTO `addtrainersplan` VALUES ('Tam37','Tam37','training','My Plan'),('Tah','Tam37','training','Test1'),('Tam37','Tam37','training','tt');
+INSERT INTO `addtrainersplan` VALUES ('Tam37','grafix','training','cc'),('Tam37','grafix','training','My Plan'),('Tam37','Tam37','training','My Plan'),('Tah','Tam37','training','Test1'),('Tam37','Tam37','training','tt');
 /*!40000 ALTER TABLE `addtrainersplan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,6 +97,7 @@ CREATE TABLE `my_plan` (
 
 LOCK TABLES `my_plan` WRITE;
 /*!40000 ALTER TABLE `my_plan` DISABLE KEYS */;
+INSERT INTO `my_plan` VALUES ('My Plan 1',1,'Push up','Push up','Push up','','Undone'),('My Plan 1',2,'Push up','Push up','','Push up','Undone'),('My Plan 1',3,'Push up','Push up','Push up','Push up','Undone'),('My Plan 1',4,'Push up','Push up','','','Undone'),('My Plan 1',5,'Push up','Push up','Push up','Push up','Undone'),('My Plan 1',6,'Push up','Push up','','','Undone'),('My Plan 1',7,'Push up','Push up','Push up','Push up','Undone'),('My plan 2',1,'','','','','Undone'),('My plan 2',2,'','','','','Undone'),('My plan 2',3,'','','','','Undone'),('My plan 2',4,'','','','','Undone'),('My plan 2',5,'','','','','Undone'),('My plan 2',6,'','','','','Undone'),('My plan 2',7,'','','','','Undone');
 /*!40000 ALTER TABLE `my_plan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,6 +113,8 @@ CREATE TABLE `my_plan_info` (
   `username` varchar(200) DEFAULT NULL,
   `category` varchar(45) DEFAULT NULL,
   `img` varchar(200) DEFAULT NULL,
+  `difficulty` varchar(45) DEFAULT NULL,
+  `desc` longtext,
   PRIMARY KEY (`plan_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -122,6 +125,7 @@ CREATE TABLE `my_plan_info` (
 
 LOCK TABLES `my_plan_info` WRITE;
 /*!40000 ALTER TABLE `my_plan_info` DISABLE KEYS */;
+INSERT INTO `my_plan_info` VALUES ('A','grafix','','../image/trainer_plan/default3.jpg','','A'),('My Plan 1','grafix','calisthenics','../image/trainer_plan/default3.jpg','intermediate','Testing my plan'),('My plan 2','grafix','','../image/trainer_plan/default3.jpg','','A');
 /*!40000 ALTER TABLE `my_plan_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +239,7 @@ CREATE TABLE `trainer_info` (
 
 LOCK TABLES `trainer_info` WRITE;
 /*!40000 ALTER TABLE `trainer_info` DISABLE KEYS */;
-INSERT INTO `trainer_info` VALUES ('grafix','$2b$10$DRIBKx6RtqirJkwoIf0VyuEW5Cx39Mqs7B1EEwc5PMsSxR.C1PjTG','grafix235@gmail.com',21,165,60,'calisthenics','Protyoy Rafi','../image/default/default3.jpg'),('ProtyRaf','$2b$10$CrZOQ71bmDoGUjDzGtcnmOUfqQl..hQ2tP1GkS2bJbVtD0/TyGN/G','prottoyrafi@iut-dhaka.edu',22,180,70,'calisthenics','Prottoy Rafi',NULL),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s',NULL),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm','../image/default/default1.jpg'),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman','../image/default/default3.jpg');
+INSERT INTO `trainer_info` VALUES ('grafix','$2b$10$vvlTIj8CYA.EcY7ecQIh/OSi/J93J2mFqoNhO9EGyStp0sroo.Sr.','grafix235@gmail.com',22,165,60,'Calisthenics','Protyoy Rafi','../image/default/default2.jpg'),('ssdsd','$2b$10$AL9yakR6//WEVGXMry1dlu9q1tXvnV3.q4KvyeXtsdyWGAuGbdHl.','s@GMAIL.COM',1,1,-3,'','s',NULL),('Tah','$2b$10$lX4fZlhmslt8HIswnScrIO6aUCMw51vqnqrgTpyRqU9ANMk9HuRUm','tahmidrahman@iut-dhaka.edu',22,22,222,'calisthenics','Tahm','../image/default/default1.jpg'),('Tam37','$2b$10$njJO2ZhMia.XJGjVsc5rs.dyS3EZDPVR3QYSq2.SBrAjC4KEHjomu','190041237tr@gmail.com',22,200,70,'weighlifting','Tahmid Rahman','../image/default/default3.jpg');
 /*!40000 ALTER TABLE `trainer_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,7 +299,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('Gr','$2b$10$QfcIi0egwtJMx68PU2hnQemTggG0GPCInSLFjZjwQ8r9FdCwh3g1m','rafi190041235@gmail.com',222,222,22,'Maintain Current Physique and Weight','Calisthenics','Athletic','Gr','../image/default/default2.jpg'),('grafix','$2b$10$3P/lvN7n5daEtonBflJR3e0GvwBR5J5PfnsRiZDSZsfHfPUtxsOK2','grafix235@gmail.com',21,165,60,'','calisthenics','skinny_fat','Protyoy Rafi','../image/default/default2.jpg'),('Tah','$2b$10$hoLSikJPOCYjatZ48yhrdObz1qr.UCYG7gTSY0n59icoKvxX3pcCy','tahmidrahman@iut-dhaka.edu',22,172,69,'Fat Burn and Lose Weight','Calisthenics','Muscular','Tah','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
+INSERT INTO `user_info` VALUES ('Gr','$2b$10$QfcIi0egwtJMx68PU2hnQemTggG0GPCInSLFjZjwQ8r9FdCwh3g1m','rafi190041235@gmail.com',222,222,22,'Maintain Current Physique and Weight','Calisthenics','Athletic','Gr','../image/default/default2.jpg'),('grafix','$2b$10$wdSOnOiX3YBP7asp80fyx.Jx.KmXZwrQThc11JSDtx7xSZThwKk5i','grafix235@gmail.com',21,165,60,'Fat Burn and Lose Weight','Calisthenics','Skinny Fat','Protyoy Rafi','../image/default/default3.jpg'),('Tah','$2b$10$hoLSikJPOCYjatZ48yhrdObz1qr.UCYG7gTSY0n59icoKvxX3pcCy','tahmidrahman@iut-dhaka.edu',22,172,69,'Fat Burn and Lose Weight','Calisthenics','Muscular','Tah','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -369,4 +373,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-29  1:05:36
+-- Dump completed on 2023-01-02 23:11:11
