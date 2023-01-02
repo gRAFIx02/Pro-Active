@@ -149,9 +149,6 @@ const TrainerAccount = () => {
         <div className='info'>
           <label>Name &emsp; &emsp; &emsp; &emsp;&nbsp; </label>
           <div className='textfield'>{user.name}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
 
 );
@@ -188,9 +185,6 @@ const TrainerAccount = () => {
         <div className='info'>
           <label>Age &emsp; &emsp; &emsp; &emsp; &emsp;  </label>
           <div className='textfield'>{user.age}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
         );
       })}
@@ -214,9 +208,6 @@ const TrainerAccount = () => {
         <div className='info'>
           <label>Weight &emsp; &emsp; &emsp; &emsp; </label>
           <div className='textfield'>{user.weight}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
          );
         })}
@@ -237,7 +228,7 @@ const TrainerAccount = () => {
         </div>
         </div>
      
-      <div className='change'>
+      <div className='t_change'>
         <Link to='/trainer_homepage/my_ac/change_password'>
             <button>Change Password</button>
         </Link>

@@ -143,9 +143,6 @@ const MyAccount = () => {
           <label>Name &emsp; &emsp; &emsp;: </label>
           
           <div className='textfield'>{user.name}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
          );
         })}
@@ -180,9 +177,6 @@ const MyAccount = () => {
         <div className='info'>
           <label>Age &emsp; &emsp; &emsp; &nbsp; : </label>
           <div className='textfield'>{user.age}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
          );
         })}
@@ -208,9 +202,6 @@ const MyAccount = () => {
         <div className='info'>
           <label>Weight &emsp; &emsp; &nbsp;: </label>
           <div className='textfield'>{user.weight}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
         );
       })}
@@ -223,9 +214,6 @@ const MyAccount = () => {
         <div className='info'>
           <label>Focus &emsp; &emsp; &ensp; &nbsp;: </label>
           <div className='textfield'>{user.focus}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
         );
       })}
@@ -238,9 +226,6 @@ const MyAccount = () => {
         <div className='info'>
           <label>Type &emsp; &emsp; &emsp; &nbsp;: </label>
           <div className='textfield'>{user.type}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
         );
       })}
@@ -254,9 +239,6 @@ const MyAccount = () => {
         <div className='info'>
           <label>Current Level : </label>
           <div className='textfield'>{user.current_level}</div>
-          <div className='edit'>
-            <button>Edit</button>
-          </div>
         </div>
   );
 })}

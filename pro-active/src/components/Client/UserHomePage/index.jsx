@@ -14,6 +14,7 @@ import MyPlan from '../MyPlan'
 import AddCustomPlan from '../AddCustomPlan'
 import ShowCustom from '../ShowCustom'
 import ChangePass from '../ChangePass'
+import SearchResult from '../SearchResult'
 
 const UserHomePage = () =>
 {
@@ -33,6 +34,7 @@ const UserHomePage = () =>
             <Routes>
                 <Route path='/' element={<UserHomepageLayout />}>
                     <Route index element={<Explore />} />
+                    <Route path='/search' element={<SearchResult />} />
                     <Route path='/exercise' element={<ShowExercise />} />
                     <Route path='/training_plan' element={<TrainingPlans />} />
                     <Route path='/tp' element={<ShowTP />} />
