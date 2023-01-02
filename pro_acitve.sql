@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: pro_active
+-- Host: 127.0.0.1    Database: pro_active
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
@@ -27,7 +27,7 @@ CREATE TABLE `addtrainersplan` (
   `username` varchar(200) NOT NULL,
   `type` varchar(200) NOT NULL,
   `trainerplanname` varchar(45) NOT NULL,
-  PRIMARY KEY (`trainerplanname`,`username`),
+  PRIMARY KEY (`username`,`type`),
   KEY `fk_trainer_n_idx` (`trainername`),
   CONSTRAINT `fk_trainer_n` FOREIGN KEY (`trainername`) REFERENCES `trainer_info` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -39,7 +39,7 @@ CREATE TABLE `addtrainersplan` (
 
 LOCK TABLES `addtrainersplan` WRITE;
 /*!40000 ALTER TABLE `addtrainersplan` DISABLE KEYS */;
-INSERT INTO `addtrainersplan` VALUES ('Tam37','grafix','training','cc'),('Tam37','grafix','training','My Plan'),('Tam37','Tam37','training','My Plan'),('Tah','Tam37','training','Test1'),('Tam37','Tam37','training','tt');
+INSERT INTO `addtrainersplan` VALUES ('Tah','Tam37','n','hero'),('Tah','Tam37','training','Test1');
 /*!40000 ALTER TABLE `addtrainersplan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -299,7 +299,7 @@ CREATE TABLE `user_info` (
 
 LOCK TABLES `user_info` WRITE;
 /*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES ('Gr','$2b$10$QfcIi0egwtJMx68PU2hnQemTggG0GPCInSLFjZjwQ8r9FdCwh3g1m','rafi190041235@gmail.com',222,222,22,'Maintain Current Physique and Weight','Calisthenics','Athletic','Gr','../image/default/default2.jpg'),('grafix','$2b$10$wdSOnOiX3YBP7asp80fyx.Jx.KmXZwrQThc11JSDtx7xSZThwKk5i','grafix235@gmail.com',21,165,60,'Fat Burn and Lose Weight','Calisthenics','Skinny Fat','Protyoy Rafi','../image/default/default3.jpg'),('Tah','$2b$10$hoLSikJPOCYjatZ48yhrdObz1qr.UCYG7gTSY0n59icoKvxX3pcCy','tahmidrahman@iut-dhaka.edu',22,172,69,'Fat Burn and Lose Weight','Calisthenics','Muscular','Tah','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
+INSERT INTO `user_info` VALUES ('Gr','$2b$10$QfcIi0egwtJMx68PU2hnQemTggG0GPCInSLFjZjwQ8r9FdCwh3g1m','rafi190041235@gmail.com',222,222,22,'Maintain Current Physique and Weight','Calisthenics','Athletic','Gr','../image/default/default2.jpg'),('grafix','$2b$10$wdSOnOiX3YBP7asp80fyx.Jx.KmXZwrQThc11JSDtx7xSZThwKk5i','grafix235@gmail.com',21,165,60,'Fat Burn and Lose Weight','Calisthenics','Skinny Fat','Protyoy Rafi','../image/default/default3.jpg'),('sabry','$2b$10$Wviry/RBZ56li8CPg3KgReqKF6LbpwYuL.NVeNSe20rZ1Gj2Lc4Cy','sabrysaid@iut-dhaka.edu',23,200,100,'Maintain Current Physique and Weight','Calisthenics','Fat','Sabry','../image/default/default2.jpg'),('Tah','$2b$10$hoLSikJPOCYjatZ48yhrdObz1qr.UCYG7gTSY0n59icoKvxX3pcCy','tahmidrahman@iut-dhaka.edu',22,172,69,'Fat Burn and Lose Weight','Calisthenics','Muscular','Tah','../image/default/default2.jpg'),('Tam37','$2b$10$OINDOkSjOUQD6OfMiuQpg.quS7srRotuLQxxrKa6N6hn3sN4fEgxW','190041237tr@gmail.com',23,170,68,'maintain','weightlifting','muscular','Tahmid Rahman','../image/default/default4.jpg');
 /*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -373,4 +373,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-02 23:11:11
+-- Dump completed on 2023-01-02 23:47:00

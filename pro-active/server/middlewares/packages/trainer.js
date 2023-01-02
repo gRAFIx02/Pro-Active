@@ -353,7 +353,7 @@ export const  getTrainerNutri = async(req,res) => {
 
   
   
-  await gnutri("Tah","n")
+  await gnutri(req.user.username,"n")
   .then((data) => {
        console.log(data);
       return res.json({data: data});
