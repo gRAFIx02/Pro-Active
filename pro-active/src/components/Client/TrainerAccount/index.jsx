@@ -238,7 +238,7 @@ const TrainerAccount = () => {
         </div>
      
       <div className='change'>
-        <Link to='/user_homepage/my_ac/change_password'>
+        <Link to='/trainer_homepage/my_ac/change_password'>
             <button>Change Password</button>
         </Link>
       </div>
