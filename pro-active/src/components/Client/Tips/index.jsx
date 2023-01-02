@@ -50,7 +50,7 @@ const Tips = () =>
                 {data.map((trainer) => {
           return (
 
-                <div className='tip_box'>{trainer.username}    {trainer.tips}</div>
+                <div className='tip_box'>{trainer.username} - {trainer.tips}</div>
                 );
             })}
             </div>
