@@ -5,7 +5,7 @@ dotenv.config();
 
 import nodemailer from "nodemailer"
 
-import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan,getNutritionPlan,addtrainertips, addTrainerPlan1, getWorkoutPlan1} from "../../controllers/users.js"
+import {addUser,getUser,addtrainer,getTrainer,getWorkoutPlan,getNutritionPlan,addtrainertips, addTrainerPlan1, getWorkoutPlan1, addUserpass, addTrainerpass} from "../../controllers/users.js"
 
 const salt_rounds = 10
 
@@ -428,4 +428,33 @@ export const addplan2 = async(req, res, next) => {
 
 
 }
+
+
+export const changepass = async(req, res, next) => {
+  const {password,confPassword} = req.body;
+  try {
+   
+    const hashPassword = bcrypt.hashSync(password, salt_rounds);
+    const response = await addUserpass(hashPassword,req.user.username)
+    return res.json({message: response});
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+}
+
+
+export const changepass1 = async(req, res, next) => {
+  const {password,confPassword} = req.body;
+  try {
+   
+    const hashPassword = bcrypt.hashSync(password, salt_rounds);
+    const response = await addTrainerpass(hashPassword,req.user.username)
+    return res.json({message: response});
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({error: error});
+  }
+}
+
 

@@ -92,6 +92,50 @@ export const addUserimage = async(username,img) => {
 }
 
 
+export const addUserpass = async(password,username) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'update `user_info`  set   `password`=?  where `username`=?',
+        [password,username], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
+export const addTrainerpass = async(password,username) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'update `trainer_info`  set   `password`=?  where `username`=?',
+        [password,username], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
 
 export const addTrainerimage = async(username,img) => {
 
