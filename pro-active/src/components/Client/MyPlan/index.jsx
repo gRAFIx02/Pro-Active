@@ -193,7 +193,7 @@ useEffect(() => {
                     <Link
                 state={{workout}}    
                 to={{
-                 pathname: "",
+                 pathname: "/user_homepage/my_plans/cp",
                  // your data array of objects
                }}>
                             

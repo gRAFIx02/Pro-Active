@@ -1,0 +1,129 @@
+.cp_back
+{
+    height: 1300px;
+    width: 1350px;
+    margin-left: 220px;
+    margin-top: 110px;
+
+    .imagefield
+    {
+        box-shadow: 1.5px 1.5px 1.5px 1.5px #bfbfbf;
+        width: 480px;
+        height: 320px;
+        margin-left: 20px;
+
+        img
+        {
+            width: 480px;
+            height: 320px;
+        }
+    }
+
+    label
+    {
+        font-family: Comic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .textfield
+    {
+        width: 175px;
+        height: 30px;
+        margin-top: -21px;
+        margin-left: 125px;
+        font-family: Comic;
+        font-size: 15px;
+    }
+
+    .plan_name
+    {
+        width: 300px;
+        height: 30px;
+        margin-left: 550px;
+        margin-top: -170px;
+    }
+
+    .difficulty
+    {
+        width: 300px;
+        height: 30px;
+        margin-left: 550px;
+        margin-top: 20px;
+    }
+
+    .catNdiff
+    {
+        width: 300px;
+        height: 30px;
+        margin-left: 550px;
+        margin-top: 20px;
+    }
+
+    .description
+    {
+        width: 1200px;
+        height: 300px;
+        margin-left: 20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+        div
+        {
+            height: 90%;
+            margin-top: 10px;
+            font-family: Comic;
+            font-size: 20px;
+        }
+    }
+
+    .column_names
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        border-radius: 3px;
+        width: 1175px;
+        height: 30px;
+        margin-left: 75px;
+        margin-top: 100px;
+        font-family: Comic;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 170px;
+    }
+
+    .row
+    {
+        box-shadow: 1px 1px 1px 1px gray;
+        width: 1175px;
+        height: 30px;
+        margin-left: 75px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 100px;
+        border-radius: 3px;
+        justify-content: center;
+        font-family: Comic;
+        font-size: 15px;
+        padding-bottom: 5px;
+
+        .entry
+        {
+            font-family: Comic;
+            width: 150px;
+            height: 30px;
+        }
+    }
+
+    .hide_btn
+    {
+        color: white;
+        background-color: white;
+        border: none;
+        outline: none;
+    }
+}
