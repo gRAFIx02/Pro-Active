@@ -38,6 +38,37 @@ const Tips = () =>
 }, []);
   
 
+         
+const [data1, setData1] = useState([]);
+
+useEffect(() => {
+  const fetchData1 = async() => {
+    await axios({
+      method: 'get',
+      url: "http://localhost:5000/gettipsforuser1",
+      withCredentials: 'true',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      responseType: 'json',
+    }).then((response) => {
+      setData1(response.data.data);
+      console.log(response.data.data);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
+  fetchData1();
+
+
+
+}, []);
+
+
+
+
+  
+
     
    
   
@@ -54,6 +85,21 @@ const Tips = () =>
                 );
             })}
             </div>
+
+
+            <div className='tip_back'>
+
+                {data1.map((trainer) => {
+          return (
+
+                <div className='tip_box'>{trainer.username}    {trainer.tips}</div>
+                );
+            })}
+            </div>
+
+
+
+
         </>
     )
 }

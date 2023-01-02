@@ -65,7 +65,51 @@ const ShowNP = () =>
 
 
 }, []);
+
+
+const [msg, setMsg] = useState("");
+
+    const checkmsg =(e)=>{
+        
+      setMsg(e);
+
+    }
+
   
+
+
+const addthisplan = async (e) => {
+  e.preventDefault();
+  try {
+    await axios({
+      method: 'post',
+      url: "http://localhost:5000/addthisplan1",
+      withCredentials: 'true',
+      data: {
+        trainername : nutrition.uploaded_by,
+        trainerplanname : nutrition.plan_name,
+        
+      },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+   
+    checkmsg("Succesfully added")
+
+  
+  } catch (error) {
+    console.log(error.response.data);
+    checkmsg("User is already enrolled in a training plan");
+  }
+
+  
+};
+
+
+
+
+
 
 
 
@@ -73,6 +117,7 @@ const ShowNP = () =>
     return(
         <>
             <div className='np_back'>
+            <p className='message'>{msg}</p>
                 <div className='imagefield'>
                     <img src={nutrition.img} alt='exercise' />
                 </div>
@@ -91,7 +136,7 @@ const ShowNP = () =>
                 <button className='hide_btn' onLoad={plan_per_day()} >Hide this button</button>
 
                 <div className='add_plan_btn'>
-                  <button>Add Plan</button>
+                  <button onClick={addthisplan}>Add Plan</button>
                 </div>
 
                 <div className='column_names'>

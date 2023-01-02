@@ -225,6 +225,27 @@ export const addTrainerplan = async(planname, username, category, difficulty,des
   }
 }
 
+export const addCustomplan = async(planname, username, category, difficulty,description,img) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `my_plan_info` (`plan_name`, `username`, `category`, `difficulty`, `desc` ,`img`) VALUES (?, ?, ?, ?, ?, ?)',
+        [planname,username, category, difficulty,description,img], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
 export const addTrainerplan1 = async(planname, day, workout_1, workout_2,workout_3,workout_4) => {
 
   
@@ -232,6 +253,30 @@ export const addTrainerplan1 = async(planname, day, workout_1, workout_2,workout
     const response = await new Promise((resolve, reject) => {
       db.execute(
         'INSERT INTO `workout` (`plan_name`, `day`, `workout_1`, `workout_2`, `workout_3` ,`workout_4`) VALUES (?, ?, ?, ?, ?, ?)',
+        [planname,day, workout_1, workout_2,workout_3,workout_4], 
+        (err, results) => {
+        if (err) {
+            reject(err.message);
+        }
+        resolve(results);
+      })
+    });
+    return response;
+  } catch (error) {
+    throw error;
+  }
+
+
+}
+
+
+export const addCustomplan1 = async(planname, day, workout_1, workout_2,workout_3,workout_4) => {
+
+  
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute(
+        'INSERT INTO `my_plan` (`plan_name`, `day`, `workout_1`, `workout_2`, `workout_3` ,`workout_4`) VALUES (?, ?, ?, ?, ?, ?)',
         [planname,day, workout_1, workout_2,workout_3,workout_4], 
         (err, results) => {
         if (err) {
@@ -328,6 +373,24 @@ export const getTrainerWorkout = async(username) => {
     console.log(error);
   }
 }
+
+export const getCustomWorkout = async(username) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM `my_plan_info` WHERE `username`=? ',
+      [username],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
 
 
 export const getAllTrainerWorkot = async(count) => {
@@ -513,6 +576,38 @@ export const gTips = async(username,type) => {
   try {
     const user = await new Promise((resolve, reject) => {
       db.execute('SELECT * FROM pro_active.trainertips where username in (select trainername from pro_active.addtrainersplan where `username`=? and `type` =?)',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const gnutri = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM pro_active.nutrition_info where plan_name in (select trainerplanname from pro_active.addtrainersplan where `username`=? and `type` =?)',
+      [username,type],
+      (err, results) => {
+        if(err) reject (err.message);
+        resolve(results);
+      })
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const gexer = async(username,type) => {
+  try {
+    const user = await new Promise((resolve, reject) => {
+      db.execute('SELECT * FROM pro_active.workout_info where plan_name in (select trainerplanname from pro_active.addtrainersplan where `username`=? and `type` =?)',
       [username,type],
       (err, results) => {
         if(err) reject (err.message);
