@@ -441,6 +441,23 @@ export const getWorkoutPlan = async(plan_name) => {
   }
 }
 
+export const getWorkoutPlan1 = async(plan_name) => {
+  try {
+    const response = await new Promise((resolve, reject) => {
+        db.execute('SELECT * FROM `my_plan` WHERE `plan_name`=? ', 
+        [plan_name],
+         (err, results) => {
+            if (err) reject(new Error(err.message));
+            resolve(results);
+        })
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+
 export const getNutritionPlan = async(plan_name) => {
   try {
     const response = await new Promise((resolve, reject) => {

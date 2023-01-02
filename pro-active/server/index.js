@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import db from "./config/Database.js";
 
-import { register, login, verifyToken, logout,trainer_register,trainerlogin, verifyToken1,logout1,plansperday,getplansperday1,nutritionsperday, getnutritionperday1, addtips, addplan1, addplan2} from "./middlewares/auth/auth.js";
+import { register, login, verifyToken, logout,trainer_register,trainerlogin, verifyToken1,logout1,plansperday,getplansperday1,nutritionsperday, getnutritionperday1, addtips, addplan1, addplan2, plansperday1, getplansperday2} from "./middlewares/auth/auth.js";
 import { bypassCORS } from "./middlewares/Setup.js";
 import { exercise_info,exercise_all_info } from "./middlewares/packages/exercise_list.js";
 import  {nutrition_info,nutrition_all_info} from "./middlewares/packages/nutrition_list.js";
@@ -91,6 +91,9 @@ app.post("/addCustomplan",bypassCORS,verifyToken,addcustomplan);
 
 app.get("/MycustomPlans",bypassCORS,verifyToken,Customworkoutplans);
 
+app.post("/customplansperday",bypassCORS,plansperday1);
+
+app.get("/customgetplansperday",bypassCORS,getplansperday2);
 
 
 
