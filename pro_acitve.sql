@@ -39,7 +39,6 @@ CREATE TABLE `addtrainersplan` (
 
 LOCK TABLES `addtrainersplan` WRITE;
 /*!40000 ALTER TABLE `addtrainersplan` DISABLE KEYS */;
-INSERT INTO `addtrainersplan` VALUES ('Tah','grafix','n','hero'),('Tam37','grafix','training','ggg'),('Tah','Tam37','n','hero'),('Tah','Tam37','training','Test1');
 /*!40000 ALTER TABLE `addtrainersplan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +151,7 @@ CREATE TABLE `nutrition` (
 
 LOCK TABLES `nutrition` WRITE;
 /*!40000 ALTER TABLE `nutrition` DISABLE KEYS */;
-INSERT INTO `nutrition` VALUES ('High Protein Diet',1,'Protein Pancake','Grilled chicken and veggies','Banana','Pasta with chicken'),('High Protein Diet',2,'Protein Pancake','Grilled salmon and veggies','Apple','Egg fried rice'),('High Protein Diet',3,'Oats','Beef and veggies','Blueberry','Pasta with salmon'),('High Protein Diet',4,'Oats','Chicken salad','Protein shake','Pumpkin pie and yogurt'),('High Protein Diet',5,'Egg sandwich','Steak','Protein bar','Chicken salad and veggies'),('High Protein Diet',6,'Egg sandwich','Salmon and salad','Poached egg','Grilled chicken'),('High Protein Diet',7,'Oats','Cashewnut salad','Boiled egg','Beef curry');
+INSERT INTO `nutrition` VALUES ('High Protein Diet',1,'Protein Pancake','Grilled chicken and veggies','Banana','Pasta with chicken'),('High Protein Diet',2,'Protein Pancake','Grilled salmon and veggies','Apple','Egg fried rice'),('High Protein Diet',3,'Oats','Beef and veggies','Blueberry','Pasta with salmon'),('High Protein Diet',4,'Oats','Chicken salad','Protein shake','Pumpkin pie and yogurt'),('High Protein Diet',5,'Egg sandwich','Steak','Protein bar','Chicken salad and veggies'),('High Protein Diet',6,'Egg sandwich','Salmon and salad','Poached egg','Grilled chicken'),('High Protein Diet',7,'Oats','Cashewnut salad','Boiled egg','Beef curry'),('Pescetarian Diet',1,'Oats','Grilled salmon','Banana','Chickpea curry'),('Pescetarian Diet',2,'Oats','Humus, spinach and salad','Banana','Root veggie stew'),('Pescetarian Diet',3,'Whole wheat sandwich','Rice and redbeans','Blue berry','Mexican tofu and yogurt'),('Pescetarian Diet',4,'Whole wheat sandwich','Fried salmon with cavier','Blue berry','Veggie burger'),('Pescetarian Diet',5,'Bagel and smoothie','Grilled salmon','Raspberry','Fish n Chips'),('Pescetarian Diet',6,'Bagel and smoothie','Sushi with Tuna','Raspberry','Grilled Shrimp with guacamole'),('Pescetarian Diet',7,'Rice and spinach','Fish Dumplings','Coconut','Fish Taco'),('Vegan Diet',1,'Oatmeal with fruits','Tofu Sandwich','Nuts','Pasta with tomato sauce'),('Vegan Diet',2,'Oatmeal with fruits','Salad with tofu and nuts','Nuts','Pasta with tomato sauce'),('Vegan Diet',3,'PBJ','Salad with tofu and nuts','Banana and berries','Veggie stir fry'),('Vegan Diet',4,'Oatmeal with fruits','Tofu Sandwich','Banana and berries','Veggie stir fry'),('Vegan Diet',5,'PBJ','Tofu Sandwich','Nuts and banana','Beans and rice'),('Vegan Diet',6,'Fruit Salad','Soup and salad','Blueberry','Cauliflower pizza'),('Vegan Diet',7,'Fruit Salad','Soup and salad','Blueberry','Rice with lentil');
 /*!40000 ALTER TABLE `nutrition` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +179,7 @@ CREATE TABLE `nutrition_info` (
 
 LOCK TABLES `nutrition_info` WRITE;
 /*!40000 ALTER TABLE `nutrition_info` DISABLE KEYS */;
-INSERT INTO `nutrition_info` VALUES ('High Protein Diet','igor','This diet plan is perfect for those looking to gain muscles without gaining a lot of body fat.','../image/nutrition/high_protein.jpg');
+INSERT INTO `nutrition_info` VALUES ('High Protein Diet','igor','This diet plan is perfect for those looking to gain muscles without gaining a lot of body fat.','../image/nutrition/high_protein.jpg'),('Pescetarian Diet','stan69','This diet is perfect for those who don\'t eat meat but are still looking for a good source of protein.','../image/nutrition/pescatarian.jpg'),('Vegan Diet','athelanx','Diet for all the vegetarians out there/.','../image/nutrition/vegan.jpg');
 /*!40000 ALTER TABLE `nutrition_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,7 +261,7 @@ CREATE TABLE `trainertips` (
 
 LOCK TABLES `trainertips` WRITE;
 /*!40000 ALTER TABLE `trainertips` DISABLE KEYS */;
-INSERT INTO `trainertips` VALUES ('igor','Don\'t drink water right before going for a workout.'),('igor','Always stay hydrated.');
+INSERT INTO `trainertips` VALUES ('igor','Don\'t drink water right before going for a workout.'),('igor','Always stay hydrated.'),('stan69','Take at least 7-9 hours of sleep per day to rest your body.'),('stan69','Cooler shower helps regenerate the body faster than warm water shower.'),('athelanx','Be sure to warm up properly to avoid injuries during exercise.'),('athelanx','Proper nutrition is the key to a healthy lifestyle, the key to which is vegetables.');
 /*!40000 ALTER TABLE `trainertips` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,7 +327,7 @@ CREATE TABLE `workout` (
 
 LOCK TABLES `workout` WRITE;
 /*!40000 ALTER TABLE `workout` DISABLE KEYS */;
-INSERT INTO `workout` VALUES ('Ultimate Summer Physique',1,'Push-Up','Crunches','Pull-Up','Squats','Undone'),('Ultimate Summer Physique',2,'Push-Up','Sit-ups','Dumbbell Curls','','Undone'),('Ultimate Summer Physique',3,'Rest','Rest','Rest','Rest','Undone'),('Ultimate Summer Physique',4,'Planche','Squats','Burpee','','Undone'),('Ultimate Summer Physique',5,'Push-Up','Pull-up','Lunges','Planche','Undone'),('Ultimate Summer Physique',6,'Push-Up','Squats','Towel Pull-up','','Undone'),('Ultimate Summer Physique',7,'Jumping Jack','Burpee','Planche Push-up','Lunges','Undone');
+INSERT INTO `workout` VALUES ('90 Day Workout Challenge',1,'Push-up','Pull-up','Crunches','Mountain Climber','Undone'),('One Punch Plan',1,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',1,'Push-Up','Crunches','Pull-Up','Squats','Undone'),('90 Day Workout Challenge',2,'Squats','Push-up','Burpees','Mountain Climber','Undone'),('One Punch Plan',2,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',2,'Push-Up','Sit-ups','Dumbbell Curls','','Undone'),('90 Day Workout Challenge',3,'Jumping Jack','Push-up','Pull-up','Crunches','Undone'),('One Punch Plan',3,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',3,'Rest','Rest','Rest','Rest','Undone'),('90 Day Workout Challenge',4,'Rest','Rest','Rest','Rest','Undone'),('One Punch Plan',4,'Rest','Rest','Rest','Rest','Undone'),('Ultimate Summer Physique',4,'Planche','Squats','Burpee','','Undone'),('90 Day Workout Challenge',5,'Squats','Pull-up','Burpees','','Undone'),('One Punch Plan',5,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',5,'Push-Up','Pull-up','Lunges','Planche','Undone'),('90 Day Workout Challenge',6,'Push-up','Squats','Crunches','Mountain Climber','Undone'),('One Punch Plan',6,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',6,'Push-Up','Squats','Towel Pull-up','','Undone'),('90 Day Workout Challenge',7,'Push-up','Burpees','Pull-up','Crunches','Undone'),('One Punch Plan',7,'Push-up','Sit-up','Squats','Running','Undone'),('Ultimate Summer Physique',7,'Jumping Jack','Burpee','Planche Push-up','Lunges','Undone');
 /*!40000 ALTER TABLE `workout` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -358,7 +357,7 @@ CREATE TABLE `workout_info` (
 
 LOCK TABLES `workout_info` WRITE;
 /*!40000 ALTER TABLE `workout_info` DISABLE KEYS */;
-INSERT INTO `workout_info` VALUES ('Ultimate Summer Physique','igor','Calisthenics','Intermediate','Tired of being out of shape? Get the physique of your dreams with my new plan, the ULTIMATE SUMMER PHYSIQUE!!!','../image/trainer_plan/ultimate.jpg');
+INSERT INTO `workout_info` VALUES ('90 Day Workout Challenge','stan69','Calisthenics','Intermediate','Are you up for a challenging journey to change your physique for good? Enroll in this training plan and start your fitness journey today!','../image/trainer_plan/download.png'),('One Punch Plan','athelanx','Calisthenics','Advanced','A training plan inspired by the One Punch Man.','../image/trainer_plan/default3.jpg'),('Ultimate Summer Physique','igor','Calisthenics','Intermediate','Tired of being out of shape? Get the physique of your dreams with my new plan, the ULTIMATE SUMMER PHYSIQUE!!!','../image/trainer_plan/ultimate.jpg');
 /*!40000 ALTER TABLE `workout_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -371,4 +370,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-03 14:18:44
+-- Dump completed on 2023-01-03 14:43:34
