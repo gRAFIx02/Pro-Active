@@ -2,7 +2,7 @@ import './index.scss'
 import { useLocation } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
-import defaultImage from '../../../../public/image/trainer_plan/default3.jpg'
+import defaultImage from '../../../Assets/images/default3.jpg'
 
 const ShowCustom = () =>
 {

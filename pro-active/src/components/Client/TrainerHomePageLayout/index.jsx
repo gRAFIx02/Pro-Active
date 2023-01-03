@@ -8,8 +8,8 @@ const TrainerHomePageLayout = () =>
     return (
         <>
             <div className='homepage'>
-                <TrainerSidebar />
                 <SearchBar />
+                <TrainerSidebar />
                 <div>
                     <Outlet />
                 </div>

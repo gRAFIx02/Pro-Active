@@ -8,8 +8,8 @@ const UserHomepageLayout = () =>
     return(
         <>
             <div className='homepage'>
-                <UserSidebar />
                 <SearchBar />
+                <UserSidebar />
                 <div>
                     <Outlet />
                 </div>
