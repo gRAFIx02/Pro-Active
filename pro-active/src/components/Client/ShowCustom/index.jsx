@@ -2,6 +2,7 @@ import './index.scss'
 import { useLocation } from 'react-router-dom'
 import React, { useEffect,useState } from "react";
 import axios from "axios";
+import defaultImage from '../../../../public/image/trainer_plan/default3.jpg'
 
 const ShowCustom = () =>
 {
@@ -74,7 +75,7 @@ const ShowCustom = () =>
         <div className='cp_back'>
                 <div className='imagefield'>
                
-                <img src={workout.img} alt='exercise' />
+                <img src={defaultImage} alt='Custom Plan Photo' />
                 </div>
                 <div className='plan_name'>
                     <label>Plan name &emsp; &emsp;: </label>
