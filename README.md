@@ -12,6 +12,9 @@ Meet the dedicated minds behind Pro-Active:
 ## Project Details
 **Pro-Active** amalgamates the prowess of our team in both relational database management and software development, aiming to deliver an innovative and comprehensive solution.
 
+## Figma Prototype
+https://www.figma.com/proto/3qC14Oydz92dIf5zbMj4G2/Pro-Active?node-id=8-9&starting-point-node-id=8%3A9&t=8WwcJTgcu5n0DZCL-1
+
 We're excited to present our combined skills and efforts in this project, showcasing the culmination of knowledge and creativity honed through our academic journey.
 
 Thank you for being a part of our journey! 🚀
